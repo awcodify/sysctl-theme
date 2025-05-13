@@ -2,59 +2,145 @@
 layout: default
 ---
 
-<div class="home">
-  <h1 class="page-heading">Latest Articles</h1>
-  
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <div class="post-preview {% unless post.image %}no-image{% endunless %}">
-          <div class="post-preview-content">
-            <span class="post-meta">
-              {{ post.date | date: site.date_format | default: "%b %-d, %Y" }}
-              {% if post.categories.size > 0 %}
-                <span class="post-categories">
-                  {% for category in post.categories %}
-                    <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
-                  {% endfor %}
-                </span>
+<div class="home home-wrapper">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to Sysctl Theme</h1>
+      <p class="hero-subtitle">A clean, modern Jekyll theme for tech blogs and documentation</p>
+      <div class="hero-buttons">
+        <a href="/about/" class="btn btn-primary">Learn More</a>
+        <a href="https://github.com/yourusername/sysctl-theme" class="btn btn-secondary">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{ '/assets/images/theme-demo.jpeg' | relative_url }}" alt="Sysctl Theme Demo">
+    </div>
+  </section>
+
+  <!-- Main Content Area with Sidebar -->
+  <div class="content-with-sidebar">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Featured Posts Section -->
+      <section class="featured-posts">
+        <h2 class="section-heading">Featured Posts</h2>
+        <div class="featured-grid">
+          {% assign featured_posts = site.posts | where: "featured", true %}
+          {% for post in featured_posts limit:3 %}
+            <div class="featured-card">
+              {% if post.image %}
+                <div class="card-image">
+                  <a href="{{ post.url | relative_url }}">
+                    <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}">
+                  </a>
+                </div>
               {% endif %}
-            </span>
-            
-            <h2>
-              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h2>
-            
-            <p class="post-excerpt">
-              {{ post.excerpt | strip_html | truncatewords: 30 }}
-            </p>
-            
-            <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
-          </div>
+              <div class="card-content">
+                <span class="card-meta">{{ post.date | date: site.date_format | default: "%b %-d, %Y" }}</span>
+                <h3 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                <p class="card-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <!-- Latest Articles -->
+      <section class="latest-articles">
+        <h2 class="section-heading">Latest Articles</h2>
+        <ul class="post-list">
+          {% for post in site.posts %}
+            {% unless post.featured %}
+            <li class="post-item">
+              <div class="post-preview {% unless post.image %}no-image{% endunless %}">
+                <div class="post-preview-content">
+                  <span class="post-meta">
+                    {{ post.date | date: site.date_format | default: "%b %-d, %Y" }}
+                    {% if post.categories.size > 0 %}
+                      <span class="post-categories">
+                        {% for category in post.categories %}
+                          <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+                        {% endfor %}
+                      </span>
+                    {% endif %}
+                  </span>
+                  
+                  <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  </h3>
+                  
+                  <p class="post-excerpt">
+                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                  </p>
+                  
+                  <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+                </div>
+                
+                {% if post.image %}
+                <div class="post-preview-image">
+                  <a href="{{ post.url | relative_url }}">
+                    <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}" />
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+            </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+        
+        {% if site.posts.size > 8 %}
+        <div class="pagination">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
+          {% endif %}
           
-          {% if post.image %}
-          <div class="post-preview-image">
-            <a href="{{ post.url | relative_url }}">
-              <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}" />
-            </a>
-          </div>
+          <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+          
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
           {% endif %}
         </div>
-      </li>
-    {% endfor %}
-  </ul>
-  
-  {% if site.posts.size > 5 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
-    {% endif %}
-    
-    <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
-    {% endif %}
+        {% endif %}
+      </section>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- About Widget -->
+      <div class="sidebar-widget about-widget">
+        <h3 class="widget-title">About</h3>
+        <p>A modern Jekyll theme perfect for tech blogs, documentation sites, and personal portfolios.</p>
+        <a href="/about/" class="sidebar-link">More about Sysctl →</a>
+      </div>
+
+      <!-- Categories Widget -->
+      <div class="sidebar-widget categories-widget">
+        <h3 class="widget-title">Categories</h3>
+        <ul class="category-list">
+          {% assign categories = site.categories | sort %}
+          {% for category in categories %}
+            <li><a href="{{ '/categories/' | append: category[0] | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Popular Posts Widget -->
+      <div class="sidebar-widget popular-posts-widget">
+        <h3 class="widget-title">Popular Posts</h3>
+        <ul class="popular-posts">
+          {% for post in site.posts limit:5 %}
+            <li>
+              <a href="{{ post.url | relative_url }}" class="popular-post-link">
+                <span class="popular-post-title">{{ post.title }}</span>
+                <span class="popular-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
   </div>
-  {% endif %}
 </div>

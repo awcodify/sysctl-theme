@@ -40,9 +40,13 @@
   {%- include header.html -%}
   
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
+    {% if page.url == "/" %}
       {{ content }}
-    </div>
+    {% else %}
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    {% endif %}
   </main>
   
   {%- include footer.html -%}
