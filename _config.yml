@@ -7,7 +7,14 @@ email: awcodify@gmail.com
 description: >-
   A clean, fast and SEO-friendly Jekyll theme focused on technical content and code readability.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # for local testing
+url: "http://localhost:4000" # for local development
+
+# GitHub Pages settings
+repository: awcodify/sysctl-theme
+github: [metadata]
+
+# Theme settings - comment this line when developing locally
+# remote_theme: awcodify/sysctl-theme
 
 # Build settings
 markdown: kramdown
@@ -45,6 +52,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-remote-theme
 
 # Content settings
 excerpt_separator: <!--more-->
@@ -59,3 +67,5 @@ exclude:
   - node_modules/
   - vendor/
   - example/
+  - LICENSE
+  - sysctl-theme.gemspec
