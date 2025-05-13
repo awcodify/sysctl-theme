@@ -346,7 +346,6 @@ html.dark-mode {
     /* Table of contents */
     .table-of-contents {
       background: linear-gradient(to bottom right, rgba($dark-surface, 0.8), rgba($dark-background, 0.8));
-      border-left: 4px solid lighten($secondary-color, 10%);
       
       h2 {
         color: lighten($secondary-color, 15%);
@@ -436,6 +435,23 @@ html.dark-mode {
           .related-post-meta {
             color: darken($dark-text-color, 20%);
           }
+        }
+      }
+    }
+  }
+  
+  /* Post layout in dark mode */
+  .post-layout {
+    @media (min-width: 1024px) {
+      &.sidebar-right {
+        .post-sidebar {
+          border-left: 2px solid $dark-border-color;
+        }
+      }
+      
+      &.sidebar-left {
+        .post-sidebar {
+          border-right: 2px solid $dark-border-color;
         }
       }
     }
