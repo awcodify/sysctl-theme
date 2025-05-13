@@ -845,11 +845,11 @@
   position: relative;
   
   @media (min-width: 1024px) {
-    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-columns: 250px minmax(0, 1fr);
   }
   
   @media (min-width: 1200px) {
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: 300px minmax(0, 1fr);
   }
   
   /* Floating sidebar with TOC */
@@ -861,7 +861,8 @@
       position: relative;
       padding-right: $spacing-md;
       
-      /* Add bolder divider on the right side */
+      /* Removing the divider that was causing the extra line */
+      /*
       &::after {
         content: '';
         position: absolute;
@@ -871,6 +872,7 @@
         height: 100%;
         background-color: $border-color;
       }
+      */
     }
     
     .floating-toc {

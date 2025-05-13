@@ -71,6 +71,25 @@
         text-decoration: underline;
       }
     }
+
+    /* Additional styles for TOC content */
+    .toc-level-2 {
+      font-size: 0.5rem;
+      margin-bottom: 8px;
+    }
+
+    .toc-level-3 {
+      font-size: 0.4rem;
+      margin-left: 12px;
+      margin-bottom: 6px;
+    }
+
+    .toc-level-4 {
+      font-size: 0.3rem;
+      margin-left: 18px;
+      margin-bottom: 4px;
+      color: lighten($dark-gray, 10%);
+    }
   }
   
   /* Make it sticky on larger screens */
@@ -117,4 +136,67 @@
 .toc-entry.active > a {
   color: $primary-color;
   font-weight: 600;
+}
+
+/* Floating sidebar TOC adjustments */
+.floating-toc {
+  .toc {
+    font-size: 0.55rem;
+    
+    a {
+      padding: 1px 0;
+      font-size: 0.55rem;
+      white-space: normal;
+      line-height: 1.1;
+      display: block;
+      border-left: 1px solid transparent;
+      padding-left: 5px;
+      margin-bottom: 2px;
+      color: $secondary-color; /* Exactly match the header color */
+      font-weight: 400;
+      
+      &:hover {
+        border-left-color: rgba($primary-color, 0.4);
+        color: $primary-color;
+      }
+      
+      &.active {
+        border-left-color: $primary-color;
+        color: $primary-color;
+      }
+    }
+    
+    .toc-level-2 > a {
+      font-weight: 500;
+      font-size: 0.55rem;
+      color: $secondary-color; /* Ensure parent items match header color */
+    }
+    
+    .toc-level-3 > a {
+      font-size: 0.5rem;
+      padding-left: 7px;
+      color: $secondary-color; /* Ensure child items match header color */
+      opacity: 0.9; /* Slightly more transparent for hierarchy */
+    }
+    
+    ul {
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+  }
+  
+  /* Elegant heading style */
+  h2 {
+    margin-top: 0;
+    margin-bottom: $spacing-xs;
+    font-size: 0.6rem;
+    color: $secondary-color; /* Confirm header color */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    
+    &::after {
+      display: none;
+    }
+  }
 }
