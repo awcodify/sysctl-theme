@@ -6,6 +6,24 @@ html.dark-mode {
   background-color: $dark-background;
   color: $dark-text-color;
   
+  /* Global heading styles to ensure visibility in dark mode - with higher specificity */
+  h1, h2, h3, h4, h5, h6,
+  .post-content h1, .post-content h2, .post-content h3, 
+  .post-content h4, .post-content h5, .post-content h6,
+  .site-footer h1, .site-footer h2, .site-footer h3, 
+  .site-footer h4, .site-footer h5, .site-footer h6,
+  [class*="section"] h1, [class*="section"] h2, [class*="section"] h3, 
+  [class*="section"] h4, [class*="section"] h5, [class*="section"] h6 {
+    color: $dark-text-color !important; /* Force override with !important */
+    letter-spacing: -0.02em;
+  }
+  
+  /* Strong tag styling for dark mode */
+  strong {
+    font-weight: 700;
+    color: lighten($dark-text-color, 10%) !important; /* Slightly brighter than normal text for emphasis */
+  }
+  
   body {
     background-color: $dark-background;
     color: $dark-text-color;
