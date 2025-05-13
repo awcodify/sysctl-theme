@@ -354,14 +354,19 @@ html.dark-mode {
       .toc-entry {
         a {
           color: $dark-text-color;
-          
-          &::before {
-            color: lighten($accent-color, 10%);
-          }
-          
+
           &:hover {
-            color: lighten($primary-color, 15%);
+            color: $accent-color; /* Match the floating TOC hover color */
           }
+          
+          &.active {
+            color: $accent-color; /* Match the floating TOC active color */
+            font-weight: 600;
+          }
+        }
+        
+        &.active > a {
+          color: $accent-color; /* Match the floating TOC active color */
         }
       }
     }
@@ -465,27 +470,32 @@ html.dark-mode {
         
         .toc {
           a {
-            color: $dark-text-color;
             
             &:hover {
-              color: lighten($primary-color, 15%);
-              border-left-color: rgba(lighten($primary-color, 15%), 0.4);
+              color: $accent-color; /* Much lighter color for hover state */
             }
             
             &.active {
-              color: lighten($primary-color, 15%);
-              border-left-color: lighten($primary-color, 15%);
+              color: $accent-color; /* Much lighter color for active state */
             }
           }
           
           .toc-level-2 > a {
-            color: $dark-text-color;
+            color: darken($dark-text-color, 5%); 
             font-weight: 500;
+            
+            &:hover, &.active {
+              color: $accent-color;
+            }
           }
           
           .toc-level-3 > a {
             color: darken($dark-text-color, 15%);
             opacity: 0.9;
+            
+            &:hover, &.active {
+              color: $accent-color;
+            }
           }
         }
       }

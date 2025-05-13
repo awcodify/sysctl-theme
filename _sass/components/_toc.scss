@@ -155,15 +155,6 @@
       color: $text-color; /* Changed from $secondary-color to $text-color for better visibility */
       font-weight: 400;
       
-      &:hover {
-        border-left-color: rgba($primary-color, 0.4);
-        color: $primary-color;
-      }
-      
-      &.active {
-        border-left-color: $primary-color;
-        color: $primary-color;
-      }
     }
     
     .toc-level-2 > a {
