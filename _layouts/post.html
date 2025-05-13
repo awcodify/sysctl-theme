@@ -68,46 +68,52 @@ layout: default
     </div>
   {%- endif -%}
 
-  {% if page.toc != false %}
-  <div class="table-of-contents">
-    <h2>Table of Contents</h2>
-    {% include toc.html html=content h_min=2 h_max=3 %}
-  </div>
-  {% endif %}
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if page.tags.size > 0 -%}
-  <div class="post-tags">
-    <h3>Tags:</h3>
-    <ul class="tag-list">
-      {%- for tag in page.tags -%}
-      <li><a href="{{ '/tags/' | append: tag | relative_url }}" class="tag">{{ tag }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </div>
-  {%- endif -%}
-
-  <div class="post-navigation">
-    {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">
-      <span class="nav-label">Previous Post</span>
-      <span class="post-title">{{page.previous.title}}</span>
-    </a>
+  <div class="post-layout">
+    {% if page.toc != false %}
+    <aside class="post-sidebar">
+      <div class="floating-toc">
+        <h2>Table of Contents</h2>
+        {% include toc.html html=content h_min=2 h_max=3 %}
+      </div>
+    </aside>
     {% endif %}
-    {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">
-      <span class="nav-label">Next Post</span>
-      <span class="post-title">{{page.next.title}}</span>
-    </a>
-    {% endif %}
-  </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+    <div class="post-content-wrapper">
+      <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+      </div>
+
+      {%- if page.tags.size > 0 -%}
+      <div class="post-tags">
+        <h3>Tags:</h3>
+        <ul class="tag-list">
+          {%- for tag in page.tags -%}
+          <li><a href="{{ '/tags/' | append: tag | relative_url }}" class="tag">{{ tag }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+
+      <div class="post-navigation">
+        {% if page.previous.url %}
+        <a class="prev" href="{{page.previous.url}}">
+          <span class="nav-label">Previous Post</span>
+          <span class="post-title">{{page.previous.title}}</span>
+        </a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="next" href="{{page.next.url}}">
+          <span class="nav-label">Next Post</span>
+          <span class="post-title">{{page.next.title}}</span>
+        </a>
+        {% endif %}
+      </div>
+
+      {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+      {%- endif -%}
+    </div>
+  </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

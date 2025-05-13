@@ -39,69 +39,111 @@ function initDarkMode() {
  * Table of Contents Functionality
  */
 function initTableOfContents() {
-  const tocContainer = document.querySelector('.table-of-contents');
-  if (!tocContainer) return;
-  
-  // Make TOC sticky on desktop
-  if (window.innerWidth >= 900) { // $on-laptop value
-    tocContainer.classList.add('sticky');
-  }
-  
-  // Make TOC collapsible on mobile
-  if (window.innerWidth < 600) { // $on-palm value
-    const tocHeading = tocContainer.querySelector('h2');
-    const tocContent = document.createElement('div');
-    tocContent.className = 'toc-content';
-    
-    // Move all elements after the heading into the content div
-    let nextSibling = tocHeading.nextElementSibling;
-    while (nextSibling) {
-      const currentSibling = nextSibling;
-      nextSibling = nextSibling.nextElementSibling;
-      tocContent.appendChild(currentSibling);
-    }
-    
-    tocContainer.appendChild(tocContent);
-    
-    // Add click event to toggle
-    tocHeading.addEventListener('click', function() {
-      tocHeading.classList.toggle('active');
-      tocContent.classList.toggle('expanded');
-    });
-  }
-  
-  // Highlight current section in TOC as user scrolls
-  const headings = document.querySelectorAll('.post-content h2, .post-content h3');
-  const tocLinks = document.querySelectorAll('.toc a');
-  
-  if (headings.length && tocLinks.length) {
-    window.addEventListener('scroll', debounce(highlightToc, 100));
-  }
-  
-  function highlightToc() {
-    // Find the heading that's currently at the top of the viewport
-    let currentHeading;
-    
-    headings.forEach(heading => {
-      const rect = heading.getBoundingClientRect();
-      if (rect.top <= 100) { // Some offset from the top
-        currentHeading = heading;
-      }
-    });
-    
-    if (currentHeading) {
-      const id = currentHeading.id;
+  // Handle static TOC for mobile
+  const staticTocContainer = document.querySelector('.table-of-contents');
+  if (staticTocContainer) {
+    // Make TOC collapsible on mobile
+    if (window.innerWidth < 600) { // $on-palm value
+      const tocHeading = staticTocContainer.querySelector('h2');
+      const tocContent = document.createElement('div');
+      tocContent.className = 'toc-content';
       
-      // Remove active class from all TOC entries
-      document.querySelectorAll('.toc-entry').forEach(entry => {
-        entry.classList.remove('active');
+      // Move all elements after the heading into the content div
+      let nextSibling = tocHeading.nextElementSibling;
+      while (nextSibling) {
+        const currentSibling = nextSibling;
+        nextSibling = nextSibling.nextElementSibling;
+        tocContent.appendChild(currentSibling);
+      }
+      
+      staticTocContainer.appendChild(tocContent);
+      
+      // Add click event to toggle
+      tocHeading.addEventListener('click', function() {
+        tocHeading.classList.toggle('active');
+        tocContent.classList.toggle('expanded');
+      });
+    }
+  }
+  
+  // Handle floating TOC
+  const floatingToc = document.querySelector('.floating-toc');
+  if (floatingToc) {
+    // Add scroll spy functionality
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
+    const tocLinks = document.querySelectorAll('.floating-toc .toc a');
+    
+    if (headings.length && tocLinks.length) {
+      // Set up Intersection Observer for headings
+      const headingsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // Store entry information in a data attribute for later use
+          if (entry.isIntersecting) {
+            entry.target.dataset.visible = true;
+          } else {
+            delete entry.target.dataset.visible;
+          }
+          
+          // Find the heading that's currently most visible
+          const visibleHeadings = Array.from(headings).filter(h => h.dataset.visible);
+          
+          if (visibleHeadings.length > 0) {
+            // Sort visible headings by their position from the top
+            const sortedHeadings = visibleHeadings.sort((a, b) => {
+              return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+            });
+            
+            // Use the first visible heading (closest to the top)
+            updateActiveTocLink(sortedHeadings[0].id);
+          }
+        });
+      }, {
+        rootMargin: '-100px 0px -80% 0px', // Adjust based on when you want to trigger the change
+        threshold: 0
       });
       
-      // Add active class to current entry
-      const activeLink = document.querySelector(`.toc a[href="#${id}"]`);
-      if (activeLink) {
-        activeLink.closest('.toc-entry').classList.add('active');
-      }
+      // Observe all headings
+      headings.forEach(heading => {
+        headingsObserver.observe(heading);
+      });
+      
+      // Add click event to smooth scroll to sections
+      tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            // Smooth scroll to target
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Account for fixed header
+              behavior: 'smooth'
+            });
+            
+            // Update URL hash without jumping
+            history.pushState(null, null, `#${targetId}`);
+            
+            // Update active TOC link
+            updateActiveTocLink(targetId);
+          }
+        });
+      });
+    }
+  }
+  
+  // Function to update active TOC link
+  function updateActiveTocLink(id) {
+    // Remove active class from all TOC links
+    document.querySelectorAll('.floating-toc .toc a').forEach(link => {
+      link.classList.remove('active');
+    });
+    
+    // Add active class to current link
+    const activeLink = document.querySelector(`.floating-toc .toc a[href="#${id}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
     }
   }
 }

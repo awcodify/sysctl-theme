@@ -143,6 +143,10 @@
     overflow: hidden;
     box-shadow: $shadow-md;
     transition: $transition-base;
+    max-height: 450px; /* Set maximum height for consistent image sizing */
+    display: flex; /* Use flexbox to center the image vertically */
+    align-items: center;
+    justify-content: center;
     
     &:hover {
       transform: translateY(-5px);
@@ -151,7 +155,9 @@
     
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      max-height: 450px; /* Ensure image doesn't exceed container */
+      object-fit: cover; /* Ensure image covers area without distortion */
       display: block;
       border-radius: $border-radius;
       transition: $transition-base;
@@ -827,6 +833,173 @@
           }
         }
       }
+    }
+  }
+}
+
+/* Post layout with sidebar */
+.post-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $spacing-lg;
+  position: relative;
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  
+  @media (min-width: 1200px) {
+    grid-template-columns: 280px minmax(0, 1fr);
+  }
+  
+  /* Floating sidebar with TOC */
+  .post-sidebar {
+    display: none;
+    
+    @media (min-width: 1024px) {
+      display: block;
+      position: relative;
+      padding-right: $spacing-md;
+      
+      /* Add bolder divider on the right side */
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: $border-color;
+      }
+    }
+    
+    .floating-toc {
+      position: sticky;
+      top: 100px;
+      background-color: transparent;
+      padding: $spacing-md $spacing-md $spacing-md 0;
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+      
+      /* Clean scrollbar styling */
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: rgba($border-color, 0.5);
+        border-radius: 3px;
+      }
+      
+      /* Elegant heading style */
+      h2 {
+        margin-top: 0;
+        margin-bottom: $spacing-md;
+        font-size: 0.9rem;
+        color: $dark-gray;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        
+        &::after {
+          display: none;
+        }
+      }
+      
+      .toc {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        
+        a {
+          display: block;
+          padding: 6px 0;
+          color: $text-color;
+          text-decoration: none;
+          font-size: 0.9rem;
+          position: relative;
+          transition: all 0.2s ease;
+          margin-bottom: 2px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          
+          &:hover {
+            color: $primary-color;
+          }
+          
+          &.active {
+            color: $primary-color;
+            font-weight: 500;
+          }
+        }
+        
+        .toc-h2 {
+          margin-bottom: 10px;
+          
+          a {
+            font-weight: 500;
+            position: relative;
+            
+            &::before {
+              content: "";
+              position: absolute;
+              left: -15px;
+              top: 50%;
+              width: 8px;
+              height: 1px;
+              background-color: $dark-gray;
+              transition: all 0.2s ease;
+            }
+            
+            &:hover::before, &.active::before {
+              background-color: $primary-color;
+              width: 12px;
+            }
+          }
+        }
+        
+        .toc-h3 {
+          margin-left: 8px;
+          margin-bottom: 6px;
+          
+          a {
+            font-size: 0.85rem;
+            color: $dark-gray;
+            padding: 4px 0;
+          }
+        }
+        
+        .toc-h4 {
+          margin-left: 16px;
+          
+          a {
+            font-size: 0.8rem;
+            color: lighten($dark-gray, 15%);
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Mobile TOC (visible only on small screens) */
+  .table-of-contents {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+  
+  /* Main content area */
+  .post-content-wrapper {
+    min-width: 0; /* Ensure grid item can shrink below min-content width */
+    
+    @media (min-width: 1024px) {
+      padding-left: $spacing-md; /* Add padding for better spacing from divider */
     }
   }
 }
