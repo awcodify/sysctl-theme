@@ -26,14 +26,18 @@ permalink: /about/
   <h2>Features</h2>
   
   <ul>
-    <li>Dark Mode Support</li>
-    <li>Table of Contents</li>
-    <li>Code Highlighting with Copy Button</li>
-    <li>Reading Time Estimation</li>
-    <li>Responsive Images</li>
-    <li>Categories and Tags</li>
-    <li>Social Media Integration</li>
-    <li>And much more!</li>
+    <li><strong>Dark Mode Support</strong> - Toggle between light and dark themes for comfortable reading in any environment</li>
+    <li><strong>Configurable Table of Contents</strong> - Easily navigate through long articles with customizable sidebar position (left or right)</li>
+    <li><strong>Syntax Highlighting</strong> - Beautiful code highlighting with copy button functionality</li>
+    <li><strong>Reading Time Estimation</strong> - Automatically calculated reading time for each article</li>
+    <li><strong>Responsive Design</strong> - Optimized viewing experience across all devices</li>
+    <li><strong>SEO Optimization</strong> - Built-in structured data, meta tags, and sitemap generation</li>
+    <li><strong>Automatic Featured Images</strong> - CSS-generated featured images when no image is specified</li>
+    <li><strong>Configurable Hero Section</strong> - Customizable homepage hero section</li>
+    <li><strong>Categories and Tags</strong> - Comprehensive content organization system</li>
+    <li><strong>Typography Focus</strong> - Carefully selected fonts and spacing for optimal readability</li>
+    <li><strong>Social Media Integration</strong> - Easy sharing and connection with your audience</li>
+    <li><strong>Customization Options</strong> - Extensive theme configuration without modifying code</li>
   </ul>
   
   <h2>License</h2>
