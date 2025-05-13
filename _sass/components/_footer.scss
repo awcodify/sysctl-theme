@@ -14,7 +14,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, $primary-color, $secondary-color, $accent-color);
+    background: $primary-color; /* Changed from gradient to solid primary color */
   }
   
   .footer-content {
@@ -37,7 +37,7 @@
       margin-top: 0;
       font-size: 1.2rem;
       margin-bottom: $spacing-md;
-      color: $secondary-color;
+      color: $primary-color;  // Changed from $secondary-color to $primary-color
       position: relative;
       display: inline-block;
       
@@ -46,7 +46,7 @@
         display: block;
         width: 2rem;
         height: 0.15rem;
-        background: $accent-color;
+        background: $primary-color;  // Changed from $accent-color to $primary-color
         margin-top: 0.3rem;
         border-radius: 1rem;
       }
