@@ -1,0 +1,132 @@
+/* Responsive styles */
+
+/* Base responsive adjustments */
+@media (max-width: $on-palm) {
+  html {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 1.9rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .wrapper {
+    padding: 0 $spacing-sm;
+  }
+  
+  /* Adjust spacing for mobile */
+  .post-content {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: $spacing-lg;
+    }
+  }
+}
+
+/* Medium screens */
+@media (min-width: $on-palm) and (max-width: $on-laptop) {
+  .wrapper {
+    padding: 0 $spacing-md;
+  }
+}
+
+/* Home page layout adjustments */
+@media (max-width: $on-palm) {
+  .post-preview {
+    grid-template-columns: 1fr;
+    
+    .post-preview-image {
+      order: -1;
+      margin-bottom: $spacing-sm;
+    }
+  }
+}
+
+/* Responsive tables */
+@media (max-width: $on-palm) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Responsive images */
+@media (max-width: $on-palm) {
+  .post-content {
+    img {
+      margin-left: -$spacing-sm;
+      margin-right: -$spacing-sm;
+      max-width: calc(100% + #{$spacing-sm * 2});
+      width: calc(100% + #{$spacing-sm * 2});
+      border-radius: 0;
+    }
+  }
+}
+
+/* Navigation for mobile */
+@media (max-width: $on-palm) {
+  .site-nav {
+    position: relative;
+    
+    .menu-icon {
+      display: block;
+    }
+    
+    .page-link {
+      display: block;
+      padding: $spacing-xs 0;
+    }
+  }
+}
+
+/* Footer responsive adjustments */
+@media (max-width: $on-palm) {
+  .site-footer {
+    text-align: center;
+    
+    .footer-col {
+      margin-bottom: $spacing-md;
+    }
+    
+    .footer-links li, 
+    .social-links li {
+      display: inline-block;
+      margin: 0 $spacing-xs $spacing-xs 0;
+    }
+  }
+}
+
+/* Post navigation on small screens */
+@media (max-width: $on-palm) {
+  .post-navigation {
+    flex-direction: column;
+    gap: $spacing-sm;
+    
+    a {
+      text-align: center;
+      width: 100%;
+      flex: none;
+    }
+  }
+}
+
+/* Making code blocks more readable on small screens */
+@media (max-width: $on-palm) {
+  pre {
+    padding: $spacing-sm;
+    font-size: 0.85rem;
+  }
+  
+  .line-numbers pre span.line::before {
+    margin-right: $spacing-xs;
+    width: 1.2em;
+  }
+}

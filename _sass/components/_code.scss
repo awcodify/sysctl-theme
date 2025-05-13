@@ -1,0 +1,135 @@
+/* Code block styles */
+.code-block {
+  margin-bottom: $spacing-lg;
+  position: relative;
+  
+  pre {
+    margin: 0;
+    padding: $spacing-md;
+    background-color: $code-background;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    overflow-x: auto;
+    font-family: $code-font-family;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    
+    code {
+      background: none;
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+      border: none;
+      display: block;
+    }
+  }
+}
+
+/* Terminal output style */
+.language-terminal pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  border-color: #444;
+}
+
+/* Filename header for code blocks */
+.code-filename {
+  display: block;
+  background: $gray;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: $spacing-xs $spacing-sm;
+  font-family: $code-font-family;
+  font-size: 0.8rem;
+  color: darken($text-color, 10%);
+  border: 1px solid $border-color;
+  border-bottom: none;
+  
+  + pre {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: 0;
+  }
+}
+
+/* Line numbers for code blocks */
+.line-numbers {
+  pre {
+    counter-reset: line;
+    
+    span.line {
+      display: inline-block;
+      width: 100%;
+      
+      &::before {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        margin-right: $spacing-md;
+        color: $dark-gray;
+        text-align: right;
+        width: 1.5em;
+        border-right: 1px solid $border-color;
+        padding-right: $spacing-xs;
+      }
+    }
+  }
+}
+
+/* Code block with highlighted lines */
+.highlight-line {
+  background-color: rgba($primary-color, 0.1);
+  display: block;
+  margin: 0 -$spacing-md;
+  padding: 0 $spacing-md;
+}
+
+/* Commands in code blocks */
+.command-line-prompt {
+  border-right: 1px solid $border-color;
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -1px;
+  margin-right: $spacing-sm;
+  pointer-events: none;
+  user-select: none;
+  
+  > span:before {
+    color: $dark-gray;
+    content: " ";
+    display: block;
+    padding-right: 0.8em;
+  }
+  
+  > span[data-prompt]:before {
+    content: attr(data-prompt);
+  }
+}
+
+/* Copy code button */
+.copy-code-button {
+  position: absolute;
+  right: $spacing-xs;
+  top: $spacing-xs;
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  color: $dark-gray;
+  background-color: $light-gray;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  opacity: 0;
+  transition: $transition-fast;
+  z-index: 2;
+  
+  &:hover {
+    background-color: darken($light-gray, 5%);
+    color: $text-color;
+  }
+}
+
+.code-block:hover .copy-code-button {
+  opacity: 1;
+}

@@ -1,0 +1,53 @@
+// Colors
+$primary-color: #4a6baf;
+$secondary-color: #64b1f4;
+$text-color: #333333;
+$background-color: #ffffff;
+$light-gray: #f5f7fa;
+$gray: #dddddd;
+$dark-gray: #999999;
+$code-background: #f7f9fb;
+$link-color: $primary-color;
+$link-hover-color: darken($primary-color, 15%);
+$border-color: #e9ecef;
+
+// Typography
+$base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$code-font-family: 'JetBrains Mono', 'Courier New', monospace;
+$base-font-size: 18px;
+$small-font-size: 16px;
+$smaller-font-size: 14px;
+$base-line-height: 1.7;
+$heading-line-height: 1.3;
+
+// Spacing
+$spacing-unit: 30px;
+$spacing-xs: $spacing-unit * 0.25;
+$spacing-sm: $spacing-unit * 0.5;
+$spacing-md: $spacing-unit;
+$spacing-lg: $spacing-unit * 1.5;
+$spacing-xl: $spacing-unit * 2;
+
+// Layout
+$content-width: 800px;
+$on-palm: 600px;
+$on-laptop: 900px;
+$on-large: 1200px;
+
+// Border Radius
+$border-radius: 5px;
+$border-radius-sm: 3px;
+$border-radius-lg: 8px;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-fast: all 0.1s ease-in-out;
+$transition-slow: all 0.3s ease-in-out;
+
+// Dark mode colors
+$dark-background: #121212;
+$dark-surface: #1e1e1e;
+$dark-text-color: #e0e0e0;
+$dark-border-color: #333333;
+$dark-code-background: #2d2d2d;
+$dark-gray-light: #555555;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {%- seo -%}
+  
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  {%- feed_meta -%}
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/favicon/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon/favicon-32x32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/images/favicon/favicon-16x16.png" | relative_url }}">
+  <link rel="manifest" href="{{ "/assets/images/favicon/site.webmanifest" | relative_url }}">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="{{ "/assets/css/main.css" | relative_url }}" as="style">
+  <link rel="preload" href="{{ "/assets/js/main.js" | relative_url }}" as="script">
+  
+  <!-- Dark mode detection -->
+  <script>
+    // Check for saved theme preference or respect OS preference
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
+    
+    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+</head>
+
+<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %}">
+  {%- include header.html -%}
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+  
+  {%- include footer.html -%}
+  
+  <script src="{{ "/assets/js/main.js" | relative_url }}" defer></script>
+</body>
+</html>

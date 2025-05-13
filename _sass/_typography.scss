@@ -1,0 +1,142 @@
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: $heading-line-height;
+  color: darken($text-color, 5%);
+  margin-top: $spacing-lg;
+  margin-bottom: $spacing-sm;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: $spacing-md;
+}
+
+/* Emphasis and strong */
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Lead paragraph (larger, for introductions) */
+.lead {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: $spacing-lg;
+}
+
+/* Drop cap for first paragraph */
+.dropcap {
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.7;
+  padding-right: 0.2em;
+  margin-top: 0.1em;
+  font-weight: 700;
+  color: $primary-color;
+}
+
+/* Small text */
+small, .small {
+  font-size: $small-font-size;
+  color: $dark-gray;
+}
+
+/* Text utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.text-muted {
+  color: $dark-gray;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: $spacing-md;
+  margin-bottom: $spacing-md;
+  
+  li {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+dl {
+  margin-bottom: $spacing-md;
+  
+  dt {
+    font-weight: 600;
+    margin-top: $spacing-sm;
+  }
+  
+  dd {
+    margin-left: $spacing-md;
+    margin-bottom: $spacing-sm;
+  }
+}
+
+/* Inline code */
+code {
+  font-family: $code-font-family;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background-color: $code-background;
+  border-radius: $border-radius-sm;
+}
+
+/* Links in headings */
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: inherit;
+    
+    &:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+  }
+}

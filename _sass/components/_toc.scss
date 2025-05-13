@@ -1,0 +1,120 @@
+/* Table of Contents styles */
+.table-of-contents {
+  background-color: $light-gray;
+  padding: $spacing-md;
+  margin-bottom: $spacing-lg;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: $spacing-sm;
+    font-size: 1.2rem;
+  }
+  
+  .toc {
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: $spacing-sm;
+    list-style-type: none;
+    
+    /* First level */
+    > li {
+      margin-bottom: $spacing-xs;
+      position: relative;
+      
+      &::before {
+        content: "•";
+        position: absolute;
+        left: -$spacing-sm;
+        color: $primary-color;
+      }
+      
+      > a {
+        font-weight: 500;
+      }
+    }
+    
+    /* Nested TOC */
+    ul {
+      list-style-type: none;
+      padding-left: $spacing-sm;
+      margin-top: $spacing-xs;
+      margin-bottom: 0;
+      
+      li {
+        margin-bottom: $spacing-xs;
+        position: relative;
+        
+        &::before {
+          content: "◦";
+          position: absolute;
+          left: -$spacing-sm;
+          color: $dark-gray;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    a {
+      color: $text-color;
+      text-decoration: none;
+      transition: $transition-base;
+      display: inline-block;
+      line-height: 1.4;
+      
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  /* Make it sticky on larger screens */
+  @media (min-width: $on-laptop) {
+    &.sticky {
+      position: sticky;
+      top: 100px;
+    }
+  }
+}
+
+/* Collapsible TOC for mobile */
+@media (max-width: $on-palm) {
+  .table-of-contents {
+    h2 {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      &::after {
+        content: "+";
+        transition: transform 0.3s ease;
+      }
+      
+      &.active::after {
+        transform: rotate(45deg);
+      }
+    }
+    
+    .toc-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      
+      &.expanded {
+        max-height: 500px;
+      }
+    }
+  }
+}
+
+/* TOC highlighting for current section */
+.toc-entry.active > a {
+  color: $primary-color;
+  font-weight: 600;
+}

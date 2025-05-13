@@ -1,0 +1,84 @@
+# Sample configuration for Sysctl Jekyll Theme
+
+# Site settings
+name: ./sysctl.id
+title: ./sysctl.id
+email: awcodify@gmail.com
+description: >-
+  A clean, fast and SEO-friendly Jekyll blog focused on technical content and code readability.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://sysctl.id"
+twitter_username: # your Twitter username
+github_username: awcodify
+linkedin_username: # your LinkedIn username
+
+# Theme settings
+remote_theme: awcodify/sysctl-theme
+# - OR if installing as a gem -
+# theme: sysctl-theme
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Theme-specific settings
+date_format: "%b %-d, %Y" # e.g. May 5, 2025
+
+# Navigation menu
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: English
+    url: /english
+  - title: Indonesia
+    url: /bahasa-indonesia
+  - title: Tags
+    url: /tags
+  - title: Contact
+    url: /contact
+
+# Social links
+social:
+  github: awcodify
+  twitter: # your Twitter handle
+  linkedin: # your LinkedIn username
+  email: awcodify@gmail.com
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-responsive-image
+  - jekyll-minifier
+
+# SEO and analytics
+google_analytics: G-MLFFR89WJX # your Google Analytics ID
+disqus:
+  shortname: sysctl-id # your Disqus shortname
+
+# Content settings
+excerpt_separator: <!--more-->
+
+# Responsive images configuration
+responsive_image:
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 480  # [Required] Width in pixels
+      quality: 80 # [Optional] JPEG quality (default: 100)
+    - width: 800
+      quality: 80
+    - width: 1400
+      quality: 90
+
+# Jekyll Minifier settings
+jekyll-minifier:
+  compress_css: true
+  compress_javascript: true
+  exclude: ['**.min.js', '**.min.css']

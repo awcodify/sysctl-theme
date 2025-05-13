@@ -1,0 +1,118 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Focus state for accessibility */
+a:focus, button:focus, input:focus, textarea:focus, select:focus, [tabindex]:focus {
+  outline: 3px solid rgba($primary-color, 0.5);
+  outline-offset: 2px;
+}
+
+/* Improved links */
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+/* List styles */
+ul, ol {
+  margin-left: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+/* Block elements spacing */
+p, h1, h2, h3, h4, h5, h6, blockquote, pre, table, dl, figure {
+  margin-bottom: $spacing-md;
+}
+
+/* Horizontal rule */
+hr {
+  height: 1px;
+  border: 0;
+  background-color: $border-color;
+  margin: $spacing-lg 0;
+}
+
+/* Blockquote styles */
+blockquote {
+  border-left: 4px solid $primary-color;
+  padding: $spacing-sm $spacing-md;
+  background-color: $light-gray;
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+  
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: $border-radius;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  
+  th, td {
+    padding: $spacing-xs $spacing-sm;
+    border-bottom: 1px solid $border-color;
+    text-align: left;
+  }
+  
+  th {
+    background-color: $light-gray;
+    font-weight: 600;
+  }
+}
+
+/* Form elements */
+input, 
+button, 
+textarea, 
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Custom selection color */
+::selection {
+  background: rgba($primary-color, 0.3);
+  color: $text-color;
+}

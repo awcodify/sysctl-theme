@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h2 class="footer-heading">{{ site.title | escape }}</h2>
+        <p>{{ site.description | escape }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Links</h2>
+        <ul class="footer-links">
+          {%- for item in site.navigation -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Connect</h2>
+        <ul class="social-links">
+          {%- if site.social.github -%}
+          <li><a href="https://github.com/{{ site.social.github }}"><span class="icon-github">GitHub</span></a></li>
+          {%- endif -%}
+          
+          {%- if site.social.twitter -%}
+          <li><a href="https://twitter.com/{{ site.social.twitter }}"><span class="icon-twitter">Twitter</span></a></li>
+          {%- endif -%}
+          
+          {%- if site.social.linkedin -%}
+          <li><a href="https://linkedin.com/in/{{ site.social.linkedin }}"><span class="icon-linkedin">LinkedIn</span></a></li>
+          {%- endif -%}
+          
+          {%- if site.social.email -%}
+          <li><a href="mailto:{{ site.social.email }}"><span class="icon-mail">Email</span></a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All rights reserved.</p>
+      <p class="powered-by">Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a></p>
+    </div>
+  </div>
+</footer>

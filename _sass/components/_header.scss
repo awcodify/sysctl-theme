@@ -1,0 +1,146 @@
+/* Header styles */
+.site-header {
+  background-color: $background-color;
+  border-bottom: 1px solid $border-color;
+  padding: $spacing-sm 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: $transition-base;
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: $text-color;
+    
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+  
+  .page-link {
+    margin-left: $spacing-md;
+    font-weight: 500;
+    font-size: 1rem;
+    color: $text-color;
+    
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+  
+  /* Mobile menu */
+  .nav-trigger {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  .trigger {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Dark mode toggle */
+  .theme-toggle {
+    margin-left: $spacing-md;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: $dark-gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      color: $text-color;
+    }
+    
+    .theme-toggle-icon {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .sun {
+      display: none;
+    }
+    
+    .moon {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: $on-palm) {
+    position: absolute;
+    top: 100%;
+    right: $spacing-sm;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    text-align: right;
+    width: auto;
+    
+    label[for="nav-trigger"] {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 36px;
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    .menu-icon {
+      display: block;
+      width: 36px;
+      height: 26px;
+      padding-top: 10px;
+      text-align: center;
+      
+      > svg {
+        fill: $text-color;
+      }
+    }
+    
+    input ~ .trigger {
+      clear: both;
+      display: none;
+      flex-direction: column;
+      padding: $spacing-sm;
+    }
+    
+    input:checked ~ .trigger {
+      display: flex;
+    }
+    
+    .page-link {
+      display: block;
+      margin: 0 0 $spacing-sm 0;
+      padding: $spacing-xs 0;
+      line-height: 1.5;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

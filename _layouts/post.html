@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      
+      {%- if page.categories.size > 0 -%}
+      <span class="post-categories">
+        {% for category in page.categories %}
+        <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+        {% endfor %}
+      </span>
+      {%- endif -%}
+      
+      <span class="reading-time" title="Estimated read time">
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+          1 min read
+        {% else %}
+          {{ words | divided_by: 180 }} min read
+        {% endif %}
+      </span>
+    </div>
+    
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    
+    {%- if page.description -%}
+    <p class="post-description" itemprop="description">{{ page.description }}</p>
+    {%- endif -%}
+    
+    {%- if page.author -%}
+    <div class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">{{ page.author }}</span>
+    </div>
+    {%- endif -%}
+  </header>
+
+  {%- if page.image -%}
+  <div class="post-featured-image">
+    <img src="{{ '/assets/images/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
+  </div>
+  {%- endif -%}
+
+  {% if page.toc != false %}
+  <div class="table-of-contents">
+    <h2>Table of Contents</h2>
+    {% include toc.html html=content h_min=2 h_max=3 %}
+  </div>
+  {% endif %}
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.tags.size > 0 -%}
+  <div class="post-tags">
+    <h3>Tags:</h3>
+    <ul class="tag-list">
+      {%- for tag in page.tags -%}
+      <li><a href="{{ '/tags/' | append: tag | relative_url }}" class="tag">{{ tag }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+
+  <div class="post-navigation">
+    {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    {% endif %}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
