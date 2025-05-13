@@ -6,6 +6,7 @@ categories: Demo
 tags: jekyll theme demo markdown
 author: Awcodify
 image: theme-demo.jpeg
+featured: true
 ---
 
 Welcome to **Sysctl Theme** for Jekyll! This is a sample post that showcases the theme's features and styling options. If you're seeing this, you've successfully installed the theme.

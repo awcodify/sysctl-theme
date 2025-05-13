@@ -6,7 +6,6 @@ categories: Tutorial
 tags: seo search-engine-optimization jekyll theme
 author: Awcodify
 image: theme-demo-2.jpeg
-featured: true
 ---
 
 Search Engine Optimization (SEO) is crucial for ensuring your content reaches your target audience. Sysctl theme comes with powerful built-in SEO features that give your Jekyll site a competitive edge in search rankings.

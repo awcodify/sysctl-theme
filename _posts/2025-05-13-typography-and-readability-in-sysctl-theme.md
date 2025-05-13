@@ -6,7 +6,6 @@ categories: Theme
 tags: typography readability design accessibility
 author: Awcodify
 image: theme-demo.jpeg
-featured: true
 ---
 
 Typography is the foundation of any good reading experience. This post explores how Sysctl theme implements typography best practices to create optimal readability for technical content.

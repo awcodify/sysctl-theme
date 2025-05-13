@@ -6,7 +6,6 @@ categories: Theme
 tags: jekyll sysctl advanced-features customization
 author: Awcodify
 image: theme-demo-2.jpeg
-featured: true
 ---
 
 Sysctl theme offers many advanced features beyond the basics. This guide explores the powerful capabilities that make Sysctl an excellent choice for technical blogs, documentation sites, and developer portfolios.
