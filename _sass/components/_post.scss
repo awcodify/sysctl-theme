@@ -135,6 +135,158 @@
     }
   }
   
+  /* CSS-only featured images */
+  .css-featured-image {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Pattern 0 - Diagonal stripes */
+    &[data-pattern="0"] {
+      background: linear-gradient(135deg, $primary-color, $secondary-color);
+      background-size: 100% 100%;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 20px,
+          rgba(255, 255, 255, 0.1) 20px,
+          rgba(255, 255, 255, 0.1) 40px
+        );
+      }
+    }
+    
+    /* Pattern 1 - Radial gradient */
+    &[data-pattern="1"] {
+      background: radial-gradient(circle at 30% 40%, $secondary-color, $accent-color);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at 70% 60%,
+          rgba(255, 255, 255, 0.2) 0%,
+          transparent 30%
+        );
+      }
+    }
+    
+    /* Pattern 2 - Geometric shapes */
+    &[data-pattern="2"] {
+      background: linear-gradient(to right, $primary-color, $accent-color);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+          linear-gradient(45deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%),
+          linear-gradient(-45deg, transparent 48%, rgba(255, 255, 255, 0.1) 49%, rgba(255, 255, 255, 0.1) 51%, transparent 52%);
+        background-size: 60px 60px;
+      }
+    }
+    
+    /* Pattern 3 - Waves */
+    &[data-pattern="3"] {
+      background: linear-gradient(to bottom, $secondary-color, $accent-color);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: 
+          radial-gradient(circle at 100% 50%, transparent 20%, rgba(255, 255, 255, 0.1) 21%, rgba(255, 255, 255, 0.1) 34%, transparent 35%, transparent),
+          radial-gradient(circle at 0% 50%, transparent 20%, rgba(255, 255, 255, 0.1) 21%, rgba(255, 255, 255, 0.1) 34%, transparent 35%, transparent);
+        background-size: 60px 120px;
+      }
+    }
+    
+    /* Pattern 4 - Grid */
+    &[data-pattern="4"] {
+      background: linear-gradient(135deg, $accent-color, $primary-color);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+    }
+    
+    /* Pattern 5 - Dots */
+    &[data-pattern="5"] {
+      background: linear-gradient(45deg, $primary-color, $secondary-color);
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px);
+        background-size: 20px 20px;
+      }
+    }
+    
+    .css-image-title {
+      font-size: 10rem;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.2);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      line-height: 1;
+      user-select: none;
+      z-index: 1;
+      position: relative;
+      transition: $transition-base;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+      }
+    }
+    
+    &:hover {
+      .css-image-title {
+        color: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05) translateY(-5px);
+      }
+    }
+  }
+  
   /* Post content */
   .post-content {
     margin-bottom: $spacing-lg;

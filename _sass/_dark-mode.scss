@@ -492,6 +492,58 @@ html.dark-mode {
     background: rgba(lighten($accent-color, 15%), 0.3);
     color: $dark-text-color;
   }
+
+  /* CSS-only featured images in dark mode */
+  .css-featured-image {
+    /* Pattern 0 - Diagonal stripes */
+    &[data-pattern="0"] {
+      background: linear-gradient(135deg, lighten($primary-color, 10%), lighten($secondary-color, 10%));
+      
+      &::before {
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 20px,
+          rgba(255, 255, 255, 0.1) 20px,
+          rgba(255, 255, 255, 0.1) 40px
+        );
+      }
+    }
+    
+    /* Pattern 1 - Radial gradient */
+    &[data-pattern="1"] {
+      background: radial-gradient(circle at 30% 40%, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+    }
+    
+    /* Pattern 2 - Geometric shapes */
+    &[data-pattern="2"] {
+      background: linear-gradient(to right, lighten($primary-color, 10%), lighten($accent-color, 10%));
+    }
+    
+    /* Pattern 3 - Waves */
+    &[data-pattern="3"] {
+      background: linear-gradient(to bottom, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+    }
+    
+    /* Pattern 4 - Grid */
+    &[data-pattern="4"] {
+      background: linear-gradient(135deg, lighten($accent-color, 10%), lighten($primary-color, 10%));
+    }
+    
+    /* Pattern 5 - Dots */
+    &[data-pattern="5"] {
+      background: linear-gradient(45deg, lighten($primary-color, 10%), lighten($secondary-color, 10%));
+    }
+    
+    .css-image-title {
+      color: rgba(255, 255, 255, 0.2);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      
+      &::after {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
 }
 
 /* Transition for smooth mode switching */

@@ -5,7 +5,7 @@ layout: default
 
   <header class="post-header">
     <div class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      <time class="dt-published post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
@@ -42,9 +42,28 @@ layout: default
   </header>
 
   {%- if page.image -%}
-  <div class="post-featured-image">
-    <img src="{{ '/assets/images/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
-  </div>
+    {% assign image_path = '/assets/images/' | append: page.image | relative_url %}
+    {% assign img_exists = site.static_files | where: "path", image_path | first %}
+    
+    {% if img_exists %}
+    <div class="post-featured-image">
+      <img src="{{ image_path }}" alt="{{ page.title }}" />
+    </div>
+    {% else %}
+    <!-- Use CSS-only featured image when the actual image file is missing -->
+    <div class="post-featured-image css-featured-image" 
+         data-pattern="{{ page.title | size | modulo: 6 }}" 
+         data-title="{{ page.title | slice: 0 | upcase }}">
+      <div class="css-image-title">{{ page.title | slice: 0 | upcase }}</div>
+    </div>
+    {% endif %}
+  {% else %}
+    <!-- Generate CSS featured image for posts without specified images -->
+    <div class="post-featured-image css-featured-image" 
+         data-pattern="{{ page.title | size | modulo: 6 }}" 
+         data-title="{{ page.title | slice: 0 | upcase }}">
+      <div class="css-image-title">{{ page.title | slice: 0 | upcase }}</div>
+    </div>
   {%- endif -%}
 
   {% if page.toc != false %}
@@ -71,10 +90,16 @@ layout: default
 
   <div class="post-navigation">
     {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    <a class="prev" href="{{page.previous.url}}">
+      <span class="nav-label">Previous Post</span>
+      <span class="post-title">{{page.previous.title}}</span>
+    </a>
     {% endif %}
     {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    <a class="next" href="{{page.next.url}}">
+      <span class="nav-label">Next Post</span>
+      <span class="post-title">{{page.next.title}}</span>
+    </a>
     {% endif %}
   </div>
 
