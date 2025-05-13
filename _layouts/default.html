@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" 
+      {% if site.dark_mode.enabled == false %}data-dark-mode-enabled="false"{% else %}data-dark-mode-enabled="true"{% endif %}
+      {% if site.dark_mode.default %}data-dark-mode-default="true"{% else %}data-dark-mode-default="false"{% endif %}>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,12 +28,32 @@
   
   <!-- Dark mode detection -->
   <script>
-    // Check for saved theme preference or respect OS preference
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const storedTheme = localStorage.getItem('theme');
+    // Get configuration from data attributes
+    const html = document.documentElement;
+    const darkModeEnabled = html.getAttribute('data-dark-mode-enabled') === 'true';
     
-    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-      document.documentElement.classList.add('dark-mode');
+    if (!darkModeEnabled) {
+      // If dark mode is disabled in config, force light mode
+      // This will override any user preference or OS setting
+      html.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    } else {
+      // Dark mode is enabled in config, check other preferences
+      const siteDefaultDark = html.getAttribute('data-dark-mode-default') === 'true';
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const storedTheme = localStorage.getItem('theme');
+      
+      if (storedTheme === 'dark' || (!storedTheme && siteDefaultDark)) {
+        // Apply dark mode if:
+        // 1. User explicitly chose dark mode in the past OR
+        // 2. No stored preference AND site default is dark
+        html.classList.add('dark-mode');
+      } else if (storedTheme === 'light' || (!storedTheme && !siteDefaultDark)) {
+        // Apply light mode if:
+        // 1. User explicitly chose light mode in the past OR
+        // 2. No stored preference AND site default is light
+        html.classList.remove('dark-mode');
+      }
     }
   </script>
 </head>

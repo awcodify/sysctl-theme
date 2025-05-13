@@ -22,8 +22,23 @@ function initDarkMode() {
   const themeToggle = document.querySelector('.theme-toggle');
   if (!themeToggle) return;
   
+  // Get configuration from data attributes
+  const html = document.documentElement;
+  const darkModeEnabled = html.getAttribute('data-dark-mode-enabled') === 'true';
+  
+  // If dark mode is completely disabled, ensure light mode is always applied
+  if (!darkModeEnabled) {
+    html.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  }
+  
   themeToggle.addEventListener('click', function() {
-    const html = document.documentElement;
+    // If dark mode is completely disabled, don't allow toggling to dark mode
+    if (!darkModeEnabled) {
+      html.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+      return;
+    }
     
     if (html.classList.contains('dark-mode')) {
       html.classList.remove('dark-mode');

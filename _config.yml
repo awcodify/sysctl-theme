@@ -27,6 +27,11 @@ paginate_path: "/page/:num/"
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
 toc_position: right # Options: 'left', 'right' (default)
 
+# Dark mode configuration
+dark_mode:
+  enabled: true   # If set to false, the toggle button will be hidden
+  default: true  # If true, dark mode will be the default theme
+
 # Homepage configuration
 homepage:
   # Hero section configuration
