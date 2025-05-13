@@ -445,6 +445,25 @@ html.dark-mode {
     }
   }
   
+  /* Homepage elements in dark mode */
+  .featured-card, .post-preview {
+    .card-title, h3 {
+      a {
+        color: lighten($dark-text-color, 15%) !important; /* Make card titles lighter and more visible */
+        
+        &:hover {
+          color: lighten($primary-color, 20%) !important; /* Even lighter hover state */
+        }
+      }
+    }
+    
+    .card-content {
+      .card-title {
+        color: lighten($dark-text-color, 15%); /* Ensure the title itself is visible */
+      }
+    }
+  }
+  
   /* Post layout in dark mode */
   .post-layout {
     @media (min-width: 1024px) {
