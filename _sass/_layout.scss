@@ -1,9 +1,10 @@
 /* Layout styles */
 .wrapper {
-  max-width: $content-width;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 $spacing-md;
   flex: 1;
+  width: 100%;
 }
 
 /* Site content */
