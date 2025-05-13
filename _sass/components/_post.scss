@@ -845,11 +845,47 @@
   position: relative;
   
   @media (min-width: 1024px) {
-    grid-template-columns: 250px minmax(0, 1fr);
+    /* Right sidebar (default) */
+    &.sidebar-right {
+      grid-template-columns: minmax(0, 1fr) 250px;
+      
+      .post-sidebar {
+        order: 2;
+        border-left: 2px solid $border-color;
+        padding-left: $spacing-md;
+      }
+      
+      .post-content-wrapper {
+        order: 1;
+        padding-right: $spacing-md;
+      }
+    }
+    
+    /* Left sidebar */
+    &.sidebar-left {
+      grid-template-columns: 250px minmax(0, 1fr);
+      
+      .post-sidebar {
+        order: 1;
+        border-right: 2px solid $border-color;
+        padding-right: $spacing-md;
+      }
+      
+      .post-content-wrapper {
+        order: 2;
+        padding-left: $spacing-md;
+      }
+    }
   }
   
   @media (min-width: 1200px) {
-    grid-template-columns: 300px minmax(0, 1fr);
+    &.sidebar-right {
+      grid-template-columns: minmax(0, 1fr) 300px;
+    }
+    
+    &.sidebar-left {
+      grid-template-columns: 300px minmax(0, 1fr);
+    }
   }
   
   /* Floating sidebar with TOC */
@@ -859,27 +895,13 @@
     @media (min-width: 1024px) {
       display: block;
       position: relative;
-      padding-right: $spacing-md;
-      
-      /* Removing the divider that was causing the extra line */
-      /*
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background-color: $border-color;
-      }
-      */
     }
     
     .floating-toc {
       position: sticky;
       top: 100px;
       background-color: transparent;
-      padding: $spacing-md $spacing-md $spacing-md 0;
+      padding: $spacing-md 0;
       max-height: calc(100vh - 150px);
       overflow-y: auto;
       
@@ -999,9 +1021,5 @@
   /* Main content area */
   .post-content-wrapper {
     min-width: 0; /* Ensure grid item can shrink below min-content width */
-    
-    @media (min-width: 1024px) {
-      padding-left: $spacing-md; /* Add padding for better spacing from divider */
-    }
   }
 }

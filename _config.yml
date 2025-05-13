@@ -25,6 +25,7 @@ paginate_path: "/page/:num/"
 
 # Theme-specific settings
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
+toc_position: right # Options: 'left', 'right' (default)
 
 # Navigation menu
 navigation:

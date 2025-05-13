@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign sidebar_pos = site.toc_position | default: "right" %}
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -68,7 +69,7 @@ layout: default
     </div>
   {%- endif -%}
 
-  <div class="post-layout">
+  <div class="post-layout {% if sidebar_pos == 'left' %}sidebar-left{% else %}sidebar-right{% endif %}">
     {% if page.toc != false %}
     <aside class="post-sidebar">
       <div class="floating-toc">
