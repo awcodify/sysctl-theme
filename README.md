@@ -1,24 +1,21 @@
 # Sysctl Theme for Jekyll
 
-A clean, fast, and SEO-friendly Jekyll theme optimized for technical blogs and documentation sites. This theme prioritizes readability, performance, and responsive design.
+A clean, modern Jekyll theme optimized for technical blogs and documentation sites. This theme prioritizes readability, performance, and responsive design.
 
-![Sysctl Theme Screenshot](screenshot.png)
+![Sysctl Theme Screenshot](assets/images/ss-sysctl-theme.png)
 
 ## Features
 
-- **Clean & Flat Design** - Minimal, distraction-free reading experience
+- **Clean & Modern Design** - Minimal, distraction-free reading experience
 - **Responsive Layout** - Optimized for all devices from mobile to desktop
-- **Dark Mode Support** - Automatic detection with manual toggle option
-- **Code Highlighting** - Beautiful syntax highlighting with copy button
+- **Dark Mode Support** - Built-in dark mode toggle option
+- **Code Highlighting** - Beautiful syntax highlighting for technical content
 - **Table of Contents** - Automatically generated for longer articles
 - **SEO Optimized** - Built-in support for meta tags and structured data
-- **Performance Focused** - Optimized assets and minimal dependencies
+- **Performance Focused** - Fast loading times with minimal dependencies
 - **Reading Time** - Automatic reading time estimation for each post
-- **Multilingual Support** - Ready for content in multiple languages
+- **Featured Posts** - Highlight your best content on the homepage
 - **Categories & Tags** - Organized content structure
-- **Disqus Comments** - Ready to integrate with Disqus
-- **Google Analytics** - Easy integration with Google Analytics
-- **Social Media Integration** - Share your content on social media
 
 ## Installation
 
@@ -89,8 +86,8 @@ navigation:
     url: /
   - title: About
     url: /about
-  - title: Blog
-    url: /blog
+  - title: Articles
+    url: /articles
   - title: Tags
     url: /tags
   - title: Contact
@@ -109,9 +106,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-
-# Content settings
-excerpt_separator: <!--more-->
 ```
 
 ### Creating Posts
@@ -125,50 +119,15 @@ title: "Your Post Title"
 description: "A brief description of your post for SEO and previews."
 categories: Category
 tags: tag1 tag2 tag3
-author: Your Name
-image: featured-image.jpg
+image: path/to/featured-image.jpg
 ---
 
-Your introduction paragraph goes here. This will be shown in post previews.
-<!--more-->
-
-The rest of your content goes here...
+Your content goes here...
 ```
 
-### Creating Pages
+### Featured Images
 
-Create a new markdown file in the root directory or in a subdirectory:
-
-```markdown
----
-layout: page
-title: About
-permalink: /about/
----
-
-Content for your about page goes here...
-```
-
-### Code Blocks
-
-Use the standard markdown code blocks with language specification:
-
-````markdown
-```javascript
-const greeting = "Hello, world!";
-console.log(greeting);
-```
-````
-
-To add a filename to your code block, use this format:
-
-````markdown
-<div class="code-filename">example.js</div>
-```javascript
-const greeting = "Hello, world!";
-console.log(greeting);
-```
-````
+For best results, use featured images in your posts. The recommended image size is 1200×630 pixels for optimal display on both the homepage and social media shares.
 
 ### Table of Contents
 
@@ -178,41 +137,13 @@ The table of contents is automatically generated for posts. If you want to disab
 
 ### Colors and Typography
 
-You can override the default colors and typography by creating a `_sass/_custom.scss` file in your site and importing it in your `assets/css/main.scss`:
+You can override the default colors and typography by creating a `_sass/_custom.scss` file in your site and importing it in your `assets/css/main.scss`.
 
-```scss
----
----
+## Important Notes
 
-// Import the theme styles
-@import "variables";
-@import "base";
-@import "layout";
-@import "typography";
-@import "syntax-highlighting";
-@import "components/header";
-@import "components/footer";
-@import "components/post";
-@import "components/code";
-@import "components/toc";
-@import "utilities";
-@import "responsive";
-@import "dark-mode";
-
-// Import your custom styles
-@import "custom";
-```
-
-Then in your `_sass/_custom.scss` file, you can override any of the theme's variables:
-
-```scss
-// Override primary color
-$primary-color: #007bff;
-
-// Override fonts
-$base-font-family: 'Roboto', sans-serif;
-$code-font-family: 'Fira Code', monospace;
-```
+- This theme requires Jekyll 4.2 or higher
+- For best performance, optimize your images before adding them to your site
+- The theme includes built-in dark mode that respects user system preferences
 
 ## License
 
