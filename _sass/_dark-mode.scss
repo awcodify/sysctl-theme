@@ -391,20 +391,27 @@ html.dark-mode {
     
     /* Post tags */
     .post-tags {
-      background-color: rgba($dark-surface, 0.5);
+      background-color: rgba($dark-background, 0.8); /* Darker background */
+      border: 1px solid $dark-border-color; /* Adding border for definition */
+      box-shadow: $shadow-sm;
       
       h3 {
         color: lighten($secondary-color, 15%);
       }
       
-      .tag {
-        background-color: rgba(lighten($accent-color, 15%), 0.1);
-        color: lighten($accent-color, 15%);
-        border: 1px solid rgba(lighten($accent-color, 15%), 0.2);
-        
-        &:hover {
-          background-color: lighten($accent-color, 15%);
-          color: $dark-background;
+      .tag-list {
+        .tag {
+          background-color: $dark-surface; /* Darker tag background */
+          color: lighten($accent-color, 15%);
+          border: 1px solid rgba(lighten($accent-color, 15%), 0.2);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          
+          &:hover {
+            background-color: lighten($accent-color, 15%);
+            color: $dark-background;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          }
         }
       }
     }
@@ -412,9 +419,10 @@ html.dark-mode {
     /* Post navigation */
     .post-navigation {
       a {
-        background: linear-gradient(135deg, rgba($dark-surface, 0.5), rgba($dark-background, 0.8));
+        background: $dark-surface; /* Solid darker background instead of gradient */
         color: $dark-text-color;
-        border-color: $dark-border-color;
+        border: 1px solid $dark-border-color;
+        box-shadow: $shadow-sm;
         
         .nav-label {
           color: lighten($secondary-color, 15%);
@@ -425,39 +433,13 @@ html.dark-mode {
         }
         
         &:hover {
-          background: linear-gradient(135deg, rgba(lighten($dark-surface, 5%), 0.5), rgba(lighten($dark-background, 5%), 0.8));
+          background: lighten($dark-surface, 5%); /* Slightly lighter on hover */
+          transform: translateY(-2px);
+          box-shadow: $shadow-md;
         }
-      }
-    }
-    
-    /* Related posts */
-    .related-posts {
-      border-color: $dark-border-color;
-      
-      h3 {
-        color: lighten($secondary-color, 15%);
         
-        &::after {
-          background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
-        }
-      }
-      
-      .related-post {
-        background-color: rgba($dark-surface, 0.3);
-        border-color: $dark-border-color;
-        
-        .related-post-content {
-          .related-post-title a {
-            color: $dark-text-color;
-            
-            &:hover {
-              color: lighten($primary-color, 15%);
-            }
-          }
-          
-          .related-post-meta {
-            color: darken($dark-text-color, 20%);
-          }
+        &.prev::before, &.next::before {
+          color: lighten($secondary-color, 15%);
         }
       }
     }

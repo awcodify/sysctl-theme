@@ -601,7 +601,8 @@
     margin-top: $spacing-lg;
     padding: $spacing-md;
     border-radius: $border-radius;
-    background-color: rgba($light-gray, 0.5);
+    border: 1px solid darken($border-color, 10%);
+    box-shadow: $shadow-sm;
     
     h3 {
       font-size: 1.1rem;
@@ -624,14 +625,15 @@
       
       .tag {
         display: inline-block;
-        background-color: rgba($accent-color, 0.1);
-        color: $accent-color;
+        background-color: rgba($accent-color, 0.15); /* Slightly increased opacity */
+        color: darken($accent-color, 10%); /* Darker text color for better contrast */
         padding: 5px 12px;
         border-radius: $border-radius;
         font-size: $smaller-font-size;
         text-decoration: none;
         transition: $transition-base;
-        border: 1px solid rgba($accent-color, 0.2);
+        border: 1px solid rgba($accent-color, 0.3); /* Slightly darker border */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         
         &:hover {
           background-color: $accent-color;
@@ -655,7 +657,7 @@
     a {
       flex: 0 0 48%;
       padding: $spacing-md;
-      background: linear-gradient(135deg, rgba($light-gray, 0.5), rgba($background-color, 0.8));
+      background: rgba($gray, 0.7); /* Darker solid background instead of gradient */
       border-radius: $border-radius;
       text-decoration: none;
       color: $text-color;
@@ -672,6 +674,7 @@
         letter-spacing: 1px;
         color: $secondary-color;
         margin-bottom: $spacing-xs;
+        font-weight: 600;
       }
       
       .post-title {
@@ -692,6 +695,7 @@
       }
       
       &:hover {
+        background: rgba($gray, 0.9); /* Even darker on hover */
         transform: translateY(-3px);
         box-shadow: $shadow-md;
         
