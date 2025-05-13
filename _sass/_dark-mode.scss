@@ -455,6 +455,41 @@ html.dark-mode {
         }
       }
     }
+    
+    /* Floating TOC in dark mode */
+    .post-sidebar {
+      .floating-toc {
+        h2 {
+          color: lighten($secondary-color, 15%);
+        }
+        
+        .toc {
+          a {
+            color: $dark-text-color;
+            
+            &:hover {
+              color: lighten($primary-color, 15%);
+              border-left-color: rgba(lighten($primary-color, 15%), 0.4);
+            }
+            
+            &.active {
+              color: lighten($primary-color, 15%);
+              border-left-color: lighten($primary-color, 15%);
+            }
+          }
+          
+          .toc-level-2 > a {
+            color: $dark-text-color;
+            font-weight: 500;
+          }
+          
+          .toc-level-3 > a {
+            color: darken($dark-text-color, 15%);
+            opacity: 0.9;
+          }
+        }
+      }
+    }
   }
   
   /* Code blocks */

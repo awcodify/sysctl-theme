@@ -152,7 +152,7 @@
       border-left: 1px solid transparent;
       padding-left: 5px;
       margin-bottom: 2px;
-      color: $secondary-color; /* Exactly match the header color */
+      color: $text-color; /* Changed from $secondary-color to $text-color for better visibility */
       font-weight: 400;
       
       &:hover {
@@ -169,13 +169,13 @@
     .toc-level-2 > a {
       font-weight: 500;
       font-size: 0.55rem;
-      color: $secondary-color; /* Ensure parent items match header color */
+      color: $text-color; /* Changed from $secondary-color to $text-color for better visibility */
     }
     
     .toc-level-3 > a {
       font-size: 0.5rem;
       padding-left: 7px;
-      color: $secondary-color; /* Ensure child items match header color */
+      color: $text-color; /* Changed from $secondary-color to $text-color for better visibility */
       opacity: 0.9; /* Slightly more transparent for hierarchy */
     }
     
@@ -190,7 +190,7 @@
     margin-top: 0;
     margin-bottom: $spacing-xs;
     font-size: 0.6rem;
-    color: $secondary-color; /* Confirm header color */
+    color: $primary-color; /* Changed from $secondary-color to $primary-color for better visibility and distinction */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 600;
