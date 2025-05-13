@@ -27,19 +27,41 @@ paginate_path: "/page/:num/"
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
 toc_position: right # Options: 'left', 'right' (default)
 
-# Hero section configuration
-hero:
-  enabled: true
-  title: "Welcome to Sysctl Theme"
-  subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
-  image: "theme-demo.jpeg"
-  buttons:
-    - label: "Learn More"
-      url: "/about/"
-      primary: true
-    - label: "GitHub"
-      url: "https://github.com/awcodify/sysctl-theme"
-      primary: false
+# Homepage configuration
+homepage:
+  # Hero section configuration
+  hero:
+    enabled: true
+    title: "Welcome to Sysctl Theme"
+    subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
+    image: "theme-demo.jpeg"
+    buttons:
+      - label: "Learn More"
+        url: "/about/"
+        primary: true
+      - label: "GitHub"
+        url: "https://github.com/awcodify/sysctl-theme"
+        primary: false
+  
+  # About section configuration for sidebar
+  about_widget:
+    enabled: true
+    title: "About"
+    content: "A modern Jekyll theme perfect for tech blogs, documentation sites, and personal portfolios."
+    link_text: "More about Sysctl →"
+    link_url: "/about/"
+    
+  # Featured posts settings
+  featured_posts:
+    enabled: true
+    title: "Featured Posts"
+    limit: 3
+    
+  # Latest articles settings
+  latest_articles:
+    enabled: true
+    title: "Latest Articles"
+    excerpt_length: 30
 
 # Navigation menu
 navigation:

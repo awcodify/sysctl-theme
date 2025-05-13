@@ -4,19 +4,19 @@ layout: default
 
 <div class="home">
   <!-- Hero Section -->
-  {% if site.hero.enabled %}
+  {% if site.homepage.hero.enabled %}
   <section class="hero-section">
     <div class="hero-content">
-      <h1 class="hero-title">{{ site.hero.title }}</h1>
-      <p class="hero-subtitle">{{ site.hero.subtitle }}</p>
+      <h1 class="hero-title">{{ site.homepage.hero.title }}</h1>
+      <p class="hero-subtitle">{{ site.homepage.hero.subtitle }}</p>
       <div class="hero-buttons">
-        {% for button in site.hero.buttons %}
+        {% for button in site.homepage.hero.buttons %}
           <a href="{{ button.url | relative_url }}" class="btn {% if button.primary %}btn-primary{% else %}btn-secondary{% endif %}">{{ button.label }}</a>
         {% endfor %}
       </div>
     </div>
     <div class="hero-image">
-      <img src="{{ '/assets/images/' | append: site.hero.image | relative_url }}" alt="{{ site.hero.title }}">
+      <img src="{{ '/assets/images/' | append: site.homepage.hero.image | relative_url }}" alt="{{ site.homepage.hero.title }}">
     </div>
   </section>
   {% endif %}
@@ -26,11 +26,13 @@ layout: default
     <!-- Main Content -->
     <div class="main-content">
       <!-- Featured Posts Section -->
+      {% if site.homepage.featured_posts.enabled %}
       <section class="featured-posts">
-        <h2 class="section-heading">Featured Posts</h2>
+        <h2 class="section-heading">{{ site.homepage.featured_posts.title }}</h2>
         <div class="featured-grid">
           {% assign featured_posts = site.posts | where: "featured", true %}
-          {% for post in featured_posts limit:3 %}
+          {% assign limit = site.homepage.featured_posts.limit | default: 3 %}
+          {% for post in featured_posts limit:limit %}
             <div class="featured-card">
               {% if post.image %}
                 <div class="card-image">
@@ -49,10 +51,12 @@ layout: default
           {% endfor %}
         </div>
       </section>
+      {% endif %}
 
       <!-- Latest Articles -->
+      {% if site.homepage.latest_articles.enabled %}
       <section class="latest-articles">
-        <h2 class="section-heading">Latest Articles</h2>
+        <h2 class="section-heading">{{ site.homepage.latest_articles.title }}</h2>
         <ul class="post-list">
           {% for post in site.posts %}
             {% unless post.featured %}
@@ -75,7 +79,8 @@ layout: default
                   </h3>
                   
                   <p class="post-excerpt">
-                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    {% assign excerpt_length = site.homepage.latest_articles.excerpt_length | default: 30 %}
+                    {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
                   </p>
                   
                   <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
@@ -108,16 +113,19 @@ layout: default
         </div>
         {% endif %}
       </section>
+      {% endif %}
     </div>
 
     <!-- Sidebar -->
     <aside class="sidebar">
       <!-- About Widget -->
+      {% if site.homepage.about_widget.enabled %}
       <div class="sidebar-widget about-widget">
-        <h3 class="widget-title">About</h3>
-        <p>A modern Jekyll theme perfect for tech blogs, documentation sites, and personal portfolios.</p>
-        <a href="/about/" class="sidebar-link">More about Sysctl →</a>
+        <h3 class="widget-title">{{ site.homepage.about_widget.title }}</h3>
+        <p>{{ site.homepage.about_widget.content }}</p>
+        <a href="{{ site.homepage.about_widget.link_url | relative_url }}" class="sidebar-link">{{ site.homepage.about_widget.link_text }}</a>
       </div>
+      {% endif %}
 
       <!-- Categories Widget -->
       <div class="sidebar-widget categories-widget">
