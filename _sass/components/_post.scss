@@ -33,6 +33,7 @@
       border-left: 3px solid rgba($accent-color, 0.5);
     }
     
+    /* Post header meta section */
     .post-meta {
       font-size: $small-font-size;
       color: $dark-gray;
@@ -42,12 +43,32 @@
       gap: $spacing-sm;
       margin-bottom: $spacing-md;
       
-      .post-date {
-        padding: $spacing-xs $spacing-sm;
+      .post-date-author {
         background-color: rgba($primary-color, 0.1);
         border-radius: $border-radius;
-        color: $primary-color;
-        font-weight: 500;
+        padding: 4px 12px;
+        display: inline-flex;
+        align-items: center;
+        
+        .post-date {
+          color: $primary-color;
+          font-weight: 500;
+          background-color: transparent;
+          padding: 0;
+        }
+        
+        .separator {
+          color: rgba($primary-color, 0.6);
+          margin: 0 6px;
+          font-weight: 300;
+        }
+        
+        .post-author {
+          color: $secondary-color;
+          font-weight: 500;
+          background-color: transparent;
+          padding: 0;
+        }
       }
       
       .post-categories {
@@ -56,9 +77,11 @@
         gap: 5px;
         
         a {
-          display: inline-block;
+          display: inline-flex;
+          align-items: center;
+          height: 28px;
           background: linear-gradient(to right, rgba($secondary-color, 0.1), rgba($accent-color, 0.1));
-          padding: 4px 10px;
+          padding: 0 10px;
           border-radius: $border-radius;
           font-size: $smaller-font-size;
           color: $secondary-color;
@@ -76,35 +99,17 @@
       }
       
       .reading-time {
-        padding: $spacing-xs $spacing-sm;
-        border-left: 1px solid $border-color;
-        display: flex;
+        background-color: rgba($light-gray, 0.5);
+        padding: 4px 8px;
+        border-radius: $border-radius;
+        display: inline-flex;
         align-items: center;
+        height: 28px;
         
         &::before {
           content: '⏱️';
           margin-right: 5px;
         }
-      }
-    }
-    
-    .post-author {
-      margin-top: $spacing-sm;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      
-      .author-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-right: $spacing-sm;
-        border: 2px solid $secondary-color;
-      }
-      
-      .author-name {
-        font-weight: 600;
-        color: $text-color;
       }
     }
   }

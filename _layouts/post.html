@@ -5,10 +5,18 @@ layout: default
 
   <header class="post-header">
     <div class="post-meta">
-      <time class="dt-published post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
+      <span class="post-date-author">
+        <time class="dt-published post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        {%- if page.author -%}
+        <span class="separator">|</span>
+        <span class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ page.author }}</span>
+        </span>
+        {%- endif -%}
+      </span>
       
       {%- if page.categories.size > 0 -%}
       <span class="post-categories">
@@ -32,12 +40,6 @@ layout: default
     
     {%- if page.description -%}
     <p class="post-description" itemprop="description">{{ page.description }}</p>
-    {%- endif -%}
-    
-    {%- if page.author -%}
-    <div class="post-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">{{ page.author }}</span>
-    </div>
     {%- endif -%}
   </header>
 
