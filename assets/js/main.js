@@ -71,7 +71,7 @@ function initTableOfContents() {
   if (floatingToc) {
     // Add scroll spy functionality
     const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
-    const tocLinks = document.querySelectorAll('.floating-toc .toc a');
+    const tocLinks = document.querySelectorAll('.floating-toc .toc a, .table-of-contents .toc a');
     
     if (headings.length && tocLinks.length) {
       // Set up Intersection Observer for headings
@@ -116,9 +116,14 @@ function initTableOfContents() {
           const targetElement = document.getElementById(targetId);
           
           if (targetElement) {
-            // Smooth scroll to target
+            // Calculate proper scroll position with offset
+            const headerOffset = 100; // Adjust this value based on your header height and desired spacing
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            // Smooth scroll to target with proper offset
             window.scrollTo({
-              top: targetElement.offsetTop - 80, // Account for fixed header
+              top: offsetPosition - 50,
               behavior: 'smooth'
             });
             
