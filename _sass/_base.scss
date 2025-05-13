@@ -26,19 +26,40 @@ body {
 
 /* Focus state for accessibility */
 a:focus, button:focus, input:focus, textarea:focus, select:focus, [tabindex]:focus {
-  outline: 3px solid rgba($primary-color, 0.5);
+  outline: 3px solid rgba($primary-color, 0.4);
   outline-offset: 2px;
 }
 
-/* Improved links */
+/* Modern links */
 a {
   color: $link-color;
   text-decoration: none;
+  position: relative;
   transition: $transition-base;
   
   &:hover {
     color: $link-hover-color;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+  
+  &.underline-effect {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
 
@@ -46,6 +67,10 @@ a {
 ul, ol {
   margin-left: $spacing-md;
   margin-bottom: $spacing-md;
+  
+  li {
+    margin-bottom: $spacing-xs;
+  }
 }
 
 /* Block elements spacing */
@@ -61,36 +86,57 @@ hr {
   margin: $spacing-lg 0;
 }
 
-/* Blockquote styles */
+/* Modern blockquote styles */
 blockquote {
-  border-left: 4px solid $primary-color;
-  padding: $spacing-sm $spacing-md;
+  border-left: 4px solid $secondary-color;
+  padding: $spacing-md;
   background-color: $light-gray;
   margin-left: 0;
   margin-right: 0;
   font-style: italic;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-sm;
   
   > :last-child {
     margin-bottom: 0;
   }
+  
+  cite {
+    display: block;
+    color: $dark-gray;
+    font-size: $smaller-font-size;
+    margin-top: $spacing-sm;
+    font-style: normal;
+  }
 }
 
-/* Images */
+/* Images with subtle shadow */
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
   border-radius: $border-radius;
+  box-shadow: $shadow-sm;
+  transition: $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
 }
 
-/* Tables */
+/* Modern tables */
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
   border-spacing: 0;
+  margin-bottom: $spacing-md;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
   
   th, td {
-    padding: $spacing-xs $spacing-sm;
+    padding: $spacing-sm $spacing-md;
     border-bottom: 1px solid $border-color;
     text-align: left;
   }
@@ -98,6 +144,14 @@ table {
   th {
     background-color: $light-gray;
     font-weight: 600;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover {
+    background-color: rgba($light-gray, 0.5);
   }
 }
 
@@ -109,10 +163,50 @@ select {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border-radius: $border-radius-sm;
+  border: 1px solid $border-color;
+  padding: $spacing-xs $spacing-sm;
+  transition: $transition-base;
+  
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+  }
+}
+
+button, .button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: $spacing-xs $spacing-md;
+  cursor: pointer;
+  font-weight: 500;
+  
+  &:hover {
+    background-color: darken($primary-color, 5%);
+    transform: translateY(-1px);
+    box-shadow: $shadow-sm;
+  }
+  
+  &.secondary {
+    background-color: $secondary-color;
+    
+    &:hover {
+      background-color: darken($secondary-color, 5%);
+    }
+  }
+  
+  &.accent {
+    background-color: $accent-color;
+    
+    &:hover {
+      background-color: darken($accent-color, 5%);
+    }
+  }
 }
 
 /* Custom selection color */
 ::selection {
-  background: rgba($primary-color, 0.3);
+  background: rgba($accent-color, 0.3);
   color: $text-color;
 }

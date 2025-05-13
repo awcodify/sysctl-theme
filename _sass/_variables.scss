@@ -1,15 +1,19 @@
 // Colors
-$primary-color: #4a6baf;
-$secondary-color: #64b1f4;
-$text-color: #333333;
+$primary-color: #3273dc;       // Modern blue
+$secondary-color: #00d1b2;     // Teal accent
+$accent-color: #ff5c8d;        // Eye-catching pink accent
+$text-color: #2c3e50;          // Softer than pure black
 $background-color: #ffffff;
-$light-gray: #f5f7fa;
-$gray: #dddddd;
-$dark-gray: #999999;
-$code-background: #f7f9fb;
+$light-gray: #f9fafb;          // Lighter background
+$gray: #e0e3e8;
+$dark-gray: #8c9bab;
+$code-background: #f0f4f8;
 $link-color: $primary-color;
-$link-hover-color: darken($primary-color, 15%);
-$border-color: #e9ecef;
+$link-hover-color: $accent-color;
+$border-color: #edf2f7;
+$success-color: #48c774;
+$warning-color: #ffdd57;
+$danger-color: #ff3860;
 
 // Typography
 $base-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -35,19 +39,24 @@ $on-laptop: 900px;
 $on-large: 1200px;
 
 // Border Radius
-$border-radius: 5px;
-$border-radius-sm: 3px;
-$border-radius-lg: 8px;
+$border-radius: 8px;          // More modern, slightly rounded corners
+$border-radius-sm: 4px;
+$border-radius-lg: 12px;
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.05);
 
 // Transitions
-$transition-base: all 0.2s ease-in-out;
-$transition-fast: all 0.1s ease-in-out;
-$transition-slow: all 0.3s ease-in-out;
+$transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-fast: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 // Dark mode colors
-$dark-background: #121212;
-$dark-surface: #1e1e1e;
-$dark-text-color: #e0e0e0;
-$dark-border-color: #333333;
-$dark-code-background: #2d2d2d;
-$dark-gray-light: #555555;
+$dark-background: #0f172a;    // Dark blue-gray background
+$dark-surface: #1e293b;       // Slightly lighter surface
+$dark-text-color: #e2e8f0;
+$dark-border-color: #334155;
+$dark-code-background: #1e293b;
+$dark-gray-light: #64748b;

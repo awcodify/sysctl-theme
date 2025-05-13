@@ -1,19 +1,36 @@
 /* Typography styles */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: $heading-line-height;
   color: darken($text-color, 5%);
   margin-top: $spacing-lg;
   margin-bottom: $spacing-sm;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-top: 0;
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 h2 {
   font-size: 1.8rem;
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    background: linear-gradient(to right, $secondary-color, $accent-color);
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+  }
 }
 
 h3 {
@@ -22,6 +39,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
+  color: $secondary-color;
 }
 
 h5 {
@@ -30,6 +48,8 @@ h5 {
 
 h6 {
   font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Paragraph spacing */
@@ -43,26 +63,32 @@ em {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
+  color: darken($text-color, 10%);
 }
 
 /* Lead paragraph (larger, for introductions) */
 .lead {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
   line-height: 1.6;
   margin-bottom: $spacing-lg;
+  color: $secondary-color;
 }
 
 /* Drop cap for first paragraph */
 .dropcap {
   float: left;
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 0.7;
   padding-right: 0.2em;
   margin-top: 0.1em;
   font-weight: 700;
-  color: $primary-color;
+  background: linear-gradient($primary-color, $accent-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Small text */
@@ -92,8 +118,20 @@ small, .small {
   color: $secondary-color;
 }
 
+.text-accent {
+  color: $accent-color;
+}
+
 .text-muted {
   color: $dark-gray;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, $primary-color, $accent-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Lists */
@@ -103,6 +141,28 @@ ul, ol {
   
   li {
     margin-bottom: $spacing-xs;
+    
+    &::marker {
+      color: $secondary-color;
+    }
+  }
+}
+
+ul.fancy-list {
+  list-style: none;
+  margin-left: 0;
+  
+  li {
+    position: relative;
+    padding-left: $spacing-md;
+    margin-bottom: $spacing-sm;
+    
+    &::before {
+      content: '→';
+      color: $accent-color;
+      position: absolute;
+      left: 0;
+    }
   }
 }
 
@@ -110,8 +170,9 @@ dl {
   margin-bottom: $spacing-md;
   
   dt {
-    font-weight: 600;
+    font-weight: 700;
     margin-top: $spacing-sm;
+    color: $secondary-color;
   }
   
   dd {
@@ -127,6 +188,7 @@ code {
   padding: 0.2em 0.4em;
   background-color: $code-background;
   border-radius: $border-radius-sm;
+  color: $accent-color;
 }
 
 /* Links in headings */
@@ -138,5 +200,27 @@ h1, h2, h3, h4, h5, h6 {
       color: $link-color;
       text-decoration: none;
     }
+  }
+}
+
+/* Highlighted text */
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.3em;
+    width: 100%;
+    background-color: rgba($secondary-color, 0.3);
+    z-index: -1;
+    transition: $transition-base;
+  }
+  
+  &:hover::before {
+    height: 0.6em;
   }
 }

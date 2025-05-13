@@ -13,9 +13,11 @@ html.dark-mode {
   
   /* Header styles */
   .site-header {
-    background-color: $dark-surface;
+    background-color: rgba($dark-surface, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-color: $dark-border-color;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: $shadow-sm;
     
     .site-title {
       color: $dark-text-color;
@@ -29,6 +31,12 @@ html.dark-mode {
     &:hover {
       color: lighten($link-color, 25%);
     }
+    
+    &.underline-effect {
+      &::after {
+        background-color: currentColor;
+      }
+    }
   }
   
   /* Navigation */
@@ -36,23 +44,39 @@ html.dark-mode {
     .page-link {
       color: $dark-text-color;
       
-      &:hover {
+      &:hover, &.active {
         color: lighten($primary-color, 20%);
+      }
+      
+      &::after {
+        background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
       }
     }
     
     @media (max-width: $on-palm) {
-      background-color: $dark-surface;
+      background-color: rgba($dark-surface, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border-color: $dark-border-color;
+      box-shadow: $shadow-md;
       
       .menu-icon > svg {
         fill: $dark-text-color;
+      }
+      
+      input ~ .trigger {
+        background: linear-gradient(to bottom right, rgba($dark-surface, 0.95), rgba($dark-surface, 0.99));
       }
     }
     
     /* Dark mode toggle */
     .theme-toggle {
-      color: $dark-text-color;
+      color: darken($dark-text-color, 15%);
+      
+      &:hover {
+        color: $dark-text-color;
+        background-color: rgba(lighten($primary-color, 20%), 0.1);
+      }
       
       .sun {
         display: block;
@@ -66,35 +90,133 @@ html.dark-mode {
   
   /* Footer */
   .site-footer {
-    background-color: $dark-surface;
+    background: linear-gradient(to bottom, $dark-surface, $dark-background);
     border-color: $dark-border-color;
     
-    .footer-links a, 
-    .social-links a {
-      color: $dark-text-color;
+    &::before {
+      background: linear-gradient(to right, lighten($primary-color, 10%), lighten($secondary-color, 10%), lighten($accent-color, 10%));
+    }
+    
+    .footer-col {
+      h2 {
+        color: lighten($secondary-color, 15%);
+        
+        &::after {
+          background: lighten($accent-color, 10%);
+        }
+      }
       
-      &:hover {
-        color: lighten($primary-color, 20%);
+      p {
+        color: darken($dark-text-color, 10%);
+      }
+    }
+    
+    .footer-links, .social-links {
+      li {
+        &:hover {
+          transform: translateX(3px);
+        }
+      }
+      
+      a {
+        color: darken($dark-text-color, 10%);
+        
+        &::before {
+          color: lighten($accent-color, 10%);
+        }
+        
+        &:hover {
+          color: lighten($primary-color, 20%);
+        }
+      }
+    }
+    
+    .social-links {
+      .social-icon {
+        background-color: rgba(lighten($primary-color, 15%), 0.1);
+        color: lighten($primary-color, 15%);
+        
+        &:hover {
+          background-color: lighten($primary-color, 15%);
+          color: $dark-background;
+        }
       }
     }
     
     .footer-bottom {
-      border-color: $dark-border-color;
+      border-color: rgba($dark-border-color, 0.5);
+      color: darken($dark-text-color, 20%);
+      
+      a {
+        color: lighten($secondary-color, 15%);
+        
+        &:hover {
+          color: lighten($accent-color, 15%);
+        }
+      }
+    }
+    
+    .back-to-top {
+      background-color: $dark-surface;
+      color: lighten($primary-color, 15%);
+      box-shadow: $shadow-md;
+      
+      &:hover {
+        background-color: lighten($primary-color, 15%);
+        color: $dark-background;
+      }
     }
   }
   
   /* Post content */
   .post {
     .post-header {
+      .post-title {
+        background: linear-gradient(to right, lighten($primary-color, 15%), lighten($secondary-color, 15%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+      
+      .post-description {
+        color: darken($dark-text-color, 15%);
+        border-left: 3px solid rgba(lighten($accent-color, 15%), 0.5);
+      }
+      
       .post-meta {
         color: darken($dark-text-color, 15%);
         
-        .post-categories a {
-          background-color: $dark-gray-light;
-          
-          &:hover {
-            background-color: lighten($primary-color, 10%);
+        .post-date {
+          background-color: rgba(lighten($primary-color, 15%), 0.1);
+          color: lighten($primary-color, 15%);
+        }
+        
+        .post-categories {
+          a {
+            background: linear-gradient(to right, rgba(lighten($secondary-color, 15%), 0.1), rgba(lighten($accent-color, 15%), 0.1));
+            color: lighten($secondary-color, 15%);
+            border: 1px solid rgba(lighten($secondary-color, 15%), 0.2);
+            
+            &:hover {
+              background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+              color: $dark-background;
+            }
           }
+        }
+        
+        .reading-time {
+          border-color: $dark-border-color;
+        }
+      }
+      
+      .post-author {
+        .author-avatar {
+          border-color: lighten($secondary-color, 15%);
+        }
+        
+        .author-name {
+          color: $dark-text-color;
         }
       }
     }
@@ -102,91 +224,272 @@ html.dark-mode {
     .post-content {
       h1, h2, h3, h4, h5, h6 {
         color: $dark-text-color;
+        
+        .heading-anchor {
+          color: darken($dark-text-color, 20%);
+          
+          &:hover {
+            color: lighten($primary-color, 15%);
+          }
+        }
       }
-    }
-    
-    .post-navigation {
-      border-color: $dark-border-color;
       
-      a {
-        background-color: $dark-gray-light;
+      h2::after {
+        background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+      }
+      
+      h4 {
+        color: lighten($secondary-color, 15%);
+      }
+      
+      strong {
+        color: lighten($dark-text-color, 10%);
+      }
+      
+      .lead {
+        color: lighten($secondary-color, 15%);
+      }
+      
+      blockquote {
+        background-color: $dark-surface;
+        border-left: 4px solid lighten($secondary-color, 10%);
+        
+        &::before {
+          color: rgba(lighten($secondary-color, 15%), 0.2);
+        }
+        
+        cite {
+          color: darken($dark-text-color, 20%);
+        }
+      }
+      
+      code {
+        color: lighten($accent-color, 15%);
+        background-color: $dark-code-background;
+      }
+      
+      a:not(.heading-anchor) {
+        color: lighten($primary-color, 15%);
         
         &:hover {
-          background-color: lighten($dark-gray-light, 10%);
+          color: lighten($accent-color, 15%);
+        }
+        
+        &::after {
+          background-color: lighten($accent-color, 15%);
         }
       }
     }
     
+    /* Table of contents */
+    .table-of-contents {
+      background: linear-gradient(to bottom right, rgba($dark-surface, 0.8), rgba($dark-background, 0.8));
+      border-left: 4px solid lighten($secondary-color, 10%);
+      
+      h2 {
+        color: lighten($secondary-color, 15%);
+      }
+      
+      .toc-entry {
+        a {
+          color: $dark-text-color;
+          
+          &::before {
+            color: lighten($accent-color, 10%);
+          }
+          
+          &:hover {
+            color: lighten($primary-color, 15%);
+          }
+        }
+      }
+    }
+    
+    /* Post tags */
     .post-tags {
-      border-color: $dark-border-color;
+      background-color: rgba($dark-surface, 0.5);
+      
+      h3 {
+        color: lighten($secondary-color, 15%);
+      }
       
       .tag {
-        background-color: $dark-gray-light;
+        background-color: rgba(lighten($accent-color, 15%), 0.1);
+        color: lighten($accent-color, 15%);
+        border: 1px solid rgba(lighten($accent-color, 15%), 0.2);
         
         &:hover {
-          background-color: lighten($primary-color, 10%);
+          background-color: lighten($accent-color, 15%);
+          color: $dark-background;
         }
       }
     }
-  }
-  
-  /* Table of contents */
-  .table-of-contents {
-    background-color: $dark-surface;
-    border-color: $dark-border-color;
+    
+    /* Post navigation */
+    .post-navigation {
+      a {
+        background: linear-gradient(135deg, rgba($dark-surface, 0.5), rgba($dark-background, 0.8));
+        color: $dark-text-color;
+        border-color: $dark-border-color;
+        
+        .nav-label {
+          color: lighten($secondary-color, 15%);
+        }
+        
+        &::after {
+          background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+        }
+        
+        &:hover {
+          background: linear-gradient(135deg, rgba(lighten($dark-surface, 5%), 0.5), rgba(lighten($dark-background, 5%), 0.8));
+        }
+      }
+    }
+    
+    /* Related posts */
+    .related-posts {
+      border-color: $dark-border-color;
+      
+      h3 {
+        color: lighten($secondary-color, 15%);
+        
+        &::after {
+          background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+        }
+      }
+      
+      .related-post {
+        background-color: rgba($dark-surface, 0.3);
+        border-color: $dark-border-color;
+        
+        .related-post-content {
+          .related-post-title a {
+            color: $dark-text-color;
+            
+            &:hover {
+              color: lighten($primary-color, 15%);
+            }
+          }
+          
+          .related-post-meta {
+            color: darken($dark-text-color, 20%);
+          }
+        }
+      }
+    }
   }
   
   /* Code blocks */
-  pre, code {
-    background-color: $dark-code-background;
-    color: #f8f8f2;
-  }
-  
-  .code-filename {
-    background-color: darken($dark-code-background, 5%);
-    border-color: $dark-border-color;
-    color: darken($dark-text-color, 10%);
-  }
-  
-  .copy-code-button {
-    background-color: $dark-gray-light;
-    border-color: $dark-border-color;
-    color: $dark-text-color;
+  .code-block {
+    pre {
+      background-color: $dark-code-background;
+      color: #f8f8f2;
+    }
     
-    &:hover {
-      background-color: lighten($dark-gray-light, 10%);
+    &::before {
+      background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
     }
   }
   
-  /* Blockquotes */
-  blockquote {
-    background-color: $dark-surface;
-    border-color: lighten($primary-color, 10%);
+  .code-filename {
+    background: $dark-surface;
+    color: $dark-text-color;
+    border-color: $dark-border-color;
+  }
+  
+  .highlight-line {
+    background: linear-gradient(to right, rgba(lighten($accent-color, 10%), 0.1), rgba(lighten($accent-color, 10%), 0.05));
+    border-left: 3px solid lighten($accent-color, 10%);
+  }
+  
+  .copy-code-button {
+    background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
+    color: $dark-background;
+    
+    &.copied {
+      background: linear-gradient(to right, lighten($success-color, 10%), lighten($success-color, 5%));
+    }
+  }
+  
+  /* Code blocks and syntax highlighting */
+  .highlight {
+    background: $dark-code-background;
+    
+    pre {
+      background-color: $dark-code-background;
+      color: #f8f8f2;
+      border-color: $dark-border-color;
+    }
+    
+    /* Syntax highlighting */
+    .c, .c1, .cm { color: #6272a4; font-style: italic; } /* Comment */
+    .err { color: #f8f8f2; background-color: transparent; } /* Error */
+    .k, .kd, .kr { color: #ff79c6; font-weight: bold; } /* Keyword */
+    .o { color: #f8f8f2; } /* Operator */
+    .p { color: #f8f8f2; } /* Punctuation */
+    .s, .s1, .s2 { color: #f1fa8c; background-color: transparent; } /* String */
+    .nb { color: #8be9fd; background-color: transparent; } /* Built-in */
+    .nc { color: #50fa7b; background-color: transparent; } /* Class */
+    .nf { color: #50fa7b; background-color: transparent; } /* Function */
+    .nn { color: #8be9fd; background-color: transparent; } /* Namespace */
+    .nt { color: #ff79c6; background-color: transparent; } /* Tag */
+    .nv { color: #8be9fd; background-color: transparent; } /* Variable */
+    .w { color: #f8f8f2; } /* Text.Whitespace */
+    .m, .mi, .mf { color: #bd93f9; background-color: transparent; } /* Number */
+    
+    /* Override any problematic elements */
+    .gd { 
+      color: #ff5555; 
+      background-color: rgba(255, 85, 85, 0.2);
+    }
+    .gi { 
+      color: #50fa7b; 
+      background-color: rgba(80, 250, 123, 0.2);
+    }
+    
+    /* All other syntax elements */
+    .kc, .kn, .kp, .kt,
+    .na, .no, .nd, .ni, .ne, .nl,
+    .nx, .py, .ow, .mh, .mo,
+    .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss, .bp,
+    .vc, .vg, .vi, .il { 
+      color: inherit;
+      background-color: transparent; 
+    }
+  }
+  
+  .language-label {
+    background: $dark-gray-light;
+    color: $dark-text-color;
   }
   
   /* Tables */
   table {
+    box-shadow: $shadow-sm;
+    
     th, td {
       border-color: $dark-border-color;
     }
     
     th {
-      background-color: $dark-gray-light;
+      background: linear-gradient(to right, rgba(lighten($primary-color, 15%), 0.1), rgba(lighten($secondary-color, 15%), 0.1));
+      color: lighten($secondary-color, 15%);
     }
     
-    tr:nth-child(even) {
-      background-color: rgba($dark-gray-light, 0.3);
+    tr {
+      &:nth-child(even) {
+        background-color: rgba($dark-gray-light, 0.3);
+      }
+      
+      &:hover {
+        background-color: rgba(lighten($secondary-color, 15%), 0.05);
+      }
     }
-  }
-  
-  /* Horizontal rules */
-  hr {
-    background-color: $dark-border-color;
   }
   
   /* Selection */
   ::selection {
-    background: rgba(lighten($primary-color, 20%), 0.3);
+    background: rgba(lighten($accent-color, 15%), 0.3);
     color: $dark-text-color;
   }
 }
@@ -194,6 +497,7 @@ html.dark-mode {
 /* Transition for smooth mode switching */
 body, a, .site-header, .site-nav, .site-footer, .post, 
 .table-of-contents, pre, code, blockquote, table, button,
-.post-navigation a, .tag, .theme-toggle {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+.post-navigation a, .tag, .theme-toggle, .footer-col h2::after,
+.post-content h2::after, .heading-anchor, .social-icon {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
