@@ -74,25 +74,10 @@
       color: lighten($text-color, 10%);
       transition: $transition-base;
       position: relative;
-      padding-left: $spacing-sm;
-      
-      &::before {
-        content: '→';
-        position: absolute;
-        left: 0;
-        color: $accent-color;
-        opacity: 0;
-        transform: translateX(-5px);
-        transition: $transition-base;
-      }
+      padding-left: 0; /* Removed padding-left completely */
       
       &:hover {
         color: $primary-color;
-        
-        &::before {
-          opacity: 1;
-          transform: translateX(0);
-        }
       }
     }
   }
@@ -112,10 +97,6 @@
     
     a {
       padding-left: 0;
-      
-      &::before {
-        display: none;
-      }
     }
     
     .social-icon {
