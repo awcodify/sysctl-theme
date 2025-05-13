@@ -1,0 +1,48 @@
+# Jekyll specific
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby/Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Ruby environment
+.ruby-version
+.ruby-gemset
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node modules if you use any JS tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build and test directories
+/dist/
+/tmp/
+/log/
+
+# Environment variables
+.env
+.env.*
+
+# If you're using Jekyll with Docker
+docker-compose.override.yml

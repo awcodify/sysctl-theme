@@ -1,27 +1,19 @@
-# Sample configuration for Sysctl Jekyll Theme
+# Main configuration for Sysctl Theme
 
 # Site settings
-name: ./sysctl.id
-title: ./sysctl.id
+name: Sysctl Theme
+title: Sysctl Theme
 email: awcodify@gmail.com
 description: >-
-  A clean, fast and SEO-friendly Jekyll blog focused on technical content and code readability.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://sysctl.id"
-twitter_username: # your Twitter username
-github_username: awcodify
-linkedin_username: # your LinkedIn username
-
-# Theme settings
-remote_theme: awcodify/sysctl-theme
-# - OR if installing as a gem -
-# theme: sysctl-theme
+  A clean, fast and SEO-friendly Jekyll theme focused on technical content and code readability.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # for local testing
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
-paginate: 10
+paginate: 5
 paginate_path: "/page/:num/"
 
 # Theme-specific settings
@@ -33,10 +25,8 @@ navigation:
     url: /
   - title: About
     url: /about
-  - title: English
-    url: /english
-  - title: Indonesia
-    url: /bahasa-indonesia
+  - title: Articles
+    url: /articles
   - title: Tags
     url: /tags
   - title: Contact
@@ -55,30 +45,17 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-responsive-image
-  - jekyll-minifier
-
-# SEO and analytics
-google_analytics: G-MLFFR89WJX # your Google Analytics ID
-disqus:
-  shortname: sysctl-id # your Disqus shortname
 
 # Content settings
 excerpt_separator: <!--more-->
 
-# Responsive images configuration
-responsive_image:
-  template: _includes/responsive-image.html
-  sizes:
-    - width: 480  # [Required] Width in pixels
-      quality: 80 # [Optional] JPEG quality (default: 100)
-    - width: 800
-      quality: 80
-    - width: 1400
-      quality: 90
-
-# Jekyll Minifier settings
-jekyll-minifier:
-  compress_css: true
-  compress_javascript: true
-  exclude: ['**.min.js', '**.min.css']
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - example/

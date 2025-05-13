@@ -19,12 +19,11 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   
-  # For responsive images
-  spec.add_runtime_dependency "jekyll-responsive-image", "~> 1.5"
-  
   # For minification and optimization
   spec.add_runtime_dependency "jekyll-minifier", "~> 0.1.10"
 
+  # Optional dependencies
+  spec.add_development_dependency "jekyll-responsive-image", "~> 1.5"
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 12.0"
 end
