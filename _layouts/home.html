@@ -4,19 +4,22 @@ layout: default
 
 <div class="home">
   <!-- Hero Section -->
+  {% if site.hero.enabled %}
   <section class="hero-section">
     <div class="hero-content">
-      <h1 class="hero-title">Welcome to Sysctl Theme</h1>
-      <p class="hero-subtitle">A clean, modern Jekyll theme for tech blogs and documentation</p>
+      <h1 class="hero-title">{{ site.hero.title }}</h1>
+      <p class="hero-subtitle">{{ site.hero.subtitle }}</p>
       <div class="hero-buttons">
-        <a href="/about/" class="btn btn-primary">Learn More</a>
-        <a href="https://github.com/yourusername/sysctl-theme" class="btn btn-secondary">GitHub</a>
+        {% for button in site.hero.buttons %}
+          <a href="{{ button.url | relative_url }}" class="btn {% if button.primary %}btn-primary{% else %}btn-secondary{% endif %}">{{ button.label }}</a>
+        {% endfor %}
       </div>
     </div>
     <div class="hero-image">
-      <img src="{{ '/assets/images/theme-demo.jpeg' | relative_url }}" alt="Sysctl Theme Demo">
+      <img src="{{ '/assets/images/' | append: site.hero.image | relative_url }}" alt="{{ site.hero.title }}">
     </div>
   </section>
+  {% endif %}
 
   <!-- Main Content Area with Sidebar -->
   <div class="content-with-sidebar">

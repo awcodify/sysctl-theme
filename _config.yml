@@ -27,6 +27,20 @@ paginate_path: "/page/:num/"
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
 toc_position: right # Options: 'left', 'right' (default)
 
+# Hero section configuration
+hero:
+  enabled: true
+  title: "Welcome to Sysctl Theme"
+  subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
+  image: "theme-demo.jpeg"
+  buttons:
+    - label: "Learn More"
+      url: "/about/"
+      primary: true
+    - label: "GitHub"
+      url: "https://github.com/awcodify/sysctl-theme"
+      primary: false
+
 # Navigation menu
 navigation:
   - title: Home

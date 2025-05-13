@@ -521,6 +521,42 @@ html.dark-mode {
     }
   }
   
+  /* Hero section buttons in dark mode */
+  .hero-section {
+    .hero-buttons {
+      .btn {
+        &.btn-primary {
+          background: linear-gradient(135deg, lighten($accent-color, 5%), lighten($primary-color, 10%));
+          box-shadow: 0 4px 15px rgba(lighten($primary-color, 15%), 0.3);
+          
+          &:hover {
+            background: linear-gradient(135deg, lighten($accent-color, 10%), lighten($primary-color, 15%));
+            box-shadow: 0 6px 20px rgba(lighten($primary-color, 20%), 0.4);
+          }
+        }
+        
+        &.btn-secondary {
+          background: linear-gradient(135deg, lighten($secondary-color, 5%), $secondary-color);
+          box-shadow: 0 4px 15px rgba(lighten($secondary-color, 15%), 0.3);
+          
+          &:hover {
+            background: linear-gradient(135deg, lighten($secondary-color, 10%), lighten($secondary-color, 5%));
+            box-shadow: 0 6px 20px rgba(lighten($secondary-color, 20%), 0.4);
+          }
+        }
+        
+        &::before {
+          background: linear-gradient(
+            90deg, 
+            rgba(255, 255, 255, 0) 0%, 
+            rgba(255, 255, 255, 0.3) 50%, 
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+      }
+    }
+  }
+  
   /* Code blocks */
   .code-block {
     pre {
