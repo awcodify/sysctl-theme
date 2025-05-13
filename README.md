@@ -2,6 +2,8 @@
 
 A clean, modern Jekyll theme optimized for technical blogs and documentation sites. This theme prioritizes readability, performance, and responsive design.
 
+> **Built with AI**: This theme was developed with the assistance of GitHub Copilot and Claude 3.7 Sonnet.
+
 ![Sysctl Theme Screenshot](assets/images/ss-sysctl-theme.png)
 
 ## Features
