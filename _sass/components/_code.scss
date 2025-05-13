@@ -175,12 +175,12 @@
   padding: 0.3rem 0.8rem;
   font-size: 0.75rem;
   color: white;
-  background: linear-gradient(to right, $secondary-color, $accent-color);
+  background-color: rgba(0, 0, 0, 0.3); /* Lighter background */
   border: none;
   border-radius: $border-radius;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(5px);
+  opacity: 0.7; /* Make button visible by default */
+  transform: translateY(0); /* No initial transform */
   transition: $transition-base;
   z-index: 2;
   font-weight: 500;
@@ -192,22 +192,21 @@
   }
   
   &:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+    color: white; /* Ensure text remains white on hover */
     box-shadow: $shadow-md;
     transform: translateY(-2px);
+    opacity: 1; /* Full opacity on hover */
   }
   
   &.copied {
     background: linear-gradient(to right, $success-color, darken($success-color, 10%));
+    opacity: 1;
     
     &::before {
       content: '✓';
     }
   }
-}
-
-.code-block:hover .copy-code-button {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Syntax highlighting improvements */

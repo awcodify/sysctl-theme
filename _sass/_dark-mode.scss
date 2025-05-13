@@ -206,7 +206,69 @@ html.dark-mode {
         }
         
         .reading-time {
-          border-color: $dark-border-color;
+          background-color: rgba($dark-gray-light, 0.3);
+          border: 1px solid rgba($dark-gray-light, 0.4);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          color: $dark-text-color; /* Adding explicit color for visibility */
+          
+          &:hover {
+            background-color: rgba($dark-gray-light, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          }
+        }
+        
+        .post-date-author {
+          background-color: rgba(lighten($primary-color, 15%), 0.15);
+          border: 1px solid rgba(lighten($primary-color, 15%), 0.3);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          
+          &:hover {
+            background-color: rgba(lighten($primary-color, 15%), 0.25);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          }
+          
+          .post-date {
+            color: lighten($primary-color, 15%);
+          }
+          
+          .separator {
+            color: rgba(lighten($primary-color, 10%), 0.6);
+          }
+          
+          .post-author {
+            color: lighten($secondary-color, 15%);
+          }
+        }
+        
+        .post-categories {
+          a {
+            background: rgba(lighten($secondary-color, 15%), 0.15);
+            color: lighten($secondary-color, 15%);
+            border: 1px solid rgba(lighten($secondary-color, 15%), 0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            
+            &:hover {
+              background: rgba(lighten($secondary-color, 15%), 0.25);
+              color: lighten($secondary-color, 15%);
+              transform: translateY(-1px);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+        
+        .reading-time {
+          background-color: rgba($dark-gray-light, 0.3);
+          border: 1px solid rgba($dark-gray-light, 0.4);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+          color: $dark-text-color; /* Adding explicit color for visibility */
+          
+          &:hover {
+            background-color: rgba($dark-gray-light, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          }
         }
       }
       
@@ -389,6 +451,11 @@ html.dark-mode {
     &::before {
       background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
     }
+    
+    &:hover .copy-code-button {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .code-filename {
@@ -403,11 +470,22 @@ html.dark-mode {
   }
   
   .copy-code-button {
-    background: linear-gradient(to right, lighten($secondary-color, 10%), lighten($accent-color, 10%));
-    color: $dark-background;
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for dark mode */
+    color: $dark-text-color;
+    opacity: 0.7; /* Make button visible by default */
+    transform: translateY(0); /* No initial transform */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4); /* Lighter on hover */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+      opacity: 1; /* Full opacity on hover */
+    }
     
     &.copied {
       background: linear-gradient(to right, lighten($success-color, 10%), lighten($success-color, 5%));
+      opacity: 1;
     }
   }
   
