@@ -45,21 +45,9 @@ layout: default
   </header>
 
   {%- if page.image -%}
-    {% assign image_path = '/assets/images/' | append: page.image | relative_url %}
-    {% assign img_exists = site.static_files | where: "path", image_path | first %}
-    
-    {% if img_exists %}
     <div class="post-featured-image">
-      <img src="{{ image_path }}" alt="{{ page.title }}" />
+      <img src="{{ '/assets/images/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
     </div>
-    {% else %}
-    <!-- Use CSS-only featured image when the actual image file is missing -->
-    <div class="post-featured-image css-featured-image" 
-         data-pattern="{{ page.title | size | modulo: 6 }}" 
-         data-title="{{ page.title | slice: 0 | upcase }}">
-      <div class="css-image-title">{{ page.title | slice: 0 | upcase }}</div>
-    </div>
-    {% endif %}
   {% else %}
     <!-- Generate CSS featured image for posts without specified images -->
     <div class="post-featured-image css-featured-image" 
