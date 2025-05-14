@@ -146,15 +146,8 @@
   }
   
   @media screen and (max-width: $on-palm) {
-    position: absolute;
-    top: 100%;
-    right: $spacing-sm;
-    background-color: $background-color;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    text-align: right;
+    position: relative;
     width: auto;
-    box-shadow: $shadow-md;
     
     label[for="nav-trigger"] {
       display: block;
@@ -185,6 +178,14 @@
       background: linear-gradient(to bottom right, rgba($background-color, 0.95), rgba($background-color, 0.99));
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      border-radius: $border-radius;
+      border: 1px solid $border-color;
+      box-shadow: $shadow-md;
+      z-index: 1001;
     }
     
     input:checked ~ .trigger {
@@ -197,6 +198,7 @@
       margin: 0 0 $spacing-sm 0;
       padding: $spacing-xs 0;
       line-height: 1.5;
+      text-align: left;
       
       &:last-child {
         margin-bottom: 0;

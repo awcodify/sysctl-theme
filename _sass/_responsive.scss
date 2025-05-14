@@ -73,16 +73,41 @@
 
 /* Navigation for mobile */
 @media (max-width: $on-palm) {
+  .site-header {
+    .wrapper {
+      position: relative; // Ensure proper positioning for children
+    }
+  }
+  
   .site-nav {
     position: relative;
+    margin-left: auto; // Push to the right side
     
     .menu-icon {
       display: block;
+      margin-left: auto; // Right align
     }
     
     .page-link {
       display: block;
       padding: $spacing-xs 0;
+      margin-left: 0; // Reset left margin
+      border-bottom: 1px solid rgba($border-color, 0.5);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    
+    .trigger {
+      max-height: calc(100vh - 100px); // Prevent from being too tall
+      overflow-y: auto; // Allow scrolling if too many items
+    }
+    
+    // Fix dark mode toggle in mobile menu
+    .theme-toggle {
+      margin: $spacing-xs 0 0 0;
+      justify-content: flex-start;
     }
   }
 }
