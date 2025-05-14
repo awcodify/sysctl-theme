@@ -1,0 +1,23 @@
+# Ignore generated site content
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Ignore third-party dependencies
+node_modules/
+vendor/
+
+# Don't ignore core theme files
+!_layouts/
+!_includes/
+!_sass/
+!assets/
+
+# Don't ignore configuration
+!_config.yml
+!sysctl-theme.gemspec
+!Gemfile
+
+# Make sure Copilot sees the guidelines
+!.github/copilot/
+!AI_GUIDELINES.md

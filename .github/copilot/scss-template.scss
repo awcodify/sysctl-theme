@@ -1,0 +1,57 @@
+/**
+ * SYSCTL THEME SCSS GUIDELINES
+ *
+ * This template demonstrates the preferred structure for SCSS files.
+ * Follow these guidelines when adding or modifying styles:
+ *
+ * 1. Use BEM methodology for class naming: .block__element--modifier
+ * 2. Follow mobile-first approach with min-width media queries
+ * 3. Use variables from _variables.scss for consistency
+ * 4. Keep component-specific styles in dedicated files
+ * 5. Ensure sufficient color contrast for accessibility
+ * 6. Comment complex selectors or calculations
+ * 7. Avoid deeply nested selectors (max 3 levels)
+ *
+ * @see Full guidelines in AI_GUIDELINES.md
+ */
+
+/* Example block component with BEM structure */
+.component {
+  /* Base component styles */
+  padding: $spacing-md;
+  margin-bottom: $spacing-lg;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  
+  /* Child element */
+  &__header {
+    font-size: $heading-font-size;
+    margin-bottom: $spacing-sm;
+    
+    /* Modifier for the element */
+    &--highlighted {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+  
+  /* Another child element */
+  &__content {
+    line-height: $base-line-height;
+  }
+  
+  /* Component modifier */
+  &--featured {
+    box-shadow: $shadow-md;
+    border-left: 4px solid $accent-color;
+  }
+  
+  /* Responsive behavior - mobile first approach */
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    
+    &__content {
+      flex: 1;
+    }
+  }
+}

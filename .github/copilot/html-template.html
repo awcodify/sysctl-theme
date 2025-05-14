@@ -1,0 +1,56 @@
+<!--
+  SYSCTL THEME HTML GUIDELINES
+  
+  Follow these guidelines when creating or modifying HTML templates:
+  
+  1. Use semantic HTML elements appropriately (header, nav, main, section, article, etc.)
+  2. Maintain proper heading hierarchy (h1 → h6)
+  3. Include appropriate ARIA attributes for accessibility
+  4. Keep markup clean and minimal
+  5. Ensure all interactive elements are keyboard accessible
+  6. Include proper alt text for images
+  7. Use descriptive link text (avoid "click here")
+  
+  See full guidelines in AI_GUIDELINES.md
+-->
+
+<!-- Example of well-structured HTML following guidelines -->
+<article class="post">
+  <header class="post__header">
+    <h1 class="post__title">Example Post Title</h1>
+    <div class="post__meta">
+      <time datetime="2025-05-14">May 14, 2025</time>
+      <span class="post__author">by Author Name</span>
+    </div>
+  </header>
+
+  <div class="post__content">
+    <p>Example paragraph with <a href="#" aria-label="More information about this topic">descriptive link text</a>.</p>
+    
+    <figure class="post__figure">
+      <img src="example.jpg" alt="Descriptive alt text that explains the image content" class="post__image">
+      <figcaption>Example image caption</figcaption>
+    </figure>
+    
+    <h2 id="section-heading">Section Heading</h2>
+    <p>Another example paragraph that demonstrates proper semantic structure.</p>
+    
+    <ul class="post__list">
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+  
+  <footer class="post__footer">
+    <div class="post__tags" aria-label="Post tags">
+      <a href="#" class="post__tag">tag1</a>
+      <a href="#" class="post__tag">tag2</a>
+    </div>
+    
+    <nav class="post__navigation" aria-label="Post navigation">
+      <a href="#" class="post__nav-link post__nav-link--prev">Previous Post</a>
+      <a href="#" class="post__nav-link post__nav-link--next">Next Post</a>
+    </nav>
+  </footer>
+</article>
