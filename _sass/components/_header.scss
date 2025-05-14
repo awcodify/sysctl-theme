@@ -111,37 +111,72 @@
     align-items: center;
   }
   
-  /* Dark mode toggle */
-  .theme-toggle {
-    margin-left: $spacing-md;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: $spacing-xs;
-    color: $dark-gray;
+  /* Site header actions container */
+  .site-header-actions {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: $transition-base;
+    margin-left: $spacing-md;
+    gap: 0.25rem;
     
-    &:hover {
-      color: $text-color;
-      background-color: rgba($primary-color, 0.1);
-      transform: rotate(15deg);
+    .search-toggle {
+      margin: 0;
+      
+      .search-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: $spacing-xs;
+        color: $dark-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: $transition-base;
+        
+        &:hover {
+          color: $text-color;
+          background-color: rgba($primary-color, 0.1);
+        }
+        
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
     
-    .theme-toggle-icon {
-      width: 20px;
-      height: 20px;
-    }
-    
-    .sun {
-      display: none;
-    }
-    
-    .moon {
-      display: block;
+    /* Dark mode toggle */
+    .theme-toggle {
+      margin-left: 0.25rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: $spacing-xs;
+      color: $dark-gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: $transition-base;
+      
+      &:hover {
+        color: $text-color;
+        background-color: rgba($primary-color, 0.1);
+        transform: rotate(15deg);
+      }
+      
+      .theme-toggle-icon {
+        width: 20px;
+        height: 20px;
+      }
+      
+      .sun {
+        display: none;
+      }
+      
+      .moon {
+        display: block;
+      }
     }
   }
   
@@ -186,6 +221,13 @@
       border: 1px solid $border-color;
       box-shadow: $shadow-md;
       z-index: 1001;
+      
+      .site-header-actions {
+        margin-top: $spacing-sm;
+        margin-left: 0;
+        justify-content: flex-start;
+        width: 100%;
+      }
     }
     
     input:checked ~ .trigger {
