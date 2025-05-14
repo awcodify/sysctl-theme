@@ -211,14 +211,14 @@
     .featured-card {
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: none; /* Removed box-shadow */
+      transition: transform 0.3s ease;
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
       
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        box-shadow: none; /* Removed box-shadow on hover as well */
       }
       
       .card-image {
