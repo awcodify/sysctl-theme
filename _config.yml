@@ -27,10 +27,26 @@ paginate_path: "/page/:num/"
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
 toc_position: right # Options: 'left', 'right' (default)
 
+# Enable search functionality
+search_enabled: true
+
 # Dark mode configuration
 dark_mode:
   enabled: true   # If set to false, the toggle button will be hidden
   default: true  # If true, dark mode will be the default theme
+
+# Related posts configuration
+related_posts:
+  enabled: true
+  title: "Related Articles"
+  count: 3
+  min_common_tags: 1
+
+# Social sharing configuration
+social_sharing:
+  enabled: true
+  title: "Share this post"
+
 
 # Homepage configuration
 homepage:
@@ -77,7 +93,7 @@ navigation:
   - title: Articles
     url: /articles
   - title: Categories
-    url: /tags
+    url: /categories
   - title: Tags
     url: /tags
   - title: Contact
