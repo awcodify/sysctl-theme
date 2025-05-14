@@ -58,7 +58,7 @@ layout: default
       <section class="latest-articles">
         <h2 class="section-heading">{{ site.homepage.latest_articles.title }}</h2>
         <ul class="post-list">
-          {% for post in site.posts %}
+          {% for post in paginator.posts %}
             {% unless post.featured %}
             <li class="post-item">
               <div class="post-preview {% unless post.image %}no-image{% endunless %}">
@@ -99,16 +99,31 @@ layout: default
           {% endfor %}
         </ul>
         
-        {% if site.posts.size > 8 %}
+        <!-- Pagination -->
+        {% if paginator.total_pages > 1 %}
         <div class="pagination">
           {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-previous">&laquo; Previous</a>
+          {% else %}
+            <span class="pagination-previous disabled">&laquo; Previous</span>
           {% endif %}
           
-          <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+          <div class="pagination-pages">
+            {% for page in (1..paginator.total_pages) %}
+              {% if page == paginator.page %}
+                <span class="pagination-current">{{ page }}</span>
+              {% elsif page == 1 %}
+                <a href="{{ '/' | relative_url }}" class="pagination-link">{{ page }}</a>
+              {% else %}
+                <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}" class="pagination-link">{{ page }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
           
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-next">Next &raquo;</a>
+          {% else %}
+            <span class="pagination-next disabled">Next &raquo;</span>
           {% endif %}
         </div>
         {% endif %}

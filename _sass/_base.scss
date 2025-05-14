@@ -22,6 +22,34 @@
  * For more detailed guidelines, see the AI_GUIDELINES.md file.
  */
 
+/* CSS Variables for light mode */
+:root {
+  --primary-color: #{$primary-color};
+  --primary-color-rgb: #{$primary-color-rgb};
+  --secondary-color: #{$secondary-color};
+  // --accent-color: #{$accent-color};
+  --text-color: #{$text-color};
+  // --background-color: #{$background-color};
+  // --background-color-alt: #{$light-gray};
+  // --border-color: #{$border-color};
+  --link-color: #{$link-color};
+  --link-hover-color: #{$link-hover-color};
+}
+
+/* Dark mode CSS variables */
+html.dark-mode {
+  --primary-color: #{lighten($primary-color, 15%)};
+  --primary-color-rgb: 101, 151, 230; /* Lightened RGB values for primary color */
+  --secondary-color: #{lighten($secondary-color, 15%)};
+  // --accent-color: #{lighten($accent-color, 15%)};
+  --text-color: #{$dark-text-color};
+  // --background-color: #{$dark-background};
+  // --background-color-alt: #{$dark-surface};
+  // --border-color: #{$dark-border-color};
+  --link-color: #{lighten($link-color, 15%)};
+  --link-hover-color: #{lighten($link-hover-color, 15%)};
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
