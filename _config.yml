@@ -39,7 +39,7 @@ homepage:
     enabled: true
     title: "Welcome to Sysctl Theme"
     subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
-    image: "theme-demo.jpeg"
+    image: "welcome-to-sysctl-theme.png"
     buttons:
       - label: "Learn More"
         url: "/about/"

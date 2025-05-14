@@ -6,6 +6,7 @@ description: "Learn how to position your table of contents sidebar on either the
 author: Awcodify
 image: theme-demo-2.jpeg
 featured: true
+image: table-of-content-thumbnail.png
 ---
 
 The Sysctl Theme now supports a configurable table of contents (TOC) sidebar position, allowing you to choose whether the sidebar appears on the left or right side of your posts. This feature gives you more control over your site's layout and can help optimize the reading experience for your audience.
