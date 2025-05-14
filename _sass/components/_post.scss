@@ -911,7 +911,8 @@
       
       /* Clean scrollbar styling */
       &::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
+        height: 4px;
       }
       
       &::-webkit-scrollbar-track {
@@ -919,9 +920,18 @@
       }
       
       &::-webkit-scrollbar-thumb {
-        background: rgba($border-color, 0.5);
-        border-radius: 3px;
+        background: rgba($primary-color, 0.2);
+        border-radius: 4px;
+        transition: background 0.3s ease;
+        
+        &:hover {
+          background: rgba($primary-color, 0.4);
+        }
       }
+      
+      /* Firefox scrollbar styling */
+      scrollbar-width: thin;
+      scrollbar-color: rgba($primary-color, 0.2) transparent;
       
       /* Elegant heading style */
       h2 {
