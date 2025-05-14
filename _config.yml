@@ -76,6 +76,8 @@ navigation:
     url: /about
   - title: Articles
     url: /articles
+  - title: Categories
+    url: /tags
   - title: Tags
     url: /tags
   - title: Contact
