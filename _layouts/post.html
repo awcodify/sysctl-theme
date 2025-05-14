@@ -83,6 +83,9 @@ layout: default
       </div>
       {%- endif -%}
 
+      <!-- Social sharing buttons -->
+      {% include social-sharing.html %}
+
       <div class="post-navigation">
         {% if page.previous.url %}
         <a class="prev" href="{{ page.previous.url | relative_url }}">
@@ -101,6 +104,9 @@ layout: default
       {%- if site.disqus.shortname -%}
         {%- include disqus_comments.html -%}
       {%- endif -%}
+      
+      <!-- Related posts section -->
+      {% include related-posts.html %}
     </div>
   </div>
 
