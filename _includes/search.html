@@ -1,0 +1,32 @@
+{% if site.search_enabled != false %}
+<div class="search-toggle">
+  <button class="search-button" aria-label="Open search" id="search-toggle-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </button>
+</div>
+
+<div class="search-overlay" id="search-overlay">
+  <div class="search-overlay-content">
+    <div class="search-header">
+      <h2>Search</h2>
+      <button class="close-search" id="close-search" aria-label="Close search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-form">
+      <input type="text" id="search-input-overlay" placeholder="Search for articles..." aria-label="Search" autocomplete="off">
+      <div id="search-results-overlay" class="search-results-container"></div>
+      
+      <div class="advanced-search-link">
+        <a href="{{ '/search/' | relative_url }}">Advanced Search</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

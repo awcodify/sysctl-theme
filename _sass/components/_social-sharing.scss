@@ -1,0 +1,95 @@
+/*
+ * Social Sharing Buttons Styling
+ */
+
+.social-sharing {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin: 0;
+    }
+    
+    .share-button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      color: #fff;
+      
+      svg {
+        width: 1rem;
+        height: 1rem;
+        fill: #fff;
+      }
+      
+      &.twitter {
+        background-color: #1DA1F2;
+        &:hover { background-color: darken(#1DA1F2, 10%); }
+      }
+      
+      &.facebook {
+        background-color: #4267B2;
+        &:hover { background-color: darken(#4267B2, 10%); }
+      }
+      
+      &.linkedin {
+        background-color: #0077B5;
+        &:hover { background-color: darken(#0077B5, 10%); }
+      }
+      
+      &.reddit {
+        background-color: #FF4500;
+        &:hover { background-color: darken(#FF4500, 10%); }
+      }
+      
+      &.email {
+        background-color: #505050;
+        &:hover { background-color: darken(#505050, 10%); }
+      }
+      
+      &.copy-link {
+        background-color: #27ae60;
+        &:hover { background-color: darken(#27ae60, 10%); }
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .share-buttons {
+      .share-button {
+        padding: 0.4rem 0.75rem;
+        
+        span {
+          display: none;
+        }
+        
+        svg {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

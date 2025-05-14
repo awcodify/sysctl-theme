@@ -1,0 +1,276 @@
+/*
+ * Search Functionality Styling
+ */
+
+/* Search toggle button in header */
+.search-toggle {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  
+  .search-button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+    
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      stroke: currentColor;
+    }
+  }
+}
+
+/* Search overlay styles */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Use viewport height units */
+  background-color: rgba(0, 0, 0, 0.9); /* Changed from 0.85 to 0.9 for 90% opacity */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .search-overlay-content {
+    position: relative; /* Add position relative */
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Remove any margin that might affect centering */
+    overflow: hidden;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    transform: translate(0, 0); /* Reset any transforms */
+    animation: fadeInSearch 0.3s ease forwards;
+    top: 0; /* Reset any potential top positioning */
+  }
+  
+  .search-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    
+    .close-search {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      padding: 0.5rem;
+      color: var(--text-color);
+      border-radius: 4px;
+      transition: background-color 0.2s;
+      
+      &:hover {
+        background-color: var(--hover-bg);
+      }
+      
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        stroke: currentColor;
+      }
+    }
+  }
+  
+  .search-form {
+    padding: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+      }
+    }
+    
+    .advanced-search-link {
+      margin-top: 1.5rem;
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+      
+      a {
+        display: inline-block;
+        color: var(--primary-color);
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: var(--primary-color-dark);
+          text-decoration: underline;
+        }
+        
+        &::after {
+          content: " →";
+          display: inline-block;
+          transition: transform 0.2s ease;
+        }
+        
+        &:hover::after {
+          transform: translateX(3px);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInSearch {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Search page and results styling */
+.search-page {
+  padding: 2rem 0;
+  
+  h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .search-container {
+    margin-bottom: 2rem;
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      
+      &:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.2);
+      }
+    }
+  }
+  
+  .search-instructions {
+    margin-bottom: 2rem;
+    
+    kbd {
+      display: inline-block;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+      background-color: var(--code-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* Shared search results styling */
+.search-results-container {
+  .search-message {
+    padding: 1rem;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .search-result {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    .search-result-link {
+      display: block;
+      color: var(--text-color);
+      text-decoration: none;
+      
+      &:hover {
+        .search-result-title {
+          color: var(--primary-color);
+        }
+      }
+    }
+    
+    .search-result-title {
+      font-size: 1.3rem;
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    
+    .search-result-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .search-result-excerpt {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-color-light);
+      
+      mark {
+        background-color: rgba(var(--primary-color-rgb), 0.15);
+        color: var(--text-color);
+        padding: 0 0.2rem;
+        border-radius: 2px;
+      }
+    }
+  }
+}
