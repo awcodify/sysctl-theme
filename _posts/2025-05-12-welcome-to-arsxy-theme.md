@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Welcome to Sysctl Theme"
+title: "Welcome to Arsxy Theme"
 description: "A introduction to the features and design of this clean, fast, and SEO-friendly Jekyll theme"
 categories: Demo
 tags: jekyll theme demo markdown
@@ -9,13 +9,13 @@ image: theme-demo.jpeg
 featured: true
 ---
 
-Welcome to **Sysctl Theme** for Jekyll! This is a sample post that showcases the theme's features and styling options. If you're seeing this, you've successfully installed the theme.
+Welcome to **Arsxy Theme** for Jekyll! This is a sample post that showcases the theme's features and styling options. If you're seeing this, you've successfully installed the theme.
 
 <!--more-->
 
 ## Clean, Fast, and SEO-friendly
 
-Sysctl Theme is designed with these principles in mind:
+Arsxy Theme is designed with these principles in mind:
 
 - **Clean Design**: Minimal, distraction-free reading experience
 - **Fast Performance**: Optimized for quick loading times
@@ -132,4 +132,4 @@ Explore the documentation to learn how to make this theme your own!
 
 To create a new post, just add a new file in the `_posts` directory with the naming convention `YYYY-MM-DD-title.md`.
 
-Thank you for using Sysctl Theme!
+Thank you for using Arsxy Theme!

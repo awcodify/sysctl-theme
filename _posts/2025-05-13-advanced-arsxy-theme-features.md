@@ -1,24 +1,24 @@
 ---
 layout: post
-title: "Advanced Sysctl Theme Features"
-description: "Exploring powerful features and advanced customization options in the Sysctl Jekyll theme"
+title: "Advanced Arsxy Theme Features"
+description: "Exploring powerful features and advanced customization options in the Arsxy Jekyll theme"
 categories: Theme
-tags: jekyll sysctl advanced-features customization
+tags: jekyll arsxy advanced-features customization
 author: Awcodify
 image: theme-demo-2.jpeg
 ---
 
-Sysctl theme offers many advanced features beyond the basics. This guide explores the powerful capabilities that make Sysctl an excellent choice for technical blogs, documentation sites, and developer portfolios.
+Arsxy theme offers many advanced features beyond the basics. This guide explores the powerful capabilities that make Arsxy an excellent choice for technical blogs, documentation sites, and developer portfolios.
 
 <!--more-->
 
 ## Advanced Content Features
 
-Sysctl theme isn't just about looking good—it's built to organize and present technical content effectively.
+Arsxy theme isn't just about looking good—it's built to organize and present technical content effectively.
 
 ### Table of Contents
 
-For longer posts, Sysctl automatically generates a table of contents from your headings:
+For longer posts, Arsxy automatically generates a table of contents from your headings:
 
 ```yaml
 ---
@@ -32,7 +32,7 @@ The TOC is responsive and highlights the current section as readers scroll throu
 
 ### Content Categories
 
-Sysctl provides powerful content organization through categories and tags:
+Arsxy provides powerful content organization through categories and tags:
 
 - **Category pages**: Automatically generated for each category
 - **Tag cloud**: Visual representation of your most common topics
@@ -40,13 +40,13 @@ Sysctl provides powerful content organization through categories and tags:
 
 ### Code Documentation Features
 
-Sysctl is optimized for developers sharing code and documentation:
+Arsxy is optimized for developers sharing code and documentation:
 
 #### Syntax Highlighting with Line Numbers
 
 ```ruby
 # Ruby example with line numbers
-class SysctlTheme
+class ArsxyTheme
   attr_accessor :options
   
   def initialize(options = {})
@@ -74,7 +74,7 @@ Every code block comes with a copy button that appears on hover, making it easy 
 
 #### Code Annotations
 
-Sysctl supports annotations in code blocks to highlight important parts:
+Arsxy supports annotations in code blocks to highlight important parts:
 
 ```javascript
 function initTheme() {
@@ -98,7 +98,7 @@ function initTheme() {
 Images and iframes are automatically lazy-loaded to improve page load times.
 
 ```html
-<!-- Automatically lazy-loaded by Sysctl -->
+<!-- Automatically lazy-loaded by Arsxy -->
 <img src="large-image.jpg" alt="A large image">
 ```
 
@@ -112,7 +112,7 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 ### Font Loading Strategy
 
-Sysctl uses a sophisticated font-loading strategy:
+Arsxy uses a sophisticated font-loading strategy:
 
 1. **System fonts first**: Starts with system fonts for immediate rendering
 2. **Web fonts with `font-display: swap`**: Prevents invisible text while web fonts load
@@ -122,7 +122,7 @@ Sysctl uses a sophisticated font-loading strategy:
 
 ### Custom Page Templates
 
-Sysctl includes several specialized page templates:
+Arsxy includes several specialized page templates:
 
 - **Documentation template**: Ideal for technical documentation with sidebar navigation
 - **Portfolio template**: Showcase your projects with filterable categories
@@ -143,13 +143,13 @@ The theme includes a rich library of components you can use in your content:
 
 ### Structured Data
 
-Sysctl automatically adds structured data for blog posts:
+Arsxy automatically adds structured data for blog posts:
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Advanced Sysctl Theme Features",
+  "headline": "Advanced Arsxy Theme Features",
   "image": "https://example.com/assets/images/theme-demo-2.jpeg",
   "datePublished": "2025-05-14",
   "dateModified": "2025-05-14",
@@ -173,7 +173,7 @@ The theme generates rich preview cards for social media sharing:
 The `_config.yml` file provides global configuration options:
 
 ```yaml
-sysctl:
+arsxy:
   # Theme features
   features:
     dark_mode: true
@@ -203,7 +203,7 @@ You can override global settings on a per-page basis:
 ---
 layout: post
 title: "Custom Page"
-sysctl:
+arsxy:
   features:
     toc_auto: false
     reading_time: false
@@ -216,7 +216,7 @@ sysctl:
 
 ### CSS Custom Properties
 
-Sysctl uses CSS custom properties (variables) extensively, making it easy to customize the theme's appearance:
+Arsxy uses CSS custom properties (variables) extensively, making it easy to customize the theme's appearance:
 
 ```css
 :root {
@@ -249,6 +249,6 @@ _includes/
 
 ## Conclusion
 
-Sysctl theme's advanced features make it a powerful platform for building sophisticated websites while maintaining clean, fast-loading pages. Whether you're creating documentation, a tech blog, or a professional portfolio, these features help you present your content in the most effective way possible.
+Arsxy theme's advanced features make it a powerful platform for building sophisticated websites while maintaining clean, fast-loading pages. Whether you're creating documentation, a tech blog, or a professional portfolio, these features help you present your content in the most effective way possible.
 
-By leveraging these advanced capabilities, you can create a unique site that stands out while benefiting from the solid foundation that Sysctl provides.
+By leveraging these advanced capabilities, you can create a unique site that stands out while benefiting from the solid foundation that Arsxy provides.

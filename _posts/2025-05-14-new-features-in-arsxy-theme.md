@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "New Features in Sysctl Theme: Related Posts, Social Sharing, and Search"
+title: "New Features in Arsxy Theme: Related Posts, Social Sharing, and Search"
 categories: [features, updates]
 tags: [related-posts, search, social-sharing, jekyll, theme]
-description: "Explore the newest features added to Sysctl Theme: intelligent related posts suggestions, social sharing buttons for enhanced content distribution, and a powerful search functionality."
+description: "Explore the newest features added to Arsxy Theme: intelligent related posts suggestions, social sharing buttons for enhanced content distribution, and a powerful search functionality."
 image: "new-features-update.svg"
 ---
 
-We're excited to announce three powerful new features that have been added to the Sysctl Theme to enhance user experience and content discoverability. These additions make your Jekyll-powered site more interactive, shareable, and navigable.
+We're excited to announce three powerful new features that have been added to the Arsxy Theme to enhance user experience and content discoverability. These additions make your Jekyll-powered site more interactive, shareable, and navigable.
 
 ## Smart Related Posts
 
@@ -44,7 +44,7 @@ Make your content more shareable with the new social sharing buttons that appear
 - Email
 - Direct link copying
 
-The sharing buttons are designed to be visually appealing while maintaining the clean aesthetic of the Sysctl Theme. On mobile devices, they automatically collapse to icon-only versions to save space.
+The sharing buttons are designed to be visually appealing while maintaining the clean aesthetic of the Arsxy Theme. On mobile devices, they automatically collapse to icon-only versions to save space.
 
 ```yaml
 # Social sharing configuration
@@ -69,8 +69,8 @@ The search functionality is powered by a client-side JavaScript implementation t
 
 ## Conclusion
 
-These new features significantly enhance the user experience of sites using the Sysctl Theme. By improving content discovery through related posts, enabling easy sharing, and adding powerful search capabilities, your Jekyll site becomes more engaging and user-friendly.
+These new features significantly enhance the user experience of sites using the Arsxy Theme. By improving content discovery through related posts, enabling easy sharing, and adding powerful search capabilities, your Jekyll site becomes more engaging and user-friendly.
 
-We're committed to continuously improving the Sysctl Theme with features that help creators showcase their content in the best possible way while providing visitors with an optimal reading experience.
+We're committed to continuously improving the Arsxy Theme with features that help creators showcase their content in the best possible way while providing visitors with an optimal reading experience.
 
 Give these new features a try and let us know what you think!
