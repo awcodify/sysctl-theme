@@ -4,9 +4,6 @@ title: SEO Optimization
 description: Optimize your Jekyll site for search engines with Arsxy theme
 permalink: /docs/seo/
 ---
-
-# SEO Optimization with Arsxy Theme
-
 The Arsxy theme includes built-in SEO features to help your content rank better in search engines. This guide explains how to make the most of these features.
 
 ## Built-in SEO Features

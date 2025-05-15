@@ -5,8 +5,6 @@ description: Complete configuration options for the Arsxy Jekyll theme
 permalink: /docs/configuration/
 ---
 
-# Configuration Options
-
 The Arsxy Theme can be extensively customized through your site's `_config.yml` file. This page documents all available configuration options.
 
 ## Basic Site Settings

@@ -4,9 +4,6 @@ title: Custom Layouts
 description: Learn how to create and customize layouts for your Arsxy Theme site
 permalink: /docs/custom-layouts/
 ---
-
-# Custom Layouts
-
 While Arsxy Theme comes with several pre-designed layouts, you may want to create your own custom layouts for specific content types or page designs. This guide will walk you through the process of creating and implementing custom layouts.
 
 ## Understanding Jekyll Layouts

@@ -4,9 +4,6 @@ title: Version History
 description: Release history and changelog for Arsxy Theme
 permalink: /docs/version-history/
 ---
-
-# Version History
-
 This page documents the release history of Arsxy Theme, including new features, improvements, and bug fixes for each version.
 
 ## Version 1.0.0 (May 12, 2025)

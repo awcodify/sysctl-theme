@@ -4,9 +4,6 @@ title: Performance Optimization
 description: Learn how to optimize your Arsxy Theme site for maximum speed and efficiency
 permalink: /docs/performance/
 ---
-
-# Performance Optimization
-
 The Arsxy Theme is designed with performance in mind, incorporating modern best practices to ensure your site loads quickly and runs efficiently. This guide explains the built-in performance optimizations and how you can further enhance your site's speed.
 
 ## Built-in Performance Features

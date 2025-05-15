@@ -4,9 +4,6 @@ title: Typography
 description: Learn about typography features and customization in Arsxy Theme
 permalink: /docs/typography/
 ---
-
-# Typography
-
 Typography is a fundamental aspect of the Arsxy Theme, carefully designed to provide optimal readability and aesthetics. This guide covers the theme's typography system and how to customize it for your specific needs.
 
 ## Typography System

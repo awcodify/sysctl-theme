@@ -4,9 +4,6 @@ title: Roadmap
 description: Future plans and upcoming features for Arsxy Theme
 permalink: /docs/roadmap/
 ---
-
-# Roadmap
-
 This page outlines the planned features and improvements for future versions of Arsxy Theme. While we strive to maintain this roadmap, priorities may shift based on user feedback and community needs.
 
 ## Upcoming in v1.1.0

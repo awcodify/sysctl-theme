@@ -4,9 +4,6 @@ title: Responsive Design
 description: Learn how the Arsxy Theme implements responsive design for all screen sizes
 permalink: /docs/responsive-design/
 ---
-
-# Responsive Design
-
 Arsxy Theme is built with a mobile-first responsive design approach, ensuring your site looks great and functions perfectly across all devices and screen sizes, from smartphones to desktop monitors.
 
 ## Mobile-First Approach

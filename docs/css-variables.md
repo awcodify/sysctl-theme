@@ -4,9 +4,6 @@ title: CSS Variables Reference
 description: Complete reference for CSS custom properties (variables) used in Arsxy Theme
 permalink: /docs/css-variables/
 ---
-
-# CSS Variables Reference
-
 Arsxy Theme uses CSS custom properties (variables) to make customization simple and consistent. This reference documents all available CSS variables and how to use them to customize your site's appearance.
 
 ## Overview

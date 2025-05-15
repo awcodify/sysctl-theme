@@ -4,9 +4,6 @@ title: Quick Start Guide
 description: Get started quickly with the Arsxy Jekyll theme
 permalink: /docs/quick-start/
 ---
-
-# Quick Start Guide
-
 This guide will help you set up a new Jekyll site with the Arsxy theme in minutes. Follow these steps to get up and running quickly.
 
 ## Prerequisites

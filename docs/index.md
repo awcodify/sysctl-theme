@@ -4,7 +4,6 @@ title: Arsxy Theme Documentation
 description: Comprehensive documentation for the Arsxy Jekyll theme
 permalink: /docs/
 ---
-
 Welcome to the official documentation for Arsxy Theme, a clean, modern Jekyll theme optimized for technical blogs and documentation sites.
 
 ## Getting Started

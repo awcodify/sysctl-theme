@@ -4,9 +4,6 @@ title: Dark Mode
 description: How to use and customize dark mode in the Arsxy theme
 permalink: /docs/dark-mode/
 ---
-
-# Dark Mode in Arsxy Theme
-
 The Arsxy theme includes a built-in dark mode feature that provides a comfortable reading experience in low-light environments. This documentation explains how to enable, configure, and customize dark mode.
 
 ## Enabling Dark Mode

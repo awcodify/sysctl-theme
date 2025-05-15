@@ -4,9 +4,6 @@ title: Troubleshooting
 description: Common issues and solutions when working with Arsxy Theme
 permalink: /docs/troubleshooting/
 ---
-
-# Troubleshooting
-
 This guide covers common issues you might encounter when working with Arsxy Theme and provides solutions to help you resolve them quickly.
 
 ## Installation Issues
