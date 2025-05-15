@@ -2,6 +2,8 @@
 
 A clean, modern Jekyll theme optimized for technical blogs and documentation sites. This theme prioritizes readability, performance, and responsive design.
 
+> **Current Status**: This theme is currently in beta (v1.0.0-beta). While it's functional and feature-rich, it may receive some refinements before the final stable release.
+
 > **Built with AI**: This theme was developed with the assistance of GitHub Copilot and Claude 3.7 Sonnet.
 
 ![Arsxy Theme Screenshot](assets/images/ss-arsxy-theme.png)
@@ -143,7 +145,7 @@ You can override the default colors and typography by creating a `_sass/_custom.
 
 ## Important Notes
 
-- This theme requires Jekyll 4.2 or higher
+- This theme requires Jekyll 3.9 or compatible versions
 - For best performance, optimize your images before adding them to your site
 - The theme includes built-in dark mode that respects user system preferences
 
