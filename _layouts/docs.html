@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<div class="docs-container">
+  <div class="docs-content">
+    <article class="docs-article">
+      <header class="docs-header">
+        <h1 class="docs-title">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="docs-description">{{ page.description }}</p>
+        {% endif %}
+      </header>
+
+      <div class="docs-body">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+  
+  <aside class="docs-sidebar">
+    <div class="docs-nav">
+      <h2 class="docs-nav-title">Documentation</h2>
+      
+      <nav class="docs-nav-menu">
+        <ul class="docs-nav-list">
+          <li><a href="/docs/" {% if page.url == "/docs/" %}class="active"{% endif %}>Introduction</a></li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Getting Started</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/installation/" {% if page.url == "/docs/installation/" %}class="active"{% endif %}>Installation Guide</a></li>
+              <li><a href="/docs/quick-start/" {% if page.url == "/docs/quick-start/" %}class="active"{% endif %}>Quick Start</a></li>
+              <li><a href="/docs/configuration/" {% if page.url == "/docs/configuration/" %}class="active"{% endif %}>Configuration</a></li>
+            </ul>
+          </li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Core Features</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/dark-mode/" {% if page.url == "/docs/dark-mode/" %}class="active"{% endif %}>Dark Mode</a></li>
+              <li><a href="/docs/seo/" {% if page.url == "/docs/seo/" %}class="active"{% endif %}>SEO Optimization</a></li>
+              <li><a href="/docs/responsive-design/" {% if page.url == "/docs/responsive-design/" %}class="active"{% endif %}>Responsive Design</a></li>
+              <li><a href="/docs/typography/" {% if page.url == "/docs/typography/" %}class="active"{% endif %}>Typography</a></li>
+            </ul>
+          </li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Components</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/components/navigation/" {% if page.url == "/docs/components/navigation/" %}class="active"{% endif %}>Navigation</a></li>
+              <li><a href="/docs/components/toc/" {% if page.url == "/docs/components/toc/" %}class="active"{% endif %}>Table of Contents</a></li>
+              <li><a href="/docs/components/code-highlighting/" {% if page.url == "/docs/components/code-highlighting/" %}class="active"{% endif %}>Code Highlighting</a></li>
+              <li><a href="/docs/components/featured-images/" {% if page.url == "/docs/components/featured-images/" %}class="active"{% endif %}>Featured Images</a></li>
+              <li><a href="/docs/components/social-sharing/" {% if page.url == "/docs/components/social-sharing/" %}class="active"{% endif %}>Social Sharing</a></li>
+              <li><a href="/docs/components/search/" {% if page.url == "/docs/components/search/" %}class="active"{% endif %}>Search</a></li>
+            </ul>
+          </li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Customization</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/customization/" {% if page.url == "/docs/customization/" %}class="active"{% endif %}>Theme Customization</a></li>
+              <li><a href="/docs/css-variables/" {% if page.url == "/docs/css-variables/" %}class="active"{% endif %}>CSS Variables</a></li>
+              <li><a href="/docs/custom-layouts/" {% if page.url == "/docs/custom-layouts/" %}class="active"{% endif %}>Custom Layouts</a></li>
+            </ul>
+          </li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Advanced</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/performance/" {% if page.url == "/docs/performance/" %}class="active"{% endif %}>Performance</a></li>
+              <li><a href="/docs/contributing/" {% if page.url == "/docs/contributing/" %}class="active"{% endif %}>Contributing</a></li>
+              <li><a href="/docs/troubleshooting/" {% if page.url == "/docs/troubleshooting/" %}class="active"{% endif %}>Troubleshooting</a></li>
+            </ul>
+          </li>
+          
+          <li class="docs-section">
+            <span class="docs-section-title">Release</span>
+            <ul class="docs-section-items">
+              <li><a href="/docs/version-history/" {% if page.url == "/docs/version-history/" %}class="active"{% endif %}>Version History</a></li>
+              <li><a href="/docs/roadmap/" {% if page.url == "/docs/roadmap/" %}class="active"{% endif %}>Roadmap</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+</div>

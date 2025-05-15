@@ -88,10 +88,10 @@ homepage:
 navigation:
   - title: Home
     url: /
+  - title: Documentation
+    url: /docs
   - title: About
     url: /about
-  - title: Articles
-    url: /articles
   - title: Categories
     url: /categories
   - title: Tags

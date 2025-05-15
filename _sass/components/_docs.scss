@@ -1,0 +1,240 @@
+// Documentation styles
+.docs-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.docs-content {
+  flex: 1;
+  min-width: 0; // Fixes text overflowing flexbox in some cases
+}
+
+.docs-article {
+  width: 100%;
+}
+
+.docs-header {
+  margin-bottom: 2rem;
+  padding-top: 0; // Remove the top padding
+}
+
+.docs-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0; // Ensure no top margin
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.docs-description {
+  font-size: 1.2rem;
+  color: var(--light-text-color);
+  margin-top: 0.5rem;
+}
+
+.docs-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  
+  h2 {
+    font-size: 1.75rem;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.75rem;
+  }
+  
+  p, ul, ol {
+    margin-bottom: 1.2rem;
+  }
+  
+  ul, ol {
+    padding-left: 1.5rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  pre {
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .highlight {
+    border-radius: 0.5rem;
+  }
+}
+
+// Sidebar styles
+.docs-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    position: relative;
+    top: 0;
+    max-height: none;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+
+.docs-nav {
+  padding: 0.75rem 1rem 1rem; // Adjust top padding to help with title alignment
+  background: var(--light-bg-color);
+  border-radius: 0.5rem;
+  
+  .dark-mode & {
+    background: var(--dark-code-bg);
+  }
+}
+
+.docs-nav-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0; // Remove the padding-top completely
+  line-height: 1.2; // Adjust line height to match the main title
+  border-bottom: 1px solid var(--border-color);
+}
+
+.docs-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  & > li {
+    margin-bottom: 0.75rem;
+    
+    & > a {
+      display: block;
+      padding: 0.4rem 0;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 0.25rem;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+      
+      &.active {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.docs-section {
+  margin-bottom: 1rem;
+}
+
+.docs-section-title {
+  display: block;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--light-text-color);
+}
+
+.docs-section-items {
+  list-style: none;
+  padding-left: 0.5rem;
+  margin: 0.5rem 0 1rem;
+  
+  li {
+    margin-bottom: 0.25rem;
+  }
+  
+  a {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--primary-color);
+      
+      .dark-mode & {
+        background: rgba(255, 255, 255, 0.05);
+      }
+    }
+    
+    &.active {
+      background: rgba(0, 0, 0, 0.07);
+      color: var(--primary-color);
+      font-weight: 500;
+      
+      .dark-mode & {
+        background: rgba(255, 255, 255, 0.07);
+      }
+    }
+  }
+}
+
+// Dark mode support
+.dark-mode {
+  .docs-description {
+    color: var(--dark-text-color);
+    opacity: 0.8;
+  }
+  
+  .docs-nav {
+    background: var(--dark-code-bg);
+  }
+  
+  .docs-section-title {
+    color: var(--dark-text-color);
+    opacity: 0.7;
+  }
+  
+  .docs-nav-list > li > a,
+  .docs-section-items a {
+    color: var(--dark-text-color);
+    
+    &:hover,
+    &.active {
+      color: var(--dark-link-color);
+    }
+  }
+}
