@@ -1,6 +1,6 @@
-# Contributing to Sysctl Theme
+# Contributing to Arsxy Theme
 
-Thank you for considering contributing to the Sysctl Theme! This document provides guidelines for contributing to this project.
+Thank you for considering contributing to the Arsxy Theme! This document provides guidelines for contributing to this project.
 
 ## Development Guidelines
 

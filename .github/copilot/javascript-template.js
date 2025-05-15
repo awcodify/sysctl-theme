@@ -1,5 +1,5 @@
 /**
- * @fileoverview Template for JavaScript files in Sysctl Theme
+ * @fileoverview Template for JavaScript files in Arsxy Theme
  * 
  * GUIDELINES FOR JAVASCRIPT DEVELOPMENT:
  * - Keep JavaScript minimal and performance-focused

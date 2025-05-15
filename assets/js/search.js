@@ -1,5 +1,5 @@
 /**
- * Search functionality for Sysctl Theme
+ * Search functionality for Arsxy Theme
  */
 (function() {
   // DOM Elements

@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: Performance Optimization
-description: Learn how to optimize your Sysctl Theme site for maximum speed and efficiency
+description: Learn how to optimize your Arsxy Theme site for maximum speed and efficiency
 permalink: /docs/performance/
 ---
 
 # Performance Optimization
 
-The Sysctl Theme is designed with performance in mind, incorporating modern best practices to ensure your site loads quickly and runs efficiently. This guide explains the built-in performance optimizations and how you can further enhance your site's speed.
+The Arsxy Theme is designed with performance in mind, incorporating modern best practices to ensure your site loads quickly and runs efficiently. This guide explains the built-in performance optimizations and how you can further enhance your site's speed.
 
 ## Built-in Performance Features
 
-Sysctl Theme includes several performance optimizations out of the box:
+Arsxy Theme includes several performance optimizations out of the box:
 
 1. **Minimal CSS Framework**: Custom-built, lightweight CSS without heavy frameworks
 2. **Optimized Asset Loading**: CSS and JavaScript loaded efficiently to minimize render blocking
@@ -21,7 +21,7 @@ Sysctl Theme includes several performance optimizations out of the box:
 
 ## Performance Metrics
 
-A default Sysctl Theme installation typically achieves:
+A default Arsxy Theme installation typically achieves:
 
 - 90+ Google PageSpeed score on mobile and desktop
 - Sub-second load times for uncached pages
@@ -277,4 +277,4 @@ Use this checklist to maintain optimal performance:
 
 - [Image Optimization](/docs/components/featured-images/)
 - [Responsive Design](/docs/responsive-design/)
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)

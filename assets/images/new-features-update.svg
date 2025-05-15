@@ -17,7 +17,7 @@ It would be better to replace this with a real screenshot or custom image.
   <rect width="100%" height="150" fill="#0066cc"/>
   
   <!-- Title -->
-  <text x="50" y="100" class="title" fill="#ffffff">Sysctl Theme - New Features</text>
+  <text x="50" y="100" class="title" fill="#ffffff">Arsxy Theme - New Features</text>
   
   <!-- Feature sections -->
   <rect x="50" y="200" width="340" height="380" rx="10" class="bg-rect"/>

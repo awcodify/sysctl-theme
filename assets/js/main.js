@@ -1,5 +1,5 @@
 /**
- * Main JavaScript file for the Sysctl Theme
+ * Main JavaScript file for the Arsxy Theme
  */
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize dark mode
