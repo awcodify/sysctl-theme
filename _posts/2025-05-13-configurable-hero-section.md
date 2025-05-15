@@ -37,7 +37,7 @@ hero:
       url: "/about/"
       primary: true
     - label: "GitHub"
-      url: "https://github.com/yourusername/sysctl-theme"
+      url: "https://github.com/awcodify/arsxy-theme"
       primary: false
 ```
 
