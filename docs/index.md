@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Sysctl Theme Documentation
-description: Comprehensive documentation for the Sysctl Jekyll theme
+title: Arsxy Theme Documentation
+description: Comprehensive documentation for the Arsxy Jekyll theme
 permalink: /docs/
 ---
 
-Welcome to the official documentation for Sysctl Theme, a clean, modern Jekyll theme optimized for technical blogs and documentation sites.
+Welcome to the official documentation for Arsxy Theme, a clean, modern Jekyll theme optimized for technical blogs and documentation sites.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ Welcome to the official documentation for Sysctl Theme, a clean, modern Jekyll t
 ## Advanced
 
 * [Performance Optimization](./performance/)
-* [Contributing to Sysctl Theme](./contributing/)
+* [Contributing to Arsxy Theme](./contributing/)
 * [Troubleshooting](./troubleshooting/)
 
 ## Release Notes

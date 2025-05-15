@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Quick Start Guide
-description: Get started quickly with the Sysctl Jekyll theme
+description: Get started quickly with the Arsxy Jekyll theme
 permalink: /docs/quick-start/
 ---
 
 # Quick Start Guide
 
-This guide will help you set up a new Jekyll site with the Sysctl theme in minutes. Follow these steps to get up and running quickly.
+This guide will help you set up a new Jekyll site with the Arsxy theme in minutes. Follow these steps to get up and running quickly.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ jekyll new my-awesome-site
 cd my-awesome-site
 ```
 
-## Step 2: Add the Sysctl Theme
+## Step 2: Add the Arsxy Theme
 
 Open your site's `Gemfile` and replace the line that says:
 
@@ -66,12 +66,12 @@ Open your `_config.yml` file and replace its contents with the following:
 title: My Awesome Site
 name: My Awesome Site
 description: >-
-  A personal blog built with Jekyll and the Sysctl theme.
+  A personal blog built with Jekyll and the Arsxy theme.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Theme settings
-remote_theme: awcodify/sysctl-theme
+remote_theme: awcodify/arsxy-theme
 
 # Build settings
 markdown: kramdown
@@ -129,14 +129,14 @@ For example, create a file named `2025-05-15-my-first-post.md` with the followin
 ---
 layout: post
 title: "My First Post"
-description: "This is my first post with the Sysctl theme."
+description: "This is my first post with the Arsxy theme."
 categories: General
 tags: jekyll sysctl
 ---
 
 # Hello World!
 
-This is my first post using the Sysctl theme. It's a beautiful, clean theme perfect for technical blogs and documentation sites.
+This is my first post using the Arsxy theme. It's a beautiful, clean theme perfect for technical blogs and documentation sites.
 
 ## Features I Love
 
@@ -155,11 +155,11 @@ Start your Jekyll server:
 bundle exec jekyll serve
 ```
 
-Visit `http://localhost:4000` in your browser to see your site with the Sysctl theme applied.
+Visit `http://localhost:4000` in your browser to see your site with the Arsxy theme applied.
 
 ## Step 7: Customize Your Site
 
-Now that you have your site running with the Sysctl theme, you can:
+Now that you have your site running with the Arsxy theme, you can:
 
 1. Update your site info in `_config.yml`
 2. Create additional pages (about.md, contact.md, etc.)
@@ -174,4 +174,4 @@ Now that you have your site running with the Sysctl theme, you can:
 
 ---
 
-Congratulations! You now have a functional Jekyll site using the Sysctl theme. Continue exploring the documentation to learn how to make the most of this theme's features.
+Congratulations! You now have a functional Jekyll site using the Arsxy theme. Continue exploring the documentation to learn how to make the most of this theme's features.

@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: Dark Mode
-description: How to use and customize dark mode in the Sysctl theme
+description: How to use and customize dark mode in the Arsxy theme
 permalink: /docs/dark-mode/
 ---
 
-# Dark Mode in Sysctl Theme
+# Dark Mode in Arsxy Theme
 
-The Sysctl theme includes a built-in dark mode feature that provides a comfortable reading experience in low-light environments. This documentation explains how to enable, configure, and customize dark mode.
+The Arsxy theme includes a built-in dark mode feature that provides a comfortable reading experience in low-light environments. This documentation explains how to enable, configure, and customize dark mode.
 
 ## Enabling Dark Mode
 
-Dark mode is enabled by default in the Sysctl theme. Users can toggle between light and dark modes using the theme toggle button in the site header.
+Dark mode is enabled by default in the Arsxy theme. Users can toggle between light and dark modes using the theme toggle button in the site header.
 
 To control dark mode availability in your site configuration, use the following settings in your `_config.yml`:
 
@@ -156,6 +156,6 @@ For advanced customization of dark mode, you can:
 
 ## Related Resources
 
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)
 - [CSS Variables](/docs/css-variables/)
 - [Typography and Readability](/docs/typography/)

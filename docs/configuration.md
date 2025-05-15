@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Configuration
-description: Complete configuration options for the Sysctl Jekyll theme
+description: Complete configuration options for the Arsxy Jekyll theme
 permalink: /docs/configuration/
 ---
 
 # Configuration Options
 
-The Sysctl Theme can be extensively customized through your site's `_config.yml` file. This page documents all available configuration options.
+The Arsxy Theme can be extensively customized through your site's `_config.yml` file. This page documents all available configuration options.
 
 ## Basic Site Settings
 
@@ -29,10 +29,10 @@ When using the theme, specify either:
 
 ```yaml
 # For remote theme installation
-remote_theme: awcodify/sysctl-theme
+remote_theme: awcodify/arsxy-theme
 
 # OR for gem-based installation
-theme: sysctl-theme
+theme: arsxy-theme
 ```
 
 ## Navigation Menu
@@ -196,7 +196,7 @@ baseurl: "/"
 url: "https://example.com"
 
 # Theme settings
-remote_theme: awcodify/sysctl-theme
+remote_theme: awcodify/arsxy-theme
 
 # Navigation menu
 navigation:

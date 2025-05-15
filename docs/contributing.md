@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Contributing to Sysctl Theme
-description: Learn how to contribute to the Sysctl Jekyll theme open source project
+title: Contributing to Arsxy Theme
+description: Learn how to contribute to the Arsxy Jekyll theme open source project
 permalink: /docs/contributing/
 ---
 
-# Contributing to Sysctl Theme
+# Contributing to Arsxy Theme
 
-Thank you for your interest in contributing to the Sysctl Theme! This guide will help you get started with contributing to this open source project.
+Thank you for your interest in contributing to the Arsxy Theme! This guide will help you get started with contributing to this open source project.
 
 ## Ways to Contribute
 
-There are many ways to contribute to the Sysctl Theme:
+There are many ways to contribute to the Arsxy Theme:
 
 1. **Reporting bugs**: Help identify and report issues
 2. **Suggesting features**: Propose new features or improvements
@@ -23,7 +23,7 @@ There are many ways to contribute to the Sysctl Theme:
 
 ### Prerequisites
 
-To contribute to the Sysctl Theme, you'll need:
+To contribute to the Arsxy Theme, you'll need:
 
 - Git
 - Ruby (version 2.5.0 or higher)
@@ -36,8 +36,8 @@ To contribute to the Sysctl Theme, you'll need:
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/sysctl-theme.git
-   cd sysctl-theme
+   git clone https://github.com/YOUR-USERNAME/arsxy-theme.git
+   cd arsxy-theme
    ```
 
 3. Install dependencies:
@@ -175,7 +175,7 @@ When contributing to documentation:
 
 ## Release Process
 
-The Sysctl Theme follows these release practices:
+The Arsxy Theme follows these release practices:
 
 1. Semantic versioning (MAJOR.MINOR.PATCH)
 2. Changelogs for each release
@@ -193,8 +193,8 @@ By participating in this project, you agree to abide by the project's Code of Co
 
 ## License
 
-By contributing to the Sysctl Theme, you agree that your contributions will be licensed under the same [MIT License](https://github.com/awcodify/sysctl-theme/blob/main/LICENSE) that covers the project.
+By contributing to the Arsxy Theme, you agree that your contributions will be licensed under the same [MIT License](https://github.com/awcodify/arsxy-theme/blob/main/LICENSE) that covers the project.
 
 ## Thank You!
 
-Thank you for contributing to the Sysctl Theme! Your efforts help make this project better for everyone.
+Thank you for contributing to the Arsxy Theme! Your efforts help make this project better for everyone.

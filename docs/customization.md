@@ -1,17 +1,17 @@
 ---
 layout: docs
-title: Customizing Sysctl Theme
-description: Learn how to customize the Sysctl theme for your Jekyll site
+title: Customizing Arsxy Theme
+description: Learn how to customize the Arsxy theme for your Jekyll site
 permalink: /docs/customization/
 ---
 
-# Customizing Your Sysctl Theme
+# Customizing Your Arsxy Theme
 
-The Sysctl theme is designed to be highly customizable while maintaining its clean and modern aesthetic. This guide covers various ways to personalize the theme to match your brand and preferences.
+The Arsxy theme is designed to be highly customizable while maintaining its clean and modern aesthetic. This guide covers various ways to personalize the theme to match your brand and preferences.
 
 ## Basic Customization Methods
 
-There are several ways to customize the Sysctl theme:
+There are several ways to customize the Arsxy theme:
 
 1. **Configuration Options**: Using settings in `_config.yml`
 2. **Custom CSS**: Creating your own stylesheet to override default styles

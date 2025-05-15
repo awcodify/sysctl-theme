@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Installation Guide
-description: How to install the Lexicon Jekyll theme
+description: How to install the Arsxy Jekyll theme
 permalink: /docs/installation/
 ---
 
 # Installation Guide
 
-There are two ways to install the Lexicon Theme for your Jekyll site: as a remote theme (recommended) or as a regular gem-based theme.
+There are two ways to install the Arsxy Theme for your Jekyll site: as a remote theme (recommended) or as a regular gem-based theme.
 
 ## Installing as a Remote Theme (Recommended)
 
@@ -18,7 +18,7 @@ This method allows you to use the theme directly from GitHub, making it easier t
 Add this line to your Jekyll site's `_config.yml` file:
 
 ```yaml
-remote_theme: awcodify/lexicon-theme
+remote_theme: awcodify/arsxy-theme
 ```
 
 ### 2. Install Required Plugins
@@ -53,7 +53,7 @@ For users who prefer a traditional gem-based approach:
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "lexicon-theme"
+gem "arsxy-theme"
 ```
 
 ### 2. Add to your `_config.yml`
@@ -61,7 +61,7 @@ gem "lexicon-theme"
 Add this line to your Jekyll site's `_config.yml` file:
 
 ```yaml
-theme: lexicon-theme
+theme: arsxy-theme
 ```
 
 ### 3. Install the Bundle

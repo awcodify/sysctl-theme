@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Troubleshooting
-description: Common issues and solutions when working with Sysctl Theme
+description: Common issues and solutions when working with Arsxy Theme
 permalink: /docs/troubleshooting/
 ---
 
 # Troubleshooting
 
-This guide covers common issues you might encounter when working with Sysctl Theme and provides solutions to help you resolve them quickly.
+This guide covers common issues you might encounter when working with Arsxy Theme and provides solutions to help you resolve them quickly.
 
 ## Installation Issues
 
@@ -16,14 +16,14 @@ This guide covers common issues you might encounter when working with Sysctl The
 **Issue**: Errors when running `bundle install` to set up your Jekyll site.
 
 **Solution**: 
-1. Ensure you have the correct Ruby version installed (Sysctl Theme requires Ruby 2.5.0 or higher)
+1. Ensure you have the correct Ruby version installed (Arsxy Theme requires Ruby 2.5.0 or higher)
 2. Try updating Bundler: `gem update bundler`
 3. Clear your gem cache: `gem cleanup`
 4. Try installing with: `bundle install --path vendor/bundle`
 
 ### Jekyll Build Failures
 
-**Issue**: Jekyll fails to build your site with Sysctl Theme.
+**Issue**: Jekyll fails to build your site with Arsxy Theme.
 
 **Solution**:
 1. Run `bundle exec jekyll build --verbose` to see detailed error information
@@ -122,9 +122,9 @@ This guide covers common issues you might encounter when working with Sysctl The
 
 If you're still experiencing issues after trying these troubleshooting steps:
 
-1. Search the [GitHub Issues](https://github.com/yourusername/sysctl-theme/issues) for similar problems
+1. Search the [GitHub Issues](https://github.com/awcodify/arsxy-theme/issues) for similar problems
 2. Check the Jekyll documentation for common Jekyll-related issues
-3. Create a new issue on the Sysctl Theme repository with:
+3. Create a new issue on the Arsxy Theme repository with:
    - A clear description of the problem
    - Steps to reproduce
    - Expected vs. actual behavior

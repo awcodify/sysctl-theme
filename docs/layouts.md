@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Layout Options
-description: Learn about the different layout options available in Sysctl Theme
+description: Learn about the different layout options available in Arsxy Theme
 permalink: /docs/layouts/
 ---
 
 # Layout Options
 
-Sysctl Theme comes with several pre-designed layout options to help you create a variety of page types for your Jekyll site. Each layout has been carefully designed to address specific content presentation needs.
+Arsxy Theme comes with several pre-designed layout options to help you create a variety of page types for your Jekyll site. Each layout has been carefully designed to address specific content presentation needs.
 
 ## Available Layouts
 

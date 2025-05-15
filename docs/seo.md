@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: SEO Optimization
-description: Optimize your Jekyll site for search engines with Sysctl theme
+description: Optimize your Jekyll site for search engines with Arsxy theme
 permalink: /docs/seo/
 ---
 
-# SEO Optimization with Sysctl Theme
+# SEO Optimization with Arsxy Theme
 
-The Sysctl theme includes built-in SEO features to help your content rank better in search engines. This guide explains how to make the most of these features.
+The Arsxy theme includes built-in SEO features to help your content rank better in search engines. This guide explains how to make the most of these features.
 
 ## Built-in SEO Features
 
-The Sysctl theme comes with several SEO optimizations out of the box:
+The Arsxy theme comes with several SEO optimizations out of the box:
 
 - **Meta tags**: Automatic generation of essential meta tags
 - **Open Graph protocol**: Social media sharing optimization
@@ -64,7 +64,7 @@ noindex: false  # Set to true to exclude this page from search engines
 ---
 ```
 
-## Best Practices for SEO with Sysctl Theme
+## Best Practices for SEO with Arsxy Theme
 
 ### Titles and Headlines
 
@@ -106,7 +106,7 @@ Example of the built-in image include:
 
 ## Implementing Schema Markup
 
-The Sysctl theme automatically implements basic schema.org markup. For more specific types, you can add custom schema in your page's front matter:
+The Arsxy theme automatically implements basic schema.org markup. For more specific types, you can add custom schema in your page's front matter:
 
 ```yaml
 ---
@@ -128,7 +128,7 @@ schema:
 
 ## Monitoring Your SEO Performance
 
-While the Sysctl theme optimizes your site for search engines, it's important to monitor your performance:
+While the Arsxy theme optimizes your site for search engines, it's important to monitor your performance:
 
 1. Set up [Google Search Console](https://search.google.com/search-console/about) for your site
 2. Connect [Google Analytics](https://analytics.google.com/) by adding your tracking ID to `_config.yml`
@@ -159,5 +159,5 @@ microsoft_clarity: "abcdef1234"  # Microsoft Clarity
 ## Related Resources
 
 - [Configuration Options](/docs/configuration/)
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)
 - [Performance Optimization](/docs/performance/)

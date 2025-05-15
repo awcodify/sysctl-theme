@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: Typography
-description: Learn about typography features and customization in Sysctl Theme
+description: Learn about typography features and customization in Arsxy Theme
 permalink: /docs/typography/
 ---
 
 # Typography
 
-Typography is a fundamental aspect of the Sysctl Theme, carefully designed to provide optimal readability and aesthetics. This guide covers the theme's typography system and how to customize it for your specific needs.
+Typography is a fundamental aspect of the Arsxy Theme, carefully designed to provide optimal readability and aesthetics. This guide covers the theme's typography system and how to customize it for your specific needs.
 
 ## Typography System
 
-The Sysctl Theme uses a modern, responsive typography system built with:
+The Arsxy Theme uses a modern, responsive typography system built with:
 
 - A carefully selected font stack for optimal readability
 - Responsive sizing that adapts to different screen sizes
@@ -390,6 +390,6 @@ The theme's typography is built with accessibility in mind:
 
 ## Related Resources
 
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)
 - [Dark Mode](/docs/dark-mode/)
 - [CSS Variables Reference](/docs/css-variables/)
