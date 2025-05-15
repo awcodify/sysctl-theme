@@ -1,0 +1,37 @@
+<!-- 
+This is an SVG placeholder showing related posts example.
+In a production environment, replace with actual screenshots.
+-->
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { fill: #333; font-family: 'Arial', sans-serif; font-size: 24px; font-weight: bold; }
+    .post-title { fill: #0066cc; font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold; }
+    .date { fill: #666; font-family: 'Arial', sans-serif; font-size: 12px; }
+    .post-card { fill: #ffffff; stroke: #ddd; stroke-width: 1; }
+    .post-img { fill: #f0f0f0; stroke: #ddd; stroke-width: 1; }
+    .section-title { fill: #333; font-family: 'Arial', sans-serif; font-size: 28px; font-weight: bold; }
+  </style>
+  
+  <rect width="100%" height="100%" fill="#f9f9f9"/>
+  
+  <!-- Section Title -->
+  <text x="30" y="50" class="section-title">Related Articles</text>
+  
+  <!-- Post 1 -->
+  <rect x="30" y="80" width="230" height="280" rx="5" class="post-card"/>
+  <rect x="45" y="100" width="200" height="120" rx="3" class="post-img"/>
+  <text x="45" y="250" class="post-title">Customizing Your Theme</text>
+  <text x="45" y="270" class="date">May 13, 2025</text>
+  
+  <!-- Post 2 -->
+  <rect x="285" y="80" width="230" height="280" rx="5" class="post-card"/>
+  <rect x="300" y="100" width="200" height="120" rx="3" class="post-img"/>
+  <text x="300" y="250" class="post-title">Dark Mode Implementation</text>
+  <text x="300" y="270" class="date">May 14, 2025</text>
+  
+  <!-- Post 3 -->
+  <rect x="540" y="80" width="230" height="280" rx="5" class="post-card"/>
+  <rect x="555" y="100" width="200" height="120" rx="3" class="post-img"/>
+  <text x="555" y="250" class="post-title">SEO Optimization Tips</text>
+  <text x="555" y="270" class="date">May 13, 2025</text>
+</svg>

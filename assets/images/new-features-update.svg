@@ -1,0 +1,58 @@
+<!-- 
+This is an SVG placeholder for the new features update image.
+It would be better to replace this with a real screenshot or custom image.
+-->
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { fill: #333; font-family: 'Arial', sans-serif; font-size: 60px; font-weight: bold; }
+    .subtitle { fill: #666; font-family: 'Arial', sans-serif; font-size: 36px; }
+    .feature { fill: #444; font-family: 'Arial', sans-serif; font-size: 32px; font-weight: bold; }
+    .icon { stroke: #0066cc; stroke-width: 3; fill: none; }
+    .bg-rect { fill: #f8f9fa; stroke: #ddd; stroke-width: 2; }
+  </style>
+  
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  
+  <!-- Header background -->
+  <rect width="100%" height="150" fill="#0066cc"/>
+  
+  <!-- Title -->
+  <text x="50" y="100" class="title" fill="#ffffff">Sysctl Theme - New Features</text>
+  
+  <!-- Feature sections -->
+  <rect x="50" y="200" width="340" height="380" rx="10" class="bg-rect"/>
+  <rect x="430" y="200" width="340" height="380" rx="10" class="bg-rect"/>
+  <rect x="810" y="200" width="340" height="380" rx="10" class="bg-rect"/>
+  
+  <!-- Feature titles -->
+  <text x="170" y="250" text-anchor="middle" class="feature">Related Posts</text>
+  <text x="600" y="250" text-anchor="middle" class="feature">Social Sharing</text>
+  <text x="980" y="250" text-anchor="middle" class="feature">Search</text>
+  
+  <!-- Feature icons -->
+  <!-- Related posts icon -->
+  <g transform="translate(170, 320)">
+    <rect x="-60" y="-35" width="120" height="70" rx="5" class="icon"/>
+    <rect x="-60" y="50" width="120" height="70" rx="5" class="icon"/>
+    <rect x="-60" y="135" width="120" height="70" rx="5" class="icon"/>
+    <line x1="-40" y1="0" x2="40" y2="0" class="icon"/>
+    <line x1="-40" y1="85" x2="40" y2="85" class="icon"/>
+    <line x1="-40" y1="170" x2="40" y2="170" class="icon"/>
+  </g>
+  
+  <!-- Social sharing icon -->
+  <g transform="translate(600, 320)">
+    <circle cx="0" cy="0" r="50" class="icon"/>
+    <path d="M -25,15 L 0,-15 L 25,15" class="icon"/>
+    <path d="M 0,-15 L 0,50" class="icon"/>
+  </g>
+  
+  <!-- Search icon -->
+  <g transform="translate(980, 320)">
+    <circle cx="-15" cy="-15" r="40" class="icon"/>
+    <line x1="15" y1="15" x2="45" y2="45" stroke-width="6" class="icon"/>
+  </g>
+  
+  <!-- Bottom tagline -->
+  <text x="600" y="600" text-anchor="middle" class="subtitle">Enhancing user experience and content discovery</text>
+</svg>
