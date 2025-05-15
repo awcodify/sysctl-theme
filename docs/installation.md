@@ -85,7 +85,7 @@ Visit `http://localhost:4000` in your browser to verify that the theme is workin
 
 If you encounter any issues during installation:
 
-- Ensure you're using Jekyll 4.2 or higher
+- Ensure you're using Jekyll 3.9 or higher versions
 - Check that all required plugins are installed
 - Make sure your `_config.yml` is formatted correctly
 

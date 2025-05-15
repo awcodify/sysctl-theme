@@ -6,9 +6,9 @@ permalink: /docs/version-history/
 ---
 This page documents the release history of Arsxy Theme, including new features, improvements, and bug fixes for each version.
 
-## Version 1.0.0 (May 12, 2025)
+## Version 1.0.0-beta (May 15, 2025)
 
-Initial public release of Arsxy Theme.
+Current beta release of Arsxy Theme, feature-complete but undergoing final testing before stable release.
 
 ### Features
 - Clean, modern design optimized for technical content
@@ -27,36 +27,16 @@ Initial public release of Arsxy Theme.
 - Configurable sidebar position
 - Performance optimizations
 
-### Documentation
-- Comprehensive documentation covering all theme features
-- Installation and quick start guides
-- Customization instructions
-- Layout options explained
+### Known Limitations
+- Additional browser testing ongoing
+- Documentation may receive further refinements
+- Some advanced customization options still being documented
 
-## v0.9.0 (April 30, 2025)
+## Planned Version 1.0.0 (Coming Soon)
 
-Beta release for early testers.
+Stable release of Arsxy Theme.
 
-### Features
-- Core theme functionality 
-- Initial documentation
-- Basic styling and layouts
-
-### Known Issues
-- Search functionality had performance issues on large sites
-- Dark mode toggle occasionally required page refresh
-- Mobile navigation had some display issues on smaller devices
-
-## v0.8.0 (April 15, 2025)
-
-Alpha release for internal testing.
-
-### Features
-- Initial implementation of core layouts
-- Basic styling
-- Prototype of dark mode
-- Early documentation structure
-
-## Future Releases
-
-For information about planned features and improvements, see the [Roadmap](/docs/roadmap/) page.
+### Additional Features
+- Any refinements based on beta feedback
+- Finalized documentation
+- Verified cross-browser compatibility
