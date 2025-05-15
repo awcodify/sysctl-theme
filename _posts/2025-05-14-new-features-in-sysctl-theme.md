@@ -60,6 +60,7 @@ social_sharing:
 Perhaps the most significant addition is the new search functionality. Users can now quickly find content by clicking the search icon in the header, which opens a centered search modal. For more advanced searches, they can access the dedicated search page.
 
 ### Search Features:
+- **Keyboard Shortcut**: Press `Ctrl+F` (or `Cmd+F` on Mac) to instantly open the search modal
 - **Instant Search**: Results appear as you type
 - **Highlighted Matches**: Search terms are highlighted in results
 - **Context Preview**: See the surrounding content for each match
