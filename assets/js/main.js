@@ -81,14 +81,23 @@ function initTableOfContents() {
     }
   }
   
-  // Handle floating TOC
+  // Handle all TOC containers (floating TOC, docs sidebar, and static TOC)
   const floatingToc = document.querySelector('.floating-toc');
-  if (floatingToc) {
-    // Add scroll spy functionality
-    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4');
-    const tocLinks = document.querySelectorAll('.floating-toc .toc a, .table-of-contents .toc a');
+  const docsSidebar = document.querySelector('.docs-sidebar .docs-nav');
+  const tocContainers = [floatingToc, staticTocContainer, docsSidebar].filter(Boolean);
+  
+  if (tocContainers.length) {
+    // Add scroll spy functionality for all content areas
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4, .docs-body h2, .docs-body h3, .docs-body h4, .docs-content h2, .docs-content h3, .docs-content h4');
+    
+    // Get all possible TOC links across all containers
+    const tocLinks = document.querySelectorAll('.floating-toc .toc a, .table-of-contents .toc a, .docs-sidebar .docs-nav a');
     
     if (headings.length && tocLinks.length) {
+      // Add debug logs
+      console.log(`TOC Initialization: Found ${headings.length} headings and ${tocLinks.length} TOC links`);
+      console.log('TOC Containers:', tocContainers);
+      
       // Set up Intersection Observer for headings
       const headingsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -109,7 +118,10 @@ function initTableOfContents() {
             });
             
             // Use the first visible heading (closest to the top)
-            updateActiveTocLink(sortedHeadings[0].id);
+            const activeHeading = sortedHeadings[0];
+            if (activeHeading && activeHeading.id) {
+              updateActiveTocLink(activeHeading.id);
+            }
           }
         });
       }, {
@@ -119,52 +131,141 @@ function initTableOfContents() {
       
       // Observe all headings
       headings.forEach(heading => {
-        headingsObserver.observe(heading);
+        if (heading.id) {
+          headingsObserver.observe(heading);
+        } else {
+          console.warn('Found heading without ID:', heading.textContent.trim());
+        }
       });
       
       // Add click event to smooth scroll to sections
       tocLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-          e.preventDefault();
+          const href = this.getAttribute('href');
           
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          
-          if (targetElement) {
-            // Calculate proper scroll position with offset
-            const headerOffset = 100; // Adjust this value based on your header height and desired spacing
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          // Only handle links that refer to page anchors
+          if (href && href.startsWith('#')) {
+            e.preventDefault();
             
-            // Smooth scroll to target with proper offset
-            window.scrollTo({
-              top: offsetPosition - 50,
-              behavior: 'smooth'
-            });
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
             
-            // Update URL hash without jumping
-            history.pushState(null, null, `#${targetId}`);
-            
-            // Update active TOC link
-            updateActiveTocLink(targetId);
+            if (targetElement) {
+              // Calculate proper scroll position with offset
+              const headerOffset = 100; // Adjust this value based on your header height and desired spacing
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              // Smooth scroll to target with proper offset
+              window.scrollTo({
+                top: offsetPosition - 50,
+                behavior: 'smooth'
+              });
+              
+              // Update URL hash without jumping
+              history.pushState(null, null, `#${targetId}`);
+              
+              // Update active TOC link
+              updateActiveTocLink(targetId);
+            }
           }
         });
       });
     }
   }
   
-  // Function to update active TOC link
+  // Function to update active TOC link and auto-scroll the TOC
   function updateActiveTocLink(id) {
-    // Remove active class from all TOC links
-    document.querySelectorAll('.floating-toc .toc a').forEach(link => {
-      link.classList.remove('active');
+    // Process all TOC containers
+    tocContainers.forEach(container => {
+      if (!container) return;
+      
+      let activeLink;
+      
+      // Handle docs sidebar differently from other TOCs
+      if (container.classList.contains('docs-nav')) {
+        // For docs sidebar, we need to handle the specific structure
+        const allLinks = container.querySelectorAll('.docs-nav-list a');
+        
+        // Remove active class from all links in this container
+        allLinks.forEach(link => {
+          link.classList.remove('active');
+        });
+        
+        // Find the matching link in the docs sidebar
+        // First, try direct href match
+        activeLink = container.querySelector(`a[href="${window.location.pathname}#${id}"], a[href="#${id}"]`);
+        
+        // If no direct match, try partial match based on section name
+        if (!activeLink) {
+          // Sometimes the ID might be a transformed version of the text
+          const idParts = id.split('-');
+          for (const link of allLinks) {
+            const linkText = link.textContent.trim().toLowerCase();
+            // Check if the link text contains parts of the ID
+            if (idParts.some(part => linkText.includes(part.toLowerCase()))) {
+              activeLink = link;
+              break;
+            }
+          }
+        }
+      } else {
+        // Standard TOC (floating or static)
+        const allLinks = container.querySelectorAll('.toc a');
+        
+        // Remove active class from all TOC links in this container
+        allLinks.forEach(link => {
+          link.classList.remove('active');
+        });
+        
+        // Find the active link by href
+        activeLink = container.querySelector(`.toc a[href="#${id}"]`);
+      }
+      
+      if (activeLink) {
+        // Add active class to current link
+        activeLink.classList.add('active');
+        console.log('Activated link:', activeLink.textContent, 'in container:', container.className);
+        
+        // Find the scrollable container for this TOC
+        let tocElement;
+        if (container.classList.contains('docs-nav')) {
+          tocElement = container.closest('.docs-sidebar');
+        } else {
+          tocElement = container.closest('.table-of-contents, .floating-toc');
+        }
+        
+        // Auto-scroll the TOC to show the active link
+        if (tocElement && tocElement.scrollHeight > tocElement.clientHeight) {
+          console.log('Autoscrolling container:', tocElement.className);
+          
+          // Calculate the position of the active link relative to the TOC container
+          const activeLinkRect = activeLink.getBoundingClientRect();
+          const tocRect = tocElement.getBoundingClientRect();
+          
+          // Check if the active link is outside the visible area of the TOC
+          const isLinkAbove = activeLinkRect.top < tocRect.top + 40; // Add padding for better visibility
+          const isLinkBelow = activeLinkRect.bottom > tocRect.bottom - 40; // Add padding for better visibility
+          
+          if (isLinkAbove || isLinkBelow) {
+            console.log('Link is outside visible area, scrolling TOC');
+            
+            // Get the scroll position of the link relative to the TOC
+            // This is more reliable than offsetTop in some cases
+            const linkTop = activeLink.getBoundingClientRect().top - tocElement.getBoundingClientRect().top + tocElement.scrollTop;
+            
+            // Calculate a position that centers the active link in the TOC as much as possible
+            const scrollPosition = linkTop - (tocElement.clientHeight / 2) + (activeLink.clientHeight / 2);
+            
+            // Scroll the TOC smoothly to show the active link
+            tocElement.scrollTo({
+              top: Math.max(0, scrollPosition),
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
     });
-    
-    // Add active class to current link
-    const activeLink = document.querySelector(`.floating-toc .toc a[href="#${id}"]`);
-    if (activeLink) {
-      activeLink.classList.add('active');
-    }
   }
 }
 
