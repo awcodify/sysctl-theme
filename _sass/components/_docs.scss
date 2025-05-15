@@ -6,9 +6,12 @@
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 2rem 1rem;
+  position: relative; // Add position context for absolute children
+  min-height: calc(100vh - 4rem); // Full viewport height minus padding
   
   @media (max-width: 768px) {
     flex-direction: column;
+    min-height: auto;
   }
 }
 
@@ -97,14 +100,34 @@
   flex-shrink: 0;
   position: sticky;
   top: 2rem;
-  align-self: flex-start;
-  overflow-y: visible; /* Changed from auto to disable scrolling */
+  height: calc(100vh - 4rem); // Full viewport height minus top spacing
+  overflow-y: auto; // Enable scrolling
+  scrollbar-width: thin; // Sleeker scrollbar for Firefox
+  
+  // Custom scrollbar for webkit browsers
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 6px;
+  }
+  
+  // Better scrolling UX
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+  overscroll-behavior: contain; // Prevent scroll chaining
   
   @media (max-width: 768px) {
     width: 100%;
     position: relative;
     top: 0;
-    max-height: none;
+    height: auto;
+    max-height: 70vh; // Limit height on mobile but still allow scrolling
     margin-top: 2rem;
     margin-bottom: 0;
     order: 2;
@@ -112,9 +135,10 @@
 }
 
 .docs-nav {
-  padding: 0.75rem 1rem 1rem; // Adjust top padding to help with title alignment
+  padding: 0.75rem 1rem 2rem; // Add more padding at the bottom
   background: var(--light-bg-color);
   border-radius: 0.5rem;
+  position: relative; // For proper stacking
   
   .dark-mode & {
     background: var(--dark-code-bg);
