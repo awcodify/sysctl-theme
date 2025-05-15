@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: Version History
-description: Release history and changelog for Sysctl Theme
+description: Release history and changelog for Arsxy Theme
 permalink: /docs/version-history/
 ---
 
 # Version History
 
-This page documents the release history of Sysctl Theme, including new features, improvements, and bug fixes for each version.
+This page documents the release history of Arsxy Theme, including new features, improvements, and bug fixes for each version.
 
-## v1.0.0 (May 15, 2025)
+## Version 1.0.0 (May 12, 2025)
 
-Initial public release of Sysctl Theme.
+Initial public release of Arsxy Theme.
 
 ### Features
 - Clean, modern design optimized for technical content

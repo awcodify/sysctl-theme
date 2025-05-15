@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Responsive Design
-description: Learn how the Sysctl Theme implements responsive design for all screen sizes
+description: Learn how the Arsxy Theme implements responsive design for all screen sizes
 permalink: /docs/responsive-design/
 ---
 
 # Responsive Design
 
-Sysctl Theme is built with a mobile-first responsive design approach, ensuring your site looks great and functions perfectly across all devices and screen sizes, from smartphones to desktop monitors.
+Arsxy Theme is built with a mobile-first responsive design approach, ensuring your site looks great and functions perfectly across all devices and screen sizes, from smartphones to desktop monitors.
 
 ## Mobile-First Approach
 
@@ -488,7 +488,7 @@ Create custom responsive components using the theme's mixins:
 
 ## Responsive Design Tools
 
-When developing with Sysctl Theme, these tools can help with responsive design:
+When developing with Arsxy Theme, these tools can help with responsive design:
 
 1. **Browser Dev Tools**: Use the responsive design mode
 2. **Browser Extensions**: Such as Responsive Viewer for Chrome

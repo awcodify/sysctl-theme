@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Roadmap
-description: Future plans and upcoming features for Sysctl Theme
+description: Future plans and upcoming features for Arsxy Theme
 permalink: /docs/roadmap/
 ---
 
 # Roadmap
 
-This page outlines the planned features and improvements for future versions of Sysctl Theme. While we strive to maintain this roadmap, priorities may shift based on user feedback and community needs.
+This page outlines the planned features and improvements for future versions of Arsxy Theme. While we strive to maintain this roadmap, priorities may shift based on user feedback and community needs.
 
 ## Upcoming in v1.1.0
 
@@ -54,10 +54,10 @@ Targeted release: October 2025
 
 ## Community Feedback
 
-We welcome your input on our roadmap! If there's a feature you'd like to see in Sysctl Theme, please:
+We welcome your input on our roadmap! If there's a feature you'd like to see in Arsxy Theme, please:
 
 1. Check if it's already on the roadmap
-2. Submit a feature request on [GitHub Issues](https://github.com/yourusername/sysctl-theme/issues)
+2. Submit a feature request on [GitHub Issues](https://github.com/yourusername/arsxy-theme/issues)
 3. Consider contributing to the theme's development
 
-The roadmap is influenced by community feedback, so your input helps shape the future of Sysctl Theme.
+The roadmap is influenced by community feedback, so your input helps shape the future of Arsxy Theme.

@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Creating Custom Layouts
-description: Learn how to create and customize layouts for your Sysctl Theme site
+title: Custom Layouts
+description: Learn how to create and customize layouts for your Arsxy Theme site
 permalink: /docs/custom-layouts/
 ---
 
-# Creating Custom Layouts
+# Custom Layouts
 
-While Sysctl Theme comes with several pre-designed layouts, you may want to create your own custom layouts for specific content types or page designs. This guide will walk you through the process of creating and implementing custom layouts.
+While Arsxy Theme comes with several pre-designed layouts, you may want to create your own custom layouts for specific content types or page designs. This guide will walk you through the process of creating and implementing custom layouts.
 
 ## Understanding Jekyll Layouts
 

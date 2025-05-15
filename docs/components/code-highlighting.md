@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Code Highlighting
-description: Learn how to use and customize syntax highlighting for code blocks in Sysctl Theme
+description: Learn how to use and customize syntax highlighting for code blocks in Arsxy Theme
 permalink: /docs/components/code-highlighting/
 ---
 
 # Code Highlighting
 
-Sysctl Theme includes powerful syntax highlighting capabilities that make code blocks in your content look beautiful and readable. This guide covers how to use and customize code highlighting in your Jekyll site.
+Arsxy Theme includes powerful syntax highlighting capabilities that make code blocks in your content look beautiful and readable. This guide covers how to use and customize code highlighting in your Jekyll site.
 
 ## Basic Usage
 
@@ -35,7 +35,7 @@ The theme supports a wide range of programming languages, including:
 
 ## Highlighting Implementation
 
-Sysctl Theme uses Rouge as the syntax highlighter, which is Jekyll's default. This is configured in your `_config.yml`:
+Arsxy Theme uses Rouge as the syntax highlighter, which is Jekyll's default. This is configured in your `_config.yml`:
 
 ```yaml
 markdown: kramdown
@@ -226,6 +226,6 @@ If you encounter issues with syntax highlighting:
 
 ## Related Resources
 
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)
 - [Typography and Readability](/docs/typography/)
 - [Dark Mode](/docs/dark-mode/)

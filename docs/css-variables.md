@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: CSS Variables Reference
-description: Complete reference for CSS custom properties (variables) used in Sysctl Theme
+description: Complete reference for CSS custom properties (variables) used in Arsxy Theme
 permalink: /docs/css-variables/
 ---
 
 # CSS Variables Reference
 
-Sysctl Theme uses CSS custom properties (variables) to make customization simple and consistent. This reference documents all available CSS variables and how to use them to customize your site's appearance.
+Arsxy Theme uses CSS custom properties (variables) to make customization simple and consistent. This reference documents all available CSS variables and how to use them to customize your site's appearance.
 
-## How CSS Variables Work
+## Overview
 
-CSS variables (officially called CSS custom properties) allow you to define reusable values that can be used throughout your stylesheets. The Sysctl Theme uses a comprehensive variable system to control colors, spacing, typography, and more.
+CSS variables (officially called CSS custom properties) allow you to define reusable values that can be used throughout your stylesheets. The Arsxy Theme uses a comprehensive variable system to control colors, spacing, typography, and more.
 
 ## Using CSS Variables
 
@@ -407,6 +407,6 @@ To override any CSS variable, add your custom values to your `_sass/_custom.scss
 
 ## Related Resources
 
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)
 - [Typography](/docs/typography/)
 - [Dark Mode](/docs/dark-mode/)
