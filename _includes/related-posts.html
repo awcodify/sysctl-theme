@@ -17,9 +17,9 @@
 
         {% if sameTagCount >= minCommonTags %}
           <a href="{{ post.url | relative_url }}" class="related-post-card">
-            {% if post.featured_image %}
+            {% if post.image %}
               <div class="related-post-image">
-                <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+                <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}">
               </div>
             {% endif %}
             <div class="related-post-content">
@@ -39,9 +39,9 @@
       {% for post in site.posts limit: maxRelated %}
         {% if post.url != page.url %}
           <a href="{{ post.url | relative_url }}" class="related-post-card">
-            {% if post.featured_image %}
+            {% if post.image %}
               <div class="related-post-image">
-                <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}">
+                <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}">
               </div>
             {% endif %}
             <div class="related-post-content">
@@ -53,6 +53,31 @@
         {% endif %}
       {% endfor %}
     {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="related-posts">
+  <h3>Related Posts</h3>
+  <div class="related-posts-grid">
+    {% assign maxRelated = 3 %}
+    {% assign maxRelatedCounter = 0 %}
+    
+    {% for post in site.posts limit: maxRelated %}
+      {% if post.url != page.url %}
+        <a href="{{ post.url | relative_url }}" class="related-post-card">
+          {% if post.image %}
+            <div class="related-post-image">
+              <img src="{{ '/assets/images/' | append: post.image | relative_url }}" alt="{{ post.title }}">
+            </div>
+          {% endif %}
+          <div class="related-post-content">
+            <h4>{{ post.title }}</h4>
+            <span class="related-post-date">{{ post.date | date: site.date_format }}</span>
+          </div>
+        </a>
+        {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 {% endif %}
