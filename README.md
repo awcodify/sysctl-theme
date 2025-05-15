@@ -145,7 +145,7 @@ You can override the default colors and typography by creating a `_sass/_custom.
 
 ## Important Notes
 
-- This theme requires Jekyll 3.9 or compatible versions
+- This theme requires Jekyll 3.10 or compatible versions
 - For best performance, optimize your images before adding them to your site
 - The theme includes built-in dark mode that respects user system preferences
 
