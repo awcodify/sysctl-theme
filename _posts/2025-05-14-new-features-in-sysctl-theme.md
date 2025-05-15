@@ -34,8 +34,6 @@ related_posts:
 
 ## Social Sharing Buttons
 
-{% include image.html url="social-sharing-sample.png" alt="" caption="" %}
-
 Make your content more shareable with the new social sharing buttons that appear below each post. These buttons make it easy for readers to share your content across various social platforms with a single click.
 
 ### Supported Platforms:
