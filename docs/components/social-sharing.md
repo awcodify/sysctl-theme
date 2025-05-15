@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Social Sharing Component
-description: Learn how to use and customize social sharing buttons in Sysctl Theme
+description: Learn how to use and customize social sharing buttons in Arsxy Theme
 permalink: /docs/components/social-sharing/
 ---
 
 # Social Sharing Component
 
-The Social Sharing component in Sysctl Theme makes it easy for readers to share your content on various social media platforms. This helps extend the reach of your posts and increase engagement with your content.
+The Social Sharing component in Arsxy Theme makes it easy for readers to share your content on various social media platforms. This helps extend the reach of your posts and increase engagement with your content.
 
 ## Default Configuration
 
@@ -193,5 +193,5 @@ The social sharing component is built with accessibility in mind:
 ## Additional Tips
 
 - Use the `page.description` or `page.excerpt` for the shared text when available
-- Add Open Graph and Twitter Card meta tags to your pages for better link previews (included by default in Sysctl Theme)
+- Add Open Graph and Twitter Card meta tags to your pages for better link previews (included by default in Arsxy Theme)
 - Test your sharing buttons across different platforms to ensure they work as expected

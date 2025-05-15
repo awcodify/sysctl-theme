@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Customizing Your Homepage Hero Section in Sysctl Theme"
+title: "Customizing Your Homepage Hero Section in Arsxy Theme"
 categories: [features, customization]
 featured: true
 image: theme-demo-2.jpeg
-description: "Learn how to customize or completely disable the homepage hero section in Sysctl Theme using simple configuration options."
+description: "Learn how to customize or completely disable the homepage hero section in Arsxy Theme using simple configuration options."
 author: awcodify
 ---
 
-The homepage hero section is often the first thing visitors see when they land on your website. It's a crucial element for making a strong first impression and communicating your site's purpose. With the latest update to Sysctl Theme, you now have complete control over the hero section through simple configuration options.
+The homepage hero section is often the first thing visitors see when they land on your website. It's a crucial element for making a strong first impression and communicating your site's purpose. With the latest update to Arsxy Theme, you now have complete control over the hero section through simple configuration options.
 
 ## Hero Section Configuration Options
 
@@ -29,7 +29,7 @@ To customize your hero section, open your `_config.yml` file and look for the `h
 # Hero section configuration
 hero:
   enabled: true
-  title: "Welcome to Sysctl Theme"
+  title: "Welcome to Arsxy Theme"
   subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
   image: "theme-demo.jpeg"
   buttons:
@@ -106,9 +106,9 @@ For the most effective hero section:
 
 ## Conclusion
 
-The configurable hero section in Sysctl Theme gives you the flexibility to create a homepage that perfectly matches your brand and content strategy. Whether you want to showcase your latest products, welcome visitors with a personal message, or keep things minimal, you now have the tools to do so through simple configuration options.
+The configurable hero section in Arsxy Theme gives you the flexibility to create a homepage that perfectly matches your brand and content strategy. Whether you want to showcase your latest products, welcome visitors with a personal message, or keep things minimal, you now have the tools to do so through simple configuration options.
 
-For more customization options, check out our other guides on [customizing your Sysctl Theme](/customizing-your-sysctl-theme/) and [SEO optimization](/seo-optimization-with-sysctl-theme/).
+For more customization options, check out our other guides on [customizing your Arsxy Theme](/customizing-your-arsxy-theme/) and [SEO optimization](/seo-optimization-with-arsxy-theme/).
 
 <!--more-->
 

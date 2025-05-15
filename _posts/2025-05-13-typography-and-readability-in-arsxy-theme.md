@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Typography and Readability in Sysctl Theme"
-description: "How Sysctl theme optimizes typography and readability for technical content and long-form articles"
+title: "Typography and Readability in Arsxy Theme"
+description: "How Arsxy theme optimizes typography and readability for technical content and long-form articles"
 categories: Theme
 tags: typography readability design accessibility
 author: Awcodify
 image: theme-demo.jpeg
 ---
 
-Typography is the foundation of any good reading experience. This post explores how Sysctl theme implements typography best practices to create optimal readability for technical content.
+Typography is the foundation of any good reading experience. This post explores how Arsxy theme implements typography best practices to create optimal readability for technical content.
 
 <!--more-->
 
@@ -20,11 +20,11 @@ Technical content comes with unique readability challenges:
 - Complex concepts that require focused attention
 - Longer time spent reading documentation
 
-Sysctl theme addresses these challenges through intentional typography decisions that reduce cognitive load and eye strain.
+Arsxy theme addresses these challenges through intentional typography decisions that reduce cognitive load and eye strain.
 
 ## Font Selection Philosophy
 
-Sysctl uses a carefully considered font strategy:
+Arsxy uses a carefully considered font strategy:
 
 ### Text Font
 
@@ -52,7 +52,7 @@ For code blocks and technical content:
 
 ## Typography Scales and Hierarchy
 
-Sysctl implements a modular scale for consistent sizing:
+Arsxy implements a modular scale for consistent sizing:
 
 | Element | Size (rem) | Weight | Purpose |
 |---------|------------|--------|---------|
@@ -70,7 +70,7 @@ Optimizing the reading experience through spacing:
 
 ### Line Length
 
-Sysctl limits line length to approximately 80 characters (around 700px), which research shows is optimal for readability and comprehension.
+Arsxy limits line length to approximately 80 characters (around 700px), which research shows is optimal for readability and comprehension.
 
 ### Line Height
 
@@ -126,7 +126,7 @@ Dark mode requires special typography considerations:
 
 ## Accessibility Considerations
 
-Sysctl prioritizes accessible typography:
+Arsxy prioritizes accessible typography:
 
 - **Minimum font size**: Never smaller than 14px (typically 16px+)
 - **Sufficient contrast ratios**: WCAG AA compliance (4.5:1 for normal text)
@@ -192,11 +192,11 @@ $font-weight-bold: 700;
 
 ## Typography in Practice
 
-Let's see how Sysctl's typography handles various content types:
+Let's see how Arsxy's typography handles various content types:
 
 ### Article Introduction
 
-The intro paragraph in Sysctl uses a slightly larger font size to draw readers in and establish the topic before diving into details.
+The intro paragraph in Arsxy uses a slightly larger font size to draw readers in and establish the topic before diving into details.
 
 ### Section Headings
 
@@ -234,6 +234,6 @@ Block quotes are visually distinct to highlight important quotations or referenc
 
 ## Conclusion
 
-Typography might seem like a small detail, but it's the foundation of how readers interact with your content. Sysctl theme's typography is designed specifically for technical content, balancing readability, aesthetics, and functionality.
+Typography might seem like a small detail, but it's the foundation of how readers interact with your content. Arsxy theme's typography is designed specifically for technical content, balancing readability, aesthetics, and functionality.
 
-By carefully considering every typographic element—from font choice to line height to spacing—Sysctl creates an optimal reading environment for your audience, whether they're reading documentation, tutorials, or technical blog posts.
+By carefully considering every typographic element—from font choice to line height to spacing—Arsxy creates an optimal reading environment for your audience, whether they're reading documentation, tutorials, or technical blog posts.

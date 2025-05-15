@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Configurable TOC Sidebar Position in Sysctl Theme"
+title: "Configurable TOC Sidebar Position in Arsxy Theme"
 categories: Features
 description: "Learn how to position your table of contents sidebar on either the left or right side of your posts"
 author: Awcodify
@@ -9,7 +9,7 @@ featured: true
 image: table-of-content-thumbnail.png
 ---
 
-The Sysctl Theme now supports a configurable table of contents (TOC) sidebar position, allowing you to choose whether the sidebar appears on the left or right side of your posts. This feature gives you more control over your site's layout and can help optimize the reading experience for your audience.
+The Arsxy Theme now supports a configurable table of contents (TOC) sidebar position, allowing you to choose whether the sidebar appears on the left or right side of your posts. This feature gives you more control over your site's layout and can help optimize the reading experience for your audience.
 
 <!--more-->
 
@@ -91,6 +91,6 @@ This feature was implemented using CSS Grid layout, which provides a clean way t
 
 ## Feedback
 
-We're always looking to improve the Sysctl Theme. If you have suggestions for enhancing the sidebar position feature or encounter any issues, please let us know by [opening an issue](https://github.com/awcodify/sysctl-theme/issues) on GitHub.
+We're always looking to improve the Arsxy Theme. If you have suggestions for enhancing the sidebar position feature or encounter any issues, please let us know by [opening an issue](https://github.com/awcodify/arsxy-theme/issues) on GitHub.
 
 Happy blogging!

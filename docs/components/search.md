@@ -1,17 +1,17 @@
 ---
 layout: docs
 title: Search Functionality
-description: Learn how to implement and customize search in your Sysctl theme
+description: Learn how to implement and customize search in your Arsxy theme
 permalink: /docs/components/search/
 ---
 
 # Search Functionality
 
-Sysctl Theme includes a powerful search feature that allows users to find content quickly across your entire site. This guide explains how the search functionality works and how to customize it.
+Arsxy Theme includes a powerful search feature that allows users to find content quickly across your entire site. This guide explains how the search functionality works and how to customize it.
 
 ## How Search Works
 
-The search in Sysctl theme is built as a client-side implementation using JavaScript, which means:
+The search in Arsxy theme is built as a client-side implementation using JavaScript, which means:
 
 - No server-side processing required
 - Works with static hosting services
@@ -248,4 +248,4 @@ If you encounter issues with the search functionality:
 
 - [Configuration Options](/docs/configuration/)
 - [Performance Optimization](/docs/performance/)
-- [Customizing Your Sysctl Theme](/docs/customization/)
+- [Customizing Your Arsxy Theme](/docs/customization/)

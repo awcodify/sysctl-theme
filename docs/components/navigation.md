@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Navigation Component
-description: Learn how to customize the navigation menus in Sysctl Theme
+description: Learn how to customize the navigation menus in Arsxy Theme
 permalink: /docs/components/navigation/
 ---
 
 # Navigation Component
 
-The Sysctl Theme includes a flexible navigation system that adapts to different screen sizes and provides a seamless user experience across your site.
+The Arsxy Theme includes a flexible navigation system that adapts to different screen sizes and provides a seamless user experience across your site.
 
 ## Main Navigation
 
@@ -137,7 +137,7 @@ You can customize the appearance of your navigation by modifying the appropriate
 
 ## Active Link Highlighting
 
-The Sysctl Theme automatically highlights the active navigation item based on the current page. This is handled by the `active-link` class, which you can customize in `_sass/components/_header.scss`.
+The Arsxy Theme automatically highlights the active navigation item based on the current page. This is handled by the `active-link` class, which you can customize in `_sass/components/_header.scss`.
 
 ## Navigation Accessibility
 

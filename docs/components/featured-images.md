@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Featured Images Component
-description: Learn how to use and customize featured images in Sysctl Theme
+description: Learn how to use and customize featured images in Arsxy Theme
 permalink: /docs/components/featured-images/
 ---
 
 # Featured Images Component
 
-Featured images enhance the visual appeal of your content and provide a preview of your posts. Sysctl Theme includes robust support for featured images across various layouts.
+Featured images enhance the visual appeal of your content and provide a preview of your posts. Arsxy Theme includes robust support for featured images across various layouts.
 
 ## Adding Featured Images to Posts
 
@@ -33,7 +33,7 @@ Featured images appear in several locations throughout the theme:
 
 ## Automatic Featured Images
 
-If you don't specify a featured image, Sysctl Theme can generate one automatically based on the post title. To enable this feature, add the following to your `_config.yml`:
+If you don't specify a featured image, Arsxy Theme can generate one automatically based on the post title. To enable this feature, add the following to your `_config.yml`:
 
 ```yaml
 featured_images:
@@ -53,7 +53,7 @@ For optimal display across all devices, use the following image dimensions:
 
 ## Image Optimization
 
-To improve page load times, Sysctl Theme automatically applies responsive image techniques:
+To improve page load times, Arsxy Theme automatically applies responsive image techniques:
 
 1. **Responsive srcset**: Multiple image sizes for different devices
 2. **Lazy loading**: Images load only when scrolled into view

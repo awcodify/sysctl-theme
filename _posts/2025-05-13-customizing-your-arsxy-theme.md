@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Customizing Your Sysctl Theme"
-description: "Learn how to personalize and extend your Sysctl Jekyll theme with custom styles, layouts, and features"
+title: "Customizing Your Arsxy Theme"
+description: "Learn how to personalize and extend your Arsxy Jekyll theme with custom styles, layouts, and features"
 categories: Tutorial
 tags: jekyll customization theme-development
 author: Awcodify
 ---
 
-This guide will help you customize your Sysctl theme installation to match your personal or brand identity. Sysctl is designed to be flexible and easy to modify, even if you're not an experienced developer.
+This guide will help you customize your Arsxy theme installation to match your personal or brand identity. Arsxy is designed to be flexible and easy to modify, even if you're not an experienced developer.
 
 <!--more-->
 
 ## Getting Started with Customization
 
-Sysctl theme is built with simplicity and flexibility in mind. You can customize nearly every aspect of the theme without touching the core files, making it easier to update in the future.
+Arsxy theme is built with simplicity and flexibility in mind. You can customize nearly every aspect of the theme without touching the core files, making it easier to update in the future.
 
 ## Basic Configuration Options
 
@@ -33,7 +33,7 @@ dark_mode_default: false # Start in light or dark mode
 
 ## Changing Colors and Typography
 
-Sysctl uses a clean, modular SCSS structure that makes it easy to change the visual appearance.
+Arsxy uses a clean, modular SCSS structure that makes it easy to change the visual appearance.
 
 ### Color Schemes
 
@@ -70,7 +70,7 @@ $smaller-font-size: 0.75rem;
 
 ## Adding Custom Layouts
 
-Sysctl comes with several layouts out of the box, but you might want to create custom layouts for specific content types.
+Arsxy comes with several layouts out of the box, but you might want to create custom layouts for specific content types.
 
 To create a custom layout:
 
@@ -146,7 +146,7 @@ To add custom styles without modifying the core theme files:
 
 ## Enhancing Dark Mode
 
-Sysctl comes with a built-in dark mode. You can customize the dark mode colors in `_sass/_dark-mode.scss`:
+Arsxy comes with a built-in dark mode. You can customize the dark mode colors in `_sass/_dark-mode.scss`:
 
 ```scss
 // Dark mode colors
@@ -227,7 +227,7 @@ Use it in your posts like this:
 
 ## Optimizing for SEO
 
-Sysctl is built with SEO in mind, but you can further optimize it:
+Arsxy is built with SEO in mind, but you can further optimize it:
 
 1. Edit the `<head>` section in `_includes/head.html`
 2. Add structured data for your content
@@ -257,6 +257,6 @@ Sysctl is built with SEO in mind, but you can further optimize it:
 
 ## Conclusion
 
-Sysctl theme is designed to be your starting point, not your limitation. With these customization techniques, you can transform the theme to match your unique style and requirements while maintaining all the performance and SEO benefits built into the core.
+Arsxy theme is designed to be your starting point, not your limitation. With these customization techniques, you can transform the theme to match your unique style and requirements while maintaining all the performance and SEO benefits built into the core.
 
 Whether you're building a personal blog, a documentation site, or a portfolio, these customization options give you the flexibility to create something truly unique without having to start from scratch.

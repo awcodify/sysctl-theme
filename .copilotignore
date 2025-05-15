@@ -15,7 +15,7 @@ vendor/
 
 # Don't ignore configuration
 !_config.yml
-!sysctl-theme.gemspec
+!arsxy-theme.gemspec
 !Gemfile
 
 # Make sure Copilot sees the guidelines

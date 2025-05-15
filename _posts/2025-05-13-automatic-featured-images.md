@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Automatic Featured Images in Sysctl Theme"
-description: "Learn how Sysctl Theme automatically generates beautiful featured images when you don't provide one"
+title: "Automatic Featured Images in Arsxy Theme"
+description: "Learn how Arsxy Theme automatically generates beautiful featured images when you don't provide one"
 categories: Features
 tags: design images css automation
 author: Awcodify
 ---
 
-One of the most convenient features of Sysctl Theme is its ability to automatically generate eye-catching featured images for your posts when you don't explicitly provide one. This ensures that every article on your site has a visually appealing header, maintaining a consistent and professional appearance across your blog.
+One of the most convenient features of Arsxy Theme is its ability to automatically generate eye-catching featured images for your posts when you don't explicitly provide one. This ensures that every article on your site has a visually appealing header, maintaining a consistent and professional appearance across your blog.
 
 <!--more-->
 
@@ -20,11 +20,11 @@ We've all been there - you're focused on writing great content, but when it come
 - Missing visual elements in social media previews
 - Reduced click-through rates from index pages
 
-Sysctl Theme solves this problem automatically with CSS-generated featured images.
+Arsxy Theme solves this problem automatically with CSS-generated featured images.
 
 ## How Automatic Featured Images Work
 
-When you create a post without specifying an image in the front matter, Sysctl Theme uses a combination of CSS gradients, patterns, and typography to generate a unique image based on your post title. Here's how it works:
+When you create a post without specifying an image in the front matter, Arsxy Theme uses a combination of CSS gradients, patterns, and typography to generate a unique image based on your post title. Here's how it works:
 
 1. The theme detects that no `image` parameter is provided in the post's front matter
 2. It creates a container with the appropriate dimensions for a featured image
@@ -67,7 +67,7 @@ Here's a simplified look at how the CSS-only featured images are structured:
 
 ## Pattern Variations
 
-To add visual interest and uniqueness to each post, Sysctl Theme includes six different pattern variations that are automatically assigned based on your post title:
+To add visual interest and uniqueness to each post, Arsxy Theme includes six different pattern variations that are automatically assigned based on your post title:
 
 ### Pattern 0: Diagonal Stripes
 Creates elegant diagonal stripes across a gradient background, perfect for technical posts.
@@ -141,8 +141,8 @@ These customizations can be made in the `_sass/components/_post.scss` file.
 
 ## Conclusion
 
-Automatic featured images are a small but significant feature that improves the overall polish and professionalism of your Jekyll site. By ensuring every post has an appealing visual header, Sysctl Theme helps maintain consistency and engagement throughout your blog.
+Automatic featured images are a small but significant feature that improves the overall polish and professionalism of your Jekyll site. By ensuring every post has an appealing visual header, Arsxy Theme helps maintain consistency and engagement throughout your blog.
 
-Next time you're in a rush to publish and don't have time to find the perfect image, remember that Sysctl Theme has you covered with beautiful, automatically generated featured images that complement your content.
+Next time you're in a rush to publish and don't have time to find the perfect image, remember that Arsxy Theme has you covered with beautiful, automatically generated featured images that complement your content.
 
 Happy blogging!

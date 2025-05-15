@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "SEO Optimization with Sysctl Theme"
-description: "Discover how to maximize your site's search engine visibility with Sysctl theme's built-in SEO features"
+title: "SEO Optimization with Arsxy Theme"
+description: "Discover how to maximize your site's search engine visibility with Arsxy theme's built-in SEO features"
 categories: Tutorial
 tags: seo search-engine-optimization jekyll theme
 author: Awcodify
 image: seo-optimization.png
 ---
 
-Search Engine Optimization (SEO) is crucial for ensuring your content reaches your target audience. Sysctl theme comes with powerful built-in SEO features that give your Jekyll site a competitive edge in search rankings.
+Search Engine Optimization (SEO) is crucial for ensuring your content reaches your target audience. Arsxy theme comes with powerful built-in SEO features that give your Jekyll site a competitive edge in search rankings.
 
 <!--more-->
 
 ## SEO-First Architecture
 
-Sysctl theme was designed with a "SEO-first" approach, meaning search engine visibility was a primary consideration throughout the development process.
+Arsxy theme was designed with a "SEO-first" approach, meaning search engine visibility was a primary consideration throughout the development process.
 
 ### Core SEO Benefits
 
@@ -29,7 +29,7 @@ The theme delivers several fundamental SEO advantages:
 
 ### Front Matter SEO Fields
 
-Sysctl makes it easy to add important SEO metadata to each page:
+Arsxy makes it easy to add important SEO metadata to each page:
 
 ```yaml
 ---
@@ -58,7 +58,7 @@ Structured data helps search engines understand your content, potentially leadin
 
 ### Blog Post Schema
 
-Sysctl automatically adds `BlogPosting` schema to your posts:
+Arsxy automatically adds `BlogPosting` schema to your posts:
 
 ```json
 {
@@ -68,8 +68,8 @@ Sysctl automatically adds `BlogPosting` schema to your posts:
     "@type": "WebPage",
     "@id": "https://yourdomain.com/blog-post-url/"
   },
-  "headline": "SEO Optimization with Sysctl Theme",
-  "description": "Discover how to maximize your site's search engine visibility with Sysctl theme's built-in SEO features",
+  "headline": "SEO Optimization with Arsxy Theme",
+  "description": "Discover how to maximize your site's search engine visibility with Arsxy theme's built-in SEO features",
   "image": "https://yourdomain.com/assets/images/theme-demo-2.jpeg",
   "author": {
     "@type": "Person",
@@ -115,11 +115,11 @@ schema_properties:
 
 ### Open Graph Protocol
 
-Sysctl implements Open Graph tags for better sharing on Facebook, LinkedIn, and other platforms:
+Arsxy implements Open Graph tags for better sharing on Facebook, LinkedIn, and other platforms:
 
 ```html
-<meta property="og:title" content="SEO Optimization with Sysctl Theme">
-<meta property="og:description" content="Discover how to maximize your site's search engine visibility with Sysctl theme's built-in SEO features">
+<meta property="og:title" content="SEO Optimization with Arsxy Theme">
+<meta property="og:description" content="Discover how to maximize your site's search engine visibility with Arsxy theme's built-in SEO features">
 <meta property="og:image" content="https://yourdomain.com/assets/images/theme-demo-2.jpeg">
 <meta property="og:url" content="https://yourdomain.com/seo-optimization/">
 <meta property="og:type" content="article">
@@ -133,8 +133,8 @@ The theme also includes Twitter-specific meta tags:
 ```html
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@yourtwitterhandle">
-<meta name="twitter:title" content="SEO Optimization with Sysctl Theme">
-<meta name="twitter:description" content="Discover how to maximize your site's search engine visibility with Sysctl theme's built-in SEO features">
+<meta name="twitter:title" content="SEO Optimization with Arsxy Theme">
+<meta name="twitter:description" content="Discover how to maximize your site's search engine visibility with Arsxy theme's built-in SEO features">
 <meta name="twitter:image" content="https://yourdomain.com/assets/images/theme-demo-2.jpeg">
 ```
 
@@ -142,7 +142,7 @@ The theme also includes Twitter-specific meta tags:
 
 ### Permalink Structure
 
-Sysctl uses SEO-friendly permalinks by default. You can customize the structure in `_config.yml`:
+Arsxy uses SEO-friendly permalinks by default. You can customize the structure in `_config.yml`:
 
 ```yaml
 permalink: /:categories/:title/
@@ -164,7 +164,7 @@ The theme automatically handles relative URLs, making sure all internal links ar
 
 ### Built-in Reading Time
 
-Sysctl automatically calculates and displays reading time, an SEO signal that can reduce bounce rates:
+Arsxy automatically calculates and displays reading time, an SEO signal that can reduce bounce rates:
 
 ```html
 <span class="reading-time">5 min read</span>
@@ -200,7 +200,7 @@ This generates a structured ToC with anchor links:
 
 ### Responsive Images
 
-Sysctl implements responsive images with appropriate attributes:
+Arsxy implements responsive images with appropriate attributes:
 
 ```html
 <img src="image.jpg" 
@@ -223,7 +223,7 @@ The theme encourages proper image SEO:
 
 ### XML Sitemap
 
-Sysctl generates a comprehensive XML sitemap:
+Arsxy generates a comprehensive XML sitemap:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -250,7 +250,7 @@ Sitemap: https://yourdomain.com/sitemap.xml
 
 ### RSS Feed
 
-Sysctl generates an RSS feed, which can help with content distribution:
+Arsxy generates an RSS feed, which can help with content distribution:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -270,7 +270,7 @@ Sysctl generates an RSS feed, which can help with content distribution:
 
 ### Lighthouse Score Optimization
 
-Sysctl is optimized for high Lighthouse scores:
+Arsxy is optimized for high Lighthouse scores:
 
 | Category | Score |
 |----------|-------|
@@ -325,8 +325,8 @@ no_index: false # Set to true to add noindex
 
 ## Conclusion
 
-Sysctl theme provides a comprehensive set of SEO features designed to help your content rank higher in search results. By leveraging these built-in optimizations, you can focus on creating great content while the theme handles the technical aspects of search engine visibility.
+Arsxy theme provides a comprehensive set of SEO features designed to help your content rank higher in search results. By leveraging these built-in optimizations, you can focus on creating great content while the theme handles the technical aspects of search engine visibility.
 
 Remember that SEO is an ongoing process, and even with these powerful tools, you'll still need to create valuable, relevant content and build quality backlinks to achieve the best results.
 
-By combining Sysctl's technical SEO advantages with your strategic content efforts, you'll be well-positioned to increase your site's organic traffic and reach a wider audience.
+By combining Arsxy's technical SEO advantages with your strategic content efforts, you'll be well-positioned to increase your site's organic traffic and reach a wider audience.

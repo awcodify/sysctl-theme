@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Dark Mode in Sysctl Theme"
-description: "A comprehensive guide to configuring and customizing the dark mode feature in your Sysctl Jekyll theme"
+title: "Dark Mode in Arsxy Theme"
+description: "A comprehensive guide to configuring and customizing the dark mode feature in your Arsxy Jekyll theme"
 categories: Feature
 tags: jekyll dark-mode accessibility customization
 author: Awcodify
 ---
 
-Dark mode has become an essential feature for modern websites, providing better readability in low-light environments and reducing eye strain. Sysctl theme includes a sophisticated dark mode implementation that's highly configurable and user-friendly.
+Dark mode has become an essential feature for modern websites, providing better readability in low-light environments and reducing eye strain. Arsxy theme includes a sophisticated dark mode implementation that's highly configurable and user-friendly.
 
 <!--more-->
 
-## Understanding Dark Mode in Sysctl
+## Understanding Dark Mode in Arsxy
 
-The Sysctl theme offers a complete dark mode solution with several key features:
+The Arsxy theme offers a complete dark mode solution with several key features:
 
 - **Toggle Button:** Users can switch between light and dark modes with a single click
 - **OS Preference Detection:** Automatically respects the user's system preference
@@ -41,7 +41,7 @@ This configuration gives you control over two main aspects:
 
 ## How It Works
 
-When a user visits your site, Sysctl performs several checks to determine which theme to display:
+When a user visits your site, Arsxy performs several checks to determine which theme to display:
 
 1. First, it checks if dark mode is enabled in your configuration
 2. If enabled, it checks for a user's previous preference stored in localStorage
@@ -67,7 +67,7 @@ For more extensive customization, you can modify the styles in `_sass/_dark-mode
 
 ## Enhancing Dark Mode Typography
 
-Typography in dark mode requires special considerations. By default, Sysctl makes these adjustments in dark mode:
+Typography in dark mode requires special considerations. By default, Arsxy makes these adjustments in dark mode:
 
 1. **Increased Contrast:** Text colors are adjusted for better readability
 2. **Font Weight Adjustments:** Font weights are slightly increased to compensate for perceived thinning on dark backgrounds
@@ -182,6 +182,6 @@ If your dark mode colors appear incorrect:
 
 ## Conclusion
 
-Sysctl's dark mode implementation gives you complete control over the appearance of your site while respecting user preferences. By understanding the configuration options and customization techniques outlined in this guide, you can create a dark mode experience that's both visually appealing and accessible.
+Arsxy's dark mode implementation gives you complete control over the appearance of your site while respecting user preferences. By understanding the configuration options and customization techniques outlined in this guide, you can create a dark mode experience that's both visually appealing and accessible.
 
-Whether you want to default to dark mode, light mode, or disable the feature entirely, Sysctl's flexible configuration system makes it easy to implement your preferred approach.
+Whether you want to default to dark mode, light mode, or disable the feature entirely, Arsxy's flexible configuration system makes it easy to implement your preferred approach.
