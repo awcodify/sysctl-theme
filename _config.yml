@@ -58,7 +58,7 @@ homepage:
     image: "welcome-to-sysctl-theme.png"
     buttons:
       - label: "Learn More"
-        url: "/about/"
+        url: "/docs/"
         primary: true
       - label: "GitHub"
         url: "https://github.com/awcodify/sysctl-theme"
