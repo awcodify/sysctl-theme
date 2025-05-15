@@ -65,11 +65,11 @@
     activeSearchArea = null;
   }
   
-  // Global keyboard shortcut for search (Ctrl+F / Cmd+F)
+  // Global keyboard shortcut for search (Ctrl+S / Cmd+S)
   document.addEventListener('keydown', (e) => {
-    // Check for Ctrl+F or Cmd+F (Mac)
-    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
-      // Prevent default browser search
+    // Check for Ctrl+S or Cmd+S (Mac)
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      // Prevent default browser save dialog
       e.preventDefault();
       
       // Open search overlay if it exists
