@@ -38,30 +38,49 @@
   // Event listeners for toggle buttons
   if (searchToggleButton) {
     searchToggleButton.addEventListener('click', () => {
-      searchOverlay.classList.add('active');
-      setTimeout(() => {
-        searchInputOverlay.focus();
-      }, 100);
-      activeSearchArea = 'overlay';
+      openSearchOverlay();
     });
   }
   
   if (closeSearchButton) {
     closeSearchButton.addEventListener('click', () => {
-      searchOverlay.classList.remove('active');
-      searchInputOverlay.value = '';
-      searchResultsOverlay.innerHTML = '';
-      activeSearchArea = null;
+      closeSearchOverlay();
     });
   }
   
-  // Close overlay with Escape key
+  // Function to open search overlay
+  function openSearchOverlay() {
+    searchOverlay.classList.add('active');
+    setTimeout(() => {
+      searchInputOverlay.focus();
+    }, 100);
+    activeSearchArea = 'overlay';
+  }
+  
+  // Function to close search overlay
+  function closeSearchOverlay() {
+    searchOverlay.classList.remove('active');
+    searchInputOverlay.value = '';
+    searchResultsOverlay.innerHTML = '';
+    activeSearchArea = null;
+  }
+  
+  // Global keyboard shortcut for search (Ctrl+F / Cmd+F)
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
-      searchOverlay.classList.remove('active');
-      searchInputOverlay.value = '';
-      searchResultsOverlay.innerHTML = '';
-      activeSearchArea = null;
+    // Check for Ctrl+F or Cmd+F (Mac)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+      // Prevent default browser search
+      e.preventDefault();
+      
+      // Open search overlay if it exists
+      if (searchOverlay) {
+        openSearchOverlay();
+      }
+    }
+    
+    // Close overlay with Escape key
+    if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) {
+      closeSearchOverlay();
     }
   });
   
