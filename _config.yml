@@ -1,8 +1,8 @@
-# Main configuration for Sysctl Theme
+# Main configuration for Arsxy Theme
 
 # Site settings
-name: Sysctl Theme
-title: Sysctl Theme
+name: Arsxy Theme
+title: Arsxy Theme
 email: awcodify@gmail.com
 description: >-
   A clean, fast and SEO-friendly Jekyll theme focused on technical content and code readability.
@@ -10,11 +10,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://localhost:4000" # for local development
 
 # GitHub Pages settings
-repository: awcodify/sysctl-theme
+repository: awcodify/arsxy-theme
 github: [metadata]
 
 # Theme settings - comment this line when developing locally
-# remote_theme: awcodify/sysctl-theme
+# remote_theme: awcodify/arsxy-theme
 
 # Build settings
 markdown: kramdown
@@ -53,15 +53,15 @@ homepage:
   # Hero section configuration
   hero:
     enabled: true
-    title: "Welcome to Sysctl Theme"
+    title: "Welcome to Arsxy Theme"
     subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
-    image: "welcome-to-sysctl-theme.png"
+    image: "welcome-to-arsxy-theme.png"
     buttons:
       - label: "Learn More"
         url: "/docs/"
         primary: true
       - label: "GitHub"
-        url: "https://github.com/awcodify/sysctl-theme"
+        url: "https://github.com/awcodify/arsxy-theme"
         primary: false
   
   # About section configuration for sidebar
@@ -69,7 +69,7 @@ homepage:
     enabled: true
     title: "About"
     content: "A modern Jekyll theme perfect for tech blogs, documentation sites, and personal portfolios."
-    link_text: "More about Sysctl →"
+    link_text: "More about Arsxy Theme →"
     link_url: "/about/"
     
   # Featured posts settings
@@ -128,4 +128,4 @@ exclude:
   - vendor/
   - example/
   - LICENSE
-  - sysctl-theme.gemspec
+  - arsxy-theme.gemspec

@@ -1,10 +1,10 @@
-# Sysctl Theme for Jekyll
+# Arsxy Theme for Jekyll
 
 A clean, modern Jekyll theme optimized for technical blogs and documentation sites. This theme prioritizes readability, performance, and responsive design.
 
 > **Built with AI**: This theme was developed with the assistance of GitHub Copilot and Claude 3.7 Sonnet.
 
-![Sysctl Theme Screenshot](assets/images/ss-sysctl-theme.png)
+![Arsxy Theme Screenshot](assets/images/ss-arsxy-theme.png)
 
 ## Features
 
@@ -26,7 +26,7 @@ A clean, modern Jekyll theme optimized for technical blogs and documentation sit
 Add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-remote_theme: awcodify/sysctl-theme
+remote_theme: awcodify/arsxy-theme
 ```
 
 And install the necessary plugins:
@@ -47,13 +47,13 @@ end
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "sysctl-theme"
+gem "arsxy-theme"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: sysctl-theme
+theme: arsxy-theme
 ```
 
 And then execute:
@@ -78,9 +78,9 @@ baseurl: "/"
 url: "https://yourdomain.com"
 
 # Theme settings
-remote_theme: awcodify/sysctl-theme
+remote_theme: awcodify/arsxy-theme
 # - OR if installing as a gem -
-# theme: sysctl-theme
+# theme: arsxy-theme
 
 # Navigation menu
 navigation:
@@ -153,4 +153,4 @@ This theme is available as open source under the terms of the [MIT License](LICE
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/awcodify/sysctl-theme.
+Bug reports and pull requests are welcome on GitHub at https://github.com/awcodify/arsxy-theme.

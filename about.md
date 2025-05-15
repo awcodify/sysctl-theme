@@ -5,9 +5,9 @@ permalink: /about/
 ---
 
 <div class="page-content">
-  <h1 class="page-title">About Sysctl Theme</h1>
+  <h1 class="page-title">About Arsxy Theme</h1>
   
-  <p class="lead">Sysctl Theme is a clean, fast, and SEO-friendly Jekyll theme optimized for technical blogs and documentation sites.</p>
+  <p class="lead">Arsxy Theme is a clean, fast, and SEO-friendly Jekyll theme optimized for technical blogs and documentation sites.</p>
   
   <p>This theme was created with a focus on:</p>
   
@@ -21,7 +21,7 @@ permalink: /about/
   
   <h2>Getting Started</h2>
   
-  <p>Visit the <a href="https://github.com/awcodify/sysctl-theme">GitHub repository</a> for complete documentation and installation instructions.</p>
+  <p>Visit the <a href="https://github.com/awcodify/arsxy-theme">GitHub repository</a> for complete documentation and installation instructions.</p>
   
   <h2>Features</h2>
   
@@ -42,5 +42,5 @@ permalink: /about/
   
   <h2>License</h2>
   
-  <p>This theme is available as open source under the terms of the <a href="https://github.com/awcodify/sysctl-theme/blob/main/LICENSE">MIT License</a>.</p>
+  <p>This theme is available as open source under the terms of the <a href="https://github.com/awcodify/arsxy-theme/blob/main/LICENSE">MIT License</a>.</p>
 </div>
