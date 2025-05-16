@@ -40,7 +40,7 @@ if [ -d "$RESPONSIVE_DIR" ]; then
     done
 fi
 
-# remove orignal images
+# remove original images
 find "$IMAGE_DIR" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -not -path "*/favicon/*" -print0 | while IFS= read -r -d $'\0' file; do
     rm "$file"
 done
