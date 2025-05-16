@@ -26,12 +26,6 @@ function initDarkMode() {
   const html = document.documentElement;
   const darkModeEnabled = html.getAttribute('data-dark-mode-enabled') === 'true';
   
-  // Debug - log the current state
-  if (typeof DEBUG !== 'undefined' && DEBUG) {
-    console.log('Dark mode enabled:', darkModeEnabled);
-    console.log('Dark mode class present:', html.classList.contains('dark-mode'));
-  }
-  
   // If dark mode is completely disabled, ensure light mode is always applied
   if (!darkModeEnabled) {
     html.classList.remove('dark-mode');
