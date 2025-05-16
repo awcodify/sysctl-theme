@@ -149,6 +149,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    min-height: 400px;
     
     img {
       max-width: 100%;
@@ -156,6 +157,7 @@
       border-radius: 8px;
       box-shadow: none; /* Removed shadow effect */
       transition: transform 0.3s ease;
+      aspect-ratio: 1.5; /* Maintain 3:2 aspect ratio */
       
       &:hover {
         transform: scale(1.02);
