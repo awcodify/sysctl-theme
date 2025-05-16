@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "arsxy-theme"
-  spec.version       = "1.0.0-beta"
+  spec.version       = "1.0.0-rc"
   spec.authors       = ["awcodify"]
   spec.email         = ["awcodify@gmail.com"]
 
