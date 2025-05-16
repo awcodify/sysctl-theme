@@ -1,24 +1,10 @@
 ---
 # This ensures Jekyll processes this file
+# This file contains critical styles needed for the initial page render
 ---
 
 @import "variables";
 @import "base";
-@import "layout";
 @import "typography";
-@import "syntax-highlighting";
 @import "components/header";
-@import "components/footer";
-@import "components/post";
-@import "components/code";
-@import "components/toc";
-@import "components/homepage";
-@import "components/pagination";
-@import "components/related-posts";
-@import "components/social-sharing";
-@import "components/search";
-@import "components/image";
-@import "components/docs";
 @import "utilities";
-@import "responsive";
-@import "dark-mode";

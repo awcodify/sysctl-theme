@@ -1,0 +1,21 @@
+---
+# This ensures Jekyll processes this file
+# This file contains non-critical styles that can be loaded later
+---
+
+@import "variables"; /* Import variables first to ensure all required variables are available */
+@import "layout";
+@import "syntax-highlighting";
+@import "components/footer";
+@import "components/post";
+@import "components/code";
+@import "components/toc";
+@import "components/homepage";
+@import "components/pagination";
+@import "components/related-posts";
+@import "components/social-sharing";
+@import "components/search";
+@import "components/image";
+@import "components/docs";
+@import "responsive";
+@import "dark-mode";
