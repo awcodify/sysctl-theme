@@ -6,7 +6,7 @@ A clean, modern Jekyll theme optimized for technical blogs and documentation sit
 
 > **Built with AI**: This theme was developed with the assistance of GitHub Copilot and Claude 3.7 Sonnet.
 
-![Arsxy Theme Screenshot](assets/images/ss-arsxy-theme.png)
+![Arsxy Theme Screenshot](assets/images/ss-arsxy-theme.webp)
 
 ## Features
 
