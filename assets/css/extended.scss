@@ -4,7 +4,6 @@
 ---
 
 @import "variables"; /* Import variables first to ensure all required variables are available */
-@import "layout";
 @import "syntax-highlighting";
 @import "components/footer";
 @import "components/post";
@@ -14,8 +13,5 @@
 @import "components/pagination";
 @import "components/related-posts";
 @import "components/social-sharing";
-@import "components/search";
 @import "components/image";
 @import "components/docs";
-@import "responsive";
-@import "dark-mode";
