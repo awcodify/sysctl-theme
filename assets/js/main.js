@@ -26,10 +26,24 @@ function initDarkMode() {
   const html = document.documentElement;
   const darkModeEnabled = html.getAttribute('data-dark-mode-enabled') === 'true';
   
+  // Debug - log the current state
+  console.log('Dark mode enabled:', darkModeEnabled);
+  console.log('Dark mode class present:', html.classList.contains('dark-mode'));
+  
   // If dark mode is completely disabled, ensure light mode is always applied
   if (!darkModeEnabled) {
     html.classList.remove('dark-mode');
     localStorage.setItem('theme', 'light');
+    showLightModeIcon(themeToggle);
+  } else {
+    // Add dark-active class to the toggle button if currently in dark mode
+    if (html.classList.contains('dark-mode')) {
+      themeToggle.classList.add('dark-active');
+      showDarkModeIcon(themeToggle);
+    } else {
+      themeToggle.classList.remove('dark-active');
+      showLightModeIcon(themeToggle);
+    }
   }
   
   themeToggle.addEventListener('click', function() {
@@ -37,17 +51,37 @@ function initDarkMode() {
     if (!darkModeEnabled) {
       html.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
+      showLightModeIcon(themeToggle);
       return;
     }
     
     if (html.classList.contains('dark-mode')) {
       html.classList.remove('dark-mode');
+      themeToggle.classList.remove('dark-active');
       localStorage.setItem('theme', 'light');
+      showLightModeIcon(themeToggle);
     } else {
       html.classList.add('dark-mode');
+      themeToggle.classList.add('dark-active');
       localStorage.setItem('theme', 'dark');
+      showDarkModeIcon(themeToggle);
     }
   });
+  
+  // Helper functions to toggle icons
+  function showDarkModeIcon(toggle) {
+    const sunIcon = toggle.querySelector('.sun');
+    const moonIcon = toggle.querySelector('.moon');
+    if (sunIcon) sunIcon.style.display = 'block';
+    if (moonIcon) moonIcon.style.display = 'none';
+  }
+  
+  function showLightModeIcon(toggle) {
+    const sunIcon = toggle.querySelector('.sun');
+    const moonIcon = toggle.querySelector('.moon');
+    if (sunIcon) sunIcon.style.display = 'none';
+    if (moonIcon) moonIcon.style.display = 'block';
+  }
 }
 
 /**
