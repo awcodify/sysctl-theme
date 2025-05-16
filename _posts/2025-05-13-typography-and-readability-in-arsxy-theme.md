@@ -5,7 +5,7 @@ description: "How Arsxy theme optimizes typography and readability for technical
 categories: Theme
 tags: typography readability design accessibility
 author: Awcodify
-image: theme-demo.jpeg
+image: theme-demo.webp
 ---
 
 Typography is the foundation of any good reading experience. This post explores how Arsxy theme implements typography best practices to create optimal readability for technical content.

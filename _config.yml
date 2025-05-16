@@ -7,7 +7,7 @@ email: awcodify@gmail.com
 description: >-
   A clean, fast and SEO-friendly Jekyll theme focused on technical content and code readability.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://localhost:4000" # for local development
+url: "https://awcodify.github.io/arsxy-theme" # GitHub Pages URL (replace with your actual site URL)
 
 # GitHub Pages settings
 repository: awcodify/arsxy-theme
@@ -22,6 +22,11 @@ highlighter: rouge
 permalink: /:title/
 paginate: 5
 paginate_path: "/page/:num/"
+
+# Optimization settings
+sass:
+  style: compressed # Enables CSS compression
+  sourcemap: never  # Disables sourcemaps for production
 
 # Theme-specific settings
 date_format: "%b %-d, %Y" # e.g. May 5, 2025
@@ -55,7 +60,7 @@ homepage:
     enabled: true
     title: "Welcome to Arsxy Theme"
     subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
-    image: "welcome-to-arsxy-theme.png"
+    image: "welcome-to-arsxy-theme.webp"
     buttons:
       - label: "Learn More"
         url: "/docs/"
@@ -106,7 +111,7 @@ social:
   linkedin: # your LinkedIn username
   email: awcodify@gmail.com
 
-# Plugin settings
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -117,7 +122,7 @@ plugins:
 # Content settings
 excerpt_separator: <!--more-->
 
-# Exclude from processing
+# Exclude files from processing
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -128,4 +133,7 @@ exclude:
   - vendor/
   - example/
   - LICENSE
+  - README.md
   - arsxy-theme.gemspec
+  - CONTRIBUTING.md
+  - scripts/
