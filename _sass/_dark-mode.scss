@@ -96,12 +96,12 @@ html.dark-mode {
         background-color: rgba(lighten($primary-color, 20%), 0.1);
       }
       
-      .sun {
-        display: block;
+      .theme-toggle-icon.sun {
+        display: block !important;
       }
       
-      .moon {
-        display: none;
+      .theme-toggle-icon.moon {
+        display: none !important;
       }
     }
   }

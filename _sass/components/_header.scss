@@ -171,16 +171,26 @@
       transform: rotate(15deg);
     }
     
+    &.dark-active {
+      .theme-toggle-icon.sun {
+        display: block;
+      }
+      
+      .theme-toggle-icon.moon {
+        display: none;
+      }
+    }
+    
     .theme-toggle-icon {
       width: 20px;
       height: 20px;
     }
     
-    .sun {
+    .theme-toggle-icon.sun {
       display: none;
     }
     
-    .moon {
+    .theme-toggle-icon.moon {
       display: block;
     }
   }
