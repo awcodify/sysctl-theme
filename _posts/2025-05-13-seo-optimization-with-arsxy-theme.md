@@ -5,7 +5,7 @@ description: "Discover how to maximize your site's search engine visibility with
 categories: Tutorial
 tags: seo search-engine-optimization jekyll theme
 author: Awcodify
-image: seo-optimization.png
+image: seo-optimization.webp
 ---
 
 Search Engine Optimization (SEO) is crucial for ensuring your content reaches your target audience. Arsxy theme comes with powerful built-in SEO features that give your Jekyll site a competitive edge in search rankings.

@@ -5,7 +5,7 @@ description: "A introduction to the features and design of this clean, fast, and
 categories: Demo
 tags: jekyll theme demo markdown
 author: Awcodify
-image: theme-demo.jpeg
+image: theme-demo.webp
 featured: true
 ---
 

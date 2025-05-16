@@ -5,7 +5,7 @@ description: "Exploring powerful features and advanced customization options in 
 categories: Theme
 tags: jekyll arsxy advanced-features customization
 author: Awcodify
-image: theme-demo-2.jpeg
+image: theme-demo-2.webp
 ---
 
 Arsxy theme offers many advanced features beyond the basics. This guide explores the powerful capabilities that make Arsxy an excellent choice for technical blogs, documentation sites, and developer portfolios.
@@ -164,7 +164,7 @@ Arsxy automatically adds structured data for blog posts:
 
 The theme generates rich preview cards for social media sharing:
 
-![Social Media Preview Example](/assets/images/theme-demo-2.jpeg)
+![Social Media Preview Example](/assets/images/theme-demo-2.webp)
 
 ## Theme Configuration API
 

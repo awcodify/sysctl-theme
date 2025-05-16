@@ -60,7 +60,7 @@ homepage:
     enabled: true
     title: "Welcome to Arsxy Theme"
     subtitle: "A clean, modern Jekyll theme for tech blogs and documentation"
-    image: "welcome-to-arsxy-theme.png"
+    image: "welcome-to-arsxy-theme.webp"
     buttons:
       - label: "Learn More"
         url: "/docs/"
