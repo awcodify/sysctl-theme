@@ -1,0 +1,22 @@
+name: General Question
+description: Ask a question that doesn't fit into the other categories
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question about Arsxy Theme!
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: A clear and concise description of your question.
+      placeholder: How do I...?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any context that might help us answer your question more effectively.

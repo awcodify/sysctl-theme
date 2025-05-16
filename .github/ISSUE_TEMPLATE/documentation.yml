@@ -1,0 +1,47 @@
+name: Documentation Improvement
+description: Suggest improvements to our documentation
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve our documentation!
+  - type: input
+    id: page
+    attributes:
+      label: Page or Section
+      description: Which documentation page or section needs improvement?
+      placeholder: e.g., Installation guide, README.md, etc.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of improvement
+      options:
+        - Error correction
+        - Clarification needed
+        - Missing information
+        - Outdated information
+        - Example needed
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: What needs to be improved in the documentation?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested changes
+      description: If possible, provide a suggested improvement or draft of the content.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the documentation issue here.

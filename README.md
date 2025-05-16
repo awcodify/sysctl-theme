@@ -156,3 +156,11 @@ This theme is available as open source under the terms of the [MIT License](LICE
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/awcodify/arsxy-theme.
+
+We appreciate your contributions to make Arsxy Theme better! Please check out our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+
+- How to submit pull requests
+- Coding standards
+- Development process
+
+When submitting pull requests, please use the appropriate PR template to help maintainers understand and review your changes efficiently.
