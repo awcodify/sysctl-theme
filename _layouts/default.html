@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="baseurl" content="{{ site.baseurl }}">
   
+  <!-- Cache control hints for browsers -->
+  <meta http-equiv="Cache-Control" content="max-age=86400, public">
+  
   {%- seo -%}
   
   <!-- Preconnect to Google Fonts -->
@@ -22,7 +25,7 @@
   <noscript><link rel="stylesheet" href="{{ "/assets/css/extended.css" | relative_url }}"></noscript>
   
   <!-- Google Fonts loaded with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
   
   {%- feed_meta -%}

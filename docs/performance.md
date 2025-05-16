@@ -180,9 +180,19 @@ While most caching is configured at the server level, you can prepare your site 
 
 The theme supports the Jekyll Assets plugin for fingerprinting (adding a hash to filenames for cache busting).
 
+### Browser Caching with HTML Meta Tags
+
+The theme adds browser caching hints via HTML meta tags, which can provide modest caching benefits:
+
+```html
+<meta http-equiv="Cache-Control" content="max-age=86400, public">
+```
+
+This helps browsers know they can cache the page for 24 hours.
+
 ### Recommended Cache Headers
 
-When deploying, configure your server with these recommended cache settings:
+When deploying to your own server, configure it with these recommended cache settings:
 
 ```
 # HTML documents - short cache
