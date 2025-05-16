@@ -1,6 +1,14 @@
 {% if include.url %}
 <figure class="image">
-  <img src="{{ '/assets/images/' | append: include.url | relative_url }}" alt="{{ include.alt | default: 'Image' }}" {% if include.width %}width="{{ include.width }}"{% endif %} {% if include.class %}class="{{ include.class }}"{% endif %}>
+  <img 
+    src="{{ '/assets/images/' | append: include.url | relative_url }}" 
+    alt="{{ include.alt | default: 'Image' }}" 
+    {% if include.width %}width="{{ include.width }}"{% endif %} 
+    {% if include.height %}height="{{ include.height }}"{% endif %} 
+    {% if include.loading != false %}loading="lazy"{% endif %}
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    style="{% if include.width and include.height %}aspect-ratio: {{ include.width | times: 1.0 | divided_by: include.height }}; {% endif %}max-width: 100%; height: auto;"
+  >
   {% if include.caption %}
   <figcaption>{{ include.caption }}</figcaption>
   {% endif %}

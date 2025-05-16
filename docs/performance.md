@@ -4,17 +4,43 @@ title: Performance Optimization
 description: Learn how to optimize your Arsxy Theme site for maximum speed and efficiency
 permalink: /docs/performance/
 ---
+# Performance Optimization
+
 The Arsxy Theme is designed with performance in mind, incorporating modern best practices to ensure your site loads quickly and runs efficiently. This guide explains the built-in performance optimizations and how you can further enhance your site's speed.
 
-## Built-in Performance Features
+## Recent Performance Improvements
 
-Arsxy Theme includes several performance optimizations out of the box:
+The theme has been optimized to achieve high scores on Google PageSpeed Insights with the following improvements:
 
-1. **Minimal CSS Framework**: Custom-built, lightweight CSS without heavy frameworks
-2. **Optimized Asset Loading**: CSS and JavaScript loaded efficiently to minimize render blocking
-3. **Image Optimization**: Responsive images, lazy loading, and WebP support
-4. **Efficient JavaScript**: Vanilla JS with no jQuery dependency
-5. **Fast Syntax Highlighting**: Optimized code highlighting using Rouge
+1. **CSS Loading Optimization**:
+   - Split CSS into critical (main.css) and non-critical (extended.css) files
+   - Non-critical CSS loaded asynchronously to prevent render blocking
+   - Added loadCSS polyfill for browser compatibility
+
+2. **Google Fonts Optimization**:
+   - Added preconnect for faster DNS resolution
+   - Implemented non-blocking loading with media="print" technique
+   - Fixed duplicate `&display=swap` parameter
+
+3. **Enhanced Caching**:
+   - Added Cache-Control meta tag for browsers
+   - Optimized SASS compression through _config.yml
+   - Leverage GitHub Pages' built-in caching mechanisms
+
+4. **Image Optimization**:
+   - Implemented WebP conversion for images
+   - Added width/height attributes to prevent layout shifts (CLS)
+   - Added aspect-ratio CSS to maintain image proportions
+   - Used appropriate loading="lazy" and loading="eager" attributes
+
+5. **Layout Shift Prevention**:
+   - Fixed search overlay animations to prevent CLS
+   - Added will-change hints for smoother animations
+   - Reserved space for dynamic content like the search overlay
+
+6. **Resource Hints**:
+   - Added preload for critical resources (hero images, JS)
+   - Used preconnect for external resources like Google Fonts
 
 ## Performance Metrics
 
@@ -40,7 +66,7 @@ The theme includes an optimized image component that automatically:
 {% raw %}
 ```liquid
 {% include image.html 
-   src="/assets/images/example.jpg" 
+   url="example.jpg" 
    alt="Optimized image example" 
    width="800" 
    height="500" 
@@ -50,14 +76,29 @@ The theme includes an optimized image component that automatically:
 ```
 {% endraw %}
 
-### Image Optimization Workflow
+### Image Optimization Script
+
+The theme includes a powerful image optimization script at `scripts/convert-image.sh`:
+
+```bash
+# Run this script to optimize all images in your assets/images directory
+bash scripts/convert-image.sh
+```
+
+The script automatically:
+- Resizes large images to a maximum width (configurable)
+- Compresses images to reduce file size
+- Converts to WebP format with fallbacks
+- Preserves image quality where needed
+
+### Best Practices for Images
 
 For best performance:
 
-1. **Resize images** to the maximum dimension they'll be displayed at
-2. **Compress images** using tools like ImageOptim, TinyPNG, or Squoosh
-3. **Convert to WebP** for modern browsers while maintaining fallbacks
-4. **Provide dimensions** to prevent layout shifts during loading
+1. **Provide dimensions**: Always specify width and height attributes
+2. **Proper loading**: Use `loading="eager"` for above-the-fold images and `loading="lazy"` for others
+3. **Image format**: Use WebP where possible (the conversion script handles this)
+4. **Aspect ratio**: Maintain consistent aspect ratios to prevent layout shifts
 
 ## CSS Optimization
 

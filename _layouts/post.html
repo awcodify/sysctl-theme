@@ -46,7 +46,14 @@ layout: default
 
   {%- if page.image -%}
     <div class="post-featured-image">
-      <img src="{{ '/assets/images/' | append: page.image | relative_url }}" alt="{{ page.title }}" />
+      <img 
+        src="{{ '/assets/images/' | append: page.image | relative_url }}" 
+        alt="{{ page.title }}" 
+        width="800" 
+        height="450" 
+        loading="eager"
+        style="aspect-ratio: 16/9; max-width: 100%; height: auto;"
+      />
     </div>
   {% else %}
     <!-- Generate CSS featured image for posts without specified images -->
