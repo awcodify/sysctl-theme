@@ -105,16 +105,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Always convert value to lowercase for case-insensitive comparison
     const lowerValue = value.toLowerCase();
     
+    // Cache the NodeList of sections to avoid redundant DOM queries
+    const sections = document.querySelectorAll(`.${sectionClass}`);
+    
     // Show all sections if 'all' is selected
     if (lowerValue === 'all') {
-      document.querySelectorAll(`.${sectionClass}`).forEach(function(section) {
+      sections.forEach(function(section) {
         section.style.display = 'block';
       });
       return;
     }
     
     // Otherwise, filter sections by taxonomy value (case-insensitive)
-    document.querySelectorAll(`.${sectionClass}`).forEach(function(section) {
+    sections.forEach(function(section) {
       if (section.getAttribute(dataAttribute).toLowerCase() === lowerValue) {
         section.style.display = 'block';
       } else {
