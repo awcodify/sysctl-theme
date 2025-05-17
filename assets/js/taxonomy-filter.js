@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set up selectors based on taxonomy type
     const dataAttribute = `data-${taxonomyType}`;
-    const sectionClass = `${taxonomyType}-section`;
     const filterClass = `${taxonomyType}-filter`;
     
     // If there's a hash, filter by that taxonomy
