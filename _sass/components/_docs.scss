@@ -81,6 +81,8 @@
   pre {
     margin: 1.5rem 0;
     border-radius: 0.5rem;
+    overflow-x: auto;
+    @include custom-scrollbar;
   }
   
   img {
@@ -102,21 +104,7 @@
   top: 2rem;
   height: calc(100vh - 4rem); // Full viewport height minus top spacing
   overflow-y: auto; // Enable scrolling
-  scrollbar-width: thin; // Sleeker scrollbar for Firefox
-  
-  // Custom scrollbar for webkit browsers
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-    background-color: var(--border-color);
-    border-radius: 6px;
-  }
+  @include custom-scrollbar;
   
   // Better scrolling UX
   -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS

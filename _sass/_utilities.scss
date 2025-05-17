@@ -25,6 +25,61 @@
   .p-#{$name} { padding: $size !important; }
 }
 
+/* Custom scrollbar mixin */
+@mixin custom-scrollbar {
+  /* Firefox scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba($primary-color, 0.2) transparent;
+  
+  /* Webkit scrollbar styling - for vertical scrollbars */
+  &::-webkit-scrollbar {
+    width: 3px;  /* Reduced from 4px to 3px */
+    height: 3px; /* Reduced from 4px to 3px for horizontal scrollbars */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba($primary-color, 0.2);
+    border-radius: 3px; /* Reduced to match scrollbar width */
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: rgba($primary-color, 0.4);
+    }
+  }
+  
+  /* Explicitly style horizontal scrollbars for code blocks */
+  &::-webkit-scrollbar:horizontal {
+    height: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 3px;
+    background: rgba($primary-color, 0.2);
+    
+    &:hover {
+      background: rgba($primary-color, 0.4);
+    }
+  }
+}
+
+/* Apply custom scrollbar to all scrollable elements */
+.custom-scrollbar {
+  @include custom-scrollbar;
+}
+
+/* Ensure all code blocks have consistent scrollbar styling */
+pre[class*="language-"],
+pre[class*="highlight"],
+div.highlight pre,
+.post-content pre,
+.docs-body pre {
+  @include custom-scrollbar;
+}
+
 /* Text alignment */
 .text-left { text-align: left !important; }
 .text-center { text-align: center !important; }
