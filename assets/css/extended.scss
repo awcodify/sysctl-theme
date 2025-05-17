@@ -4,6 +4,7 @@
 ---
 
 @import "variables"; /* Import variables first to ensure all required variables are available */
+@import "utilities"; /* Import utilities for mixins and helper classes */
 @import "syntax-highlighting";
 @import "components/footer";
 @import "components/post";

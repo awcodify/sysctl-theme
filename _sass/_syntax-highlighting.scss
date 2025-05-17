@@ -12,6 +12,7 @@
     font-family: $code-font-family;
     font-size: 0.85rem;
     line-height: 1.6;
+    @include custom-scrollbar; /* Apply the custom scrollbar styling */
     
     code {
       padding: 0;

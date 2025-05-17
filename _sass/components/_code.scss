@@ -15,6 +15,9 @@
     box-shadow: $shadow-md;
     border: none;
     
+    /* Clean scrollbar styling */
+    @include custom-scrollbar;
+    
     code {
       background: none;
       padding: 0;

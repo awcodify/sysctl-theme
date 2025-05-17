@@ -31,10 +31,21 @@
   {%- feed_meta -%}
   
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/images/favicon/apple-touch-icon.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon/favicon-32x32.png" | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/images/favicon/favicon-16x16.png" | relative_url }}">
-  <link rel="manifest" href="{{ "/assets/images/favicon/site.webmanifest" | relative_url }}">
+  {% if site.favicon.enabled != false %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.favicon.apple_touch_icon | default: "/assets/images/favicon/apple-touch-icon.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.favicon.icon32 | default: "/assets/images/favicon/favicon-32x32.png" | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.favicon.icon16 | default: "/assets/images/favicon/favicon-16x16.png" | relative_url }}">
+  <link rel="manifest" href="{{ site.favicon.manifest | default: "/assets/images/favicon/site.webmanifest" | relative_url }}">
+  {% if site.favicon.mask_icon %}
+  <link rel="mask-icon" href="{{ site.favicon.mask_icon | relative_url }}" color="{{ site.favicon.mask_icon_color | default: '#5bbad5' }}">
+  {% endif %}
+  {% if site.favicon.shortcut_icon %}
+  <link rel="shortcut icon" href="{{ site.favicon.shortcut_icon | relative_url }}">
+  {% endif %}
+  {% if site.favicon.ms_config %}
+  <meta name="msapplication-config" content="{{ site.favicon.ms_config | relative_url }}">
+  {% endif %}
+  {% endif %}
   
   <!-- Preload critical JS -->
   <link rel="preload" href="{{ "/assets/js/main.js" | relative_url }}" as="script">

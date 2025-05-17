@@ -477,6 +477,8 @@
       margin: $spacing-md 0 $spacing-lg;
       position: relative;
       box-shadow: $shadow-md;
+      overflow-x: auto; /* Ensure overflow is handled */
+      @include custom-scrollbar; /* Apply the custom scrollbar styling */
       
       &::before {
         content: attr(data-language);
@@ -908,30 +910,7 @@
       padding: $spacing-md 0;
       max-height: calc(100vh - 150px);
       overflow-y: auto;
-      
-      /* Clean scrollbar styling */
-      &::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-      }
-      
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      
-      &::-webkit-scrollbar-thumb {
-        background: rgba($primary-color, 0.2);
-        border-radius: 4px;
-        transition: background 0.3s ease;
-        
-        &:hover {
-          background: rgba($primary-color, 0.4);
-        }
-      }
-      
-      /* Firefox scrollbar styling */
-      scrollbar-width: thin;
-      scrollbar-color: rgba($primary-color, 0.2) transparent;
+      @include custom-scrollbar;
       
       /* Elegant heading style */
       h2 {
