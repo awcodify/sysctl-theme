@@ -12,7 +12,7 @@ Targeted release: July 2025
 
 ### New Features
 - **Internationalization (i18n) Support**: Built-in support for multiple languages
-- **Comment System Integration**: Native support for popular comment systems (Disqus, Utterances, Giscus)
+- **Comment System Improvements**: Additional features for Giscus integration
 - **Image Gallery Component**: Easy-to-use image gallery for posts and pages
 - **Table of Contents Improvements**: Collapsible sections and active section highlighting
 - **Custom Color Schemes**: Predefined color schemes and easier customization options

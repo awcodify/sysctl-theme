@@ -28,6 +28,7 @@ Welcome to the official documentation for Arsxy Theme, a clean, modern Jekyll th
 * [Featured Images](./components/featured-images/)
 * [Social Sharing](./components/social-sharing/)
 * [Search Functionality](./components/search/)
+* [Comment Systems](./comments/)
 
 ## Customization
 

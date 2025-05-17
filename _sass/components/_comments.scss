@@ -1,0 +1,33 @@
+
+/* Comments Styling */
+.comments-wrapper {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  
+  .comments-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--heading-color);
+  }
+  
+  .giscus-container {
+    margin-top: 1rem;
+    
+    // This ensures the Giscus frame gets proper styling
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+/* Dark Mode Adjustments */
+.dark-mode {
+  .comments-wrapper {
+    border-top: 1px solid var(--dark-border-color);
+    
+    .comments-heading {
+      color: var(--dark-heading-color);
+    }
+  }
+}
