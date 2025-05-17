@@ -5,8 +5,7 @@ description: "Learn how to easily add a GitHub Discussions-powered comment syste
 categories: Tutorial
 tags: giscus github-discussions comments
 author: Awcodify
-image: giscus-comments.webp
-featured: true
+image: comment-with-giscus.png
 ---
 
 Arsxy Theme now supports Giscus, a modern comments system powered by GitHub Discussions! This tutorial will walk you through setting up Giscus on your blog.
