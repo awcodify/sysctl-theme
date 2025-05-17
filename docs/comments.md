@@ -1,19 +1,14 @@
 ---
 layout: docs
-title: Comment Systems
+title: Comment System
 permalink: /docs/comments/
-description: Learn how to add comments to your blog using Giscus or Disqus with the Arsxy theme.
+description: Learn how to add comments to your blog using Giscus with the Arsxy theme.
 nav_order: 12
 ---
 
-# Comment Systems
+# Comment System
 
-Arsxy theme supports two popular comment systems for your blog posts:
-
-1. [Giscus](https://giscus.app/) - A comments system powered by GitHub Discussions
-2. [Disqus](https://disqus.com/) - A popular comment platform
-
-Both systems are fully integrated with the theme, including dark mode support. You can enable either one (but not both simultaneously) through the configuration in your `_config.yml`.
+Arsxy theme supports [Giscus](https://giscus.app/) - a modern comments system powered by GitHub Discussions. It's fully integrated with the theme, including dark mode support.
 
 ## Setting up Giscus (Recommended)
 
@@ -49,26 +44,9 @@ giscus:
 
 The Arsxy theme will automatically adjust the Giscus theme when visitors switch between dark and light mode.
 
-## Setting up Disqus
-
-Disqus is a traditional comment system that's widely used across the web.
-
-### Configuration
-
-1. Sign up for a [Disqus account](https://disqus.com/profile/signup/)
-2. Create a new site and get your shortname
-3. Update your `_config.yml`:
-
-```yaml
-disqus:
-  shortname: your-disqus-shortname
-```
-
 ## Important Notes
 
-- You can enable either Giscus or Disqus, not both simultaneously.
-- If both are configured, Disqus will take precedence.
-- To disable comments completely, ensure both Giscus and Disqus configurations are disabled/removed.
+- To disable comments completely, set `giscus.enabled` to `false` in your `_config.yml`.
 
 ## Styling Comments
 

@@ -13,7 +13,7 @@ A clean, modern Jekyll theme optimized for technical blogs and documentation sit
 - **Clean & Modern Design** - Minimal, distraction-free reading experience
 - **Responsive Layout** - Optimized for all devices from mobile to desktop
 - **Dark Mode Support** - Built-in dark mode toggle option
-- **Comment Systems** - Support for Giscus (GitHub Discussions) and Disqus comments
+- **Comment System** - Support for Giscus (GitHub Discussions) comments
 - **Code Highlighting** - Beautiful syntax highlighting for technical content
 - **Table of Contents** - Automatically generated for longer articles
 - **SEO Optimized** - Built-in support for meta tags and structured data
