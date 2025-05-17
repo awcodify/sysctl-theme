@@ -106,8 +106,36 @@ html.dark-mode {
     }
   }
   
-  /* Category and Tag section styling in dark mode */
+  /* Unified taxonomy (category and tag) styling in dark mode */
   html.dark-mode {
+    /* CSS Variables for dark mode tags and filters */
+    --tag-bg: #{$dark-surface};
+    --tag-bg-hover: #{lighten($dark-surface, 5%)};
+    --tag-text: #{$dark-text-color};
+    --tag-border: #{$dark-border-color};
+    --tag-active-bg: #{lighten($primary-color, 15%)};
+    --tag-active-text: #{$dark-background};
+    --tag-active-border: transparent;
+    
+    /* Category and tag filters */
+    .category-filter a,
+    .tag-filter a {
+      background-color: rgba($dark-surface, 0.6);
+      color: $dark-text-color;
+      border: 1px solid $dark-border-color;
+      
+      &:hover {
+        background-color: rgba($dark-surface, 0.9);
+        border-color: lighten($dark-border-color, 10%);
+      }
+      
+      &.active {
+        background-color: lighten($primary-color, 15%);
+        color: $dark-background;
+        border-color: transparent;
+      }
+    }
+
     /* Category sections */
     .categories-list {
       .category-section {
@@ -163,8 +191,6 @@ html.dark-mode {
         }
       }
     }
-    
-    /* Tag cloud removed */
     
     /* Sidebar tags */
     .sidebar-tags {

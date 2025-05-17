@@ -91,4 +91,4 @@ permalink: /tags/
   </div>
 </div>
 
-<script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/taxonomy-filter.js' | relative_url }}"></script>

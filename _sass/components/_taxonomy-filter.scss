@@ -1,0 +1,100 @@
+/* 
+ * Unified taxonomy (category & tag) filtering styles
+ * This file replaces both _category-filter.scss and _tag-filter.scss
+ */
+
+/* Navigation container */
+.categories-nav,
+.tags-nav {
+  margin: 1.5rem 0;
+}
+
+/* Filter styles - used for both categories and tags */
+.category-filter,
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.category-filter li,
+.tag-filter li {
+  margin-bottom: 0.5rem;
+}
+
+/* Common link styling for filter items */
+.category-filter a,
+.tag-filter a,
+.sidebar-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: 1px solid var(--tag-border);
+}
+
+.sidebar-tag {
+  padding: 0.2rem 0.6rem; /* Smaller padding for sidebar tags */
+  font-size: 0.85rem;  /* Smaller font for sidebar tags */
+}
+
+/* Hover state */
+.category-filter a:hover,
+.tag-filter a:hover,
+.sidebar-tag:hover {
+  background-color: var(--tag-bg-hover);
+}
+
+/* Active state */
+.category-filter a.active,
+.tag-filter a.active {
+  background-color: var(--tag-active-bg);
+  color: var(--tag-active-text);
+  border-color: var(--tag-active-border);
+}
+
+/* Animation for filtered sections */
+.category-section,
+.tag-section {
+  transition: opacity 0.3s ease, display 0s;
+  display: block; /* Make sure they're visible by default */
+}
+
+/* Sidebar tags container */
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.view-all-tags {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--link-color);
+}
+
+/* Item tags styling */
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .category-filter,
+  .tag-filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
