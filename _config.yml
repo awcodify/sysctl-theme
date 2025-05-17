@@ -135,6 +135,20 @@ plugins:
 # Content settings
 excerpt_separator: <!--more-->
 
+# Giscus Comments (GitHub Discussions)
+giscus:
+  enabled: true # Set to true to enable Giscus comments
+  repo: "awcodify/arsxy-theme" # Format: username/repo
+  repo_id: "R_kgDOOpZ3CA" # Get this from running the giscus app
+  category: "Blog Comment" # The discussion category
+  category_id: "DIC_kwDOOpZ3CM4CqQcg" # Get this from running the giscus app
+  mapping: "pathname" # How to map comments to posts
+  reactions_enabled: "1" # Enable reactions
+  theme: "preferred_color_scheme" # Theme options: light, dark, preferred_color_scheme
+  emit_metadata: "0"
+  input_position: "top" # Position of the comment box
+  lang: "en" # Language for the comments interface
+
 # Exclude files from processing
 exclude:
   - .sass-cache/

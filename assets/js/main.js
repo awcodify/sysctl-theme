@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize mobile navigation
   initMobileNav();
+  
+  // Initialize Giscus comments
+  initGiscus();
 });
 
 /**
@@ -366,4 +369,47 @@ function debounce(func, wait) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(context, args), wait);
   };
+}
+
+/**
+ * Giscus Comments Functionality
+ * This function initializes Giscus and handles theme changes
+ */
+function initGiscus() {
+  // Check if Giscus is present on the page
+  if (!document.querySelector('.giscus-container')) return;
+
+  // Function to set Giscus theme based on site theme
+  function setGiscusTheme() {
+    const isDarkMode = document.documentElement.classList.contains('dark-mode');
+    const theme = isDarkMode ? 'dark' : 'light';
+    
+    // Get the iframe if it exists
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe) {
+      // Send message to Giscus to update theme
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme } } },
+        'https://giscus.app'
+      );
+    }
+  }
+
+  // Set the initial theme after Giscus loads
+  window.addEventListener('message', function(event) {
+    if (event.origin !== 'https://giscus.app') return;
+    if (event.data && event.data.giscus && event.data.giscus.resizeHeight) {
+      // Giscus has loaded, set the theme
+      setGiscusTheme();
+    }
+  });
+
+  // Update Giscus theme when site theme changes
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      // Small delay to ensure the DOM class is updated first
+      setTimeout(setGiscusTheme, 100);
+    });
+  }
 }

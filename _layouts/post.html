@@ -110,6 +110,8 @@ layout: default
 
       {%- if site.disqus.shortname -%}
         {%- include disqus_comments.html -%}
+      {%- elsif site.giscus.enabled -%}
+        {%- include giscus.html -%}
       {%- endif -%}
       
       <!-- Related posts section -->
