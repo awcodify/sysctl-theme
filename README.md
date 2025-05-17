@@ -8,6 +8,11 @@ A clean, modern Jekyll theme optimized for technical blogs and documentation sit
 
 ![Arsxy Theme Screenshot](assets/images/ss-arsxy-theme.webp)
 
+## Demo
+
+- **Theme Demo**: [https://awcodify.github.io/arsxy-theme/](https://awcodify.github.io/arsxy-theme/)
+- **Real-world Implementation**: [https://sysctl.id](https://sysctl.id)
+
 ## Features
 
 - **Clean & Modern Design** - Minimal, distraction-free reading experience
