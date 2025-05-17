@@ -98,8 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function filterTaxonomy(taxonomyType, value) {
-    console.log(`Filtering by ${taxonomyType}:`, value);
-    
     // Set up selectors based on taxonomy type
     const dataAttribute = `data-${taxonomyType}`;
     const sectionClass = `${taxonomyType}-section`;
