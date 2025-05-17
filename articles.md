@@ -40,7 +40,8 @@ permalink: /articles/
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
             </span>
             {% for tag in post.tags %}
-              <a href="{{ '/tags/#' | append: tag | slugify | relative_url }}" class="article-tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
+              {% assign tag_slug = tag | slugify %}
+              <a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="article-tag">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
             {% endfor %}
           {% endif %}
         </div>

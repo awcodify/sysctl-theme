@@ -80,7 +80,8 @@ layout: default
                     {% if post.categories.size > 0 %}
                       <span class="post-categories">
                         {% for category in post.categories %}
-                          <a href="{{ '/categories/#' | append: category | downcase | relative_url }}">{{ category }}</a>
+                          {% assign category_slug = category | slugify %}
+                          <a href="{{ '/categories/#' | append: category_slug | relative_url }}">{{ category }}</a>
                         {% endfor %}
                       </span>
                     {% endif %}
@@ -166,7 +167,8 @@ layout: default
         <ul class="category-list">
           {% assign categories = site.categories | sort %}
           {% for category in categories %}
-            <li><a href="{{ '/categories/#' | append: category[0] | slugify | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
+            {% assign category_slug = category[0] | slugify %}
+            <li><a href="{{ '/categories/#' | append: category_slug | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
           {% endfor %}
         </ul>
       </div>
@@ -177,7 +179,8 @@ layout: default
         <div class="sidebar-tags">
           {% assign tags = site.tags | sort %}
           {% for tag in tags limit:15 %}
-            <a href="{{ '/tags/#' | append: tag[0] | downcase | relative_url }}" class="sidebar-tag">{{ tag[0] }}</a>
+            {% assign tag_slug = tag[0] | slugify %}
+            <a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="sidebar-tag">{{ tag[0] }}</a>
           {% endfor %}
           {% if site.tags.size > 15 %}
             <a href="{{ '/tags/' | relative_url }}" class="view-all-tags">View all</a>

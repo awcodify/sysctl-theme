@@ -22,7 +22,8 @@ layout: default
       {%- if page.categories.size > 0 -%}
       <span class="post-categories">
         {% for category in page.categories %}
-        <a href="{{ '/categories/#' | append: category | slugify | relative_url }}">{{ category }}</a>
+        {% assign category_slug = category | slugify %}
+        <a href="{{ '/categories/#' | append: category_slug | relative_url }}">{{ category }}</a>
         {% endfor %}
       </span>
       {%- endif -%}
@@ -84,7 +85,8 @@ layout: default
         <h3>Tags:</h3>
         <ul class="tag-list">
           {%- for tag in page.tags -%}
-          <li><a href="{{ '/tags/#' | append: tag | downcase | relative_url }}" class="tag">{{ tag }}</a></li>
+          {% assign tag_slug = tag | slugify %}
+          <li><a href="{{ '/tags/#' | append: tag_slug | relative_url }}" class="tag">{{ tag }}</a></li>
           {%- endfor -%}
         </ul>
       </div>
