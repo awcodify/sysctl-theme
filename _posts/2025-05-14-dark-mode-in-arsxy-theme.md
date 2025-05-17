@@ -2,7 +2,7 @@
 layout: post
 title: "Dark Mode in Arsxy Theme"
 description: "A comprehensive guide to configuring and customizing the dark mode feature in your Arsxy Jekyll theme"
-categories: Feature
+categories: Features
 tags: jekyll dark-mode accessibility customization
 author: Awcodify
 ---

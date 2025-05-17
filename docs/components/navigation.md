@@ -4,9 +4,6 @@ title: Navigation Component
 description: Learn how to customize the navigation menus in Arsxy Theme
 permalink: /docs/components/navigation/
 ---
-
-# Navigation Component
-
 The Arsxy Theme includes a flexible navigation system that adapts to different screen sizes and provides a seamless user experience across your site.
 
 ## Main Navigation

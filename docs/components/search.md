@@ -4,9 +4,6 @@ title: Search Functionality
 description: Learn how to implement and customize search in your Arsxy theme
 permalink: /docs/components/search/
 ---
-
-# Search Functionality
-
 Arsxy Theme includes a powerful search feature that allows users to find content quickly across your entire site. This guide explains how the search functionality works and how to customize it.
 
 ## How Search Works

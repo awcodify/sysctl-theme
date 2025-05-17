@@ -29,6 +29,7 @@ Welcome to the official documentation for Arsxy Theme, a clean, modern Jekyll th
 * [Social Sharing](./components/social-sharing/)
 * [Search Functionality](./components/search/)
 * [Comment Systems](./comments/)
+* [Tags and Categories](./taxonomy/)
 
 ## Customization
 

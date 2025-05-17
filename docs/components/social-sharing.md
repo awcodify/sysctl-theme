@@ -4,9 +4,6 @@ title: Social Sharing Component
 description: Learn how to use and customize social sharing buttons in Arsxy Theme
 permalink: /docs/components/social-sharing/
 ---
-
-# Social Sharing Component
-
 The Social Sharing component in Arsxy Theme makes it easy for readers to share your content on various social media platforms. This helps extend the reach of your posts and increase engagement with your content.
 
 ## Default Configuration

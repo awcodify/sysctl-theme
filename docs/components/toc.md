@@ -4,9 +4,6 @@ title: Table of Contents
 description: Learn how to use and customize the Table of Contents component in Arsxy Theme
 permalink: /docs/components/toc/
 ---
-
-# Table of Contents Component
-
 The Table of Contents (TOC) component in Arsxy Theme automatically generates a navigable outline of your post's headings. This helps readers quickly understand your content structure and navigate to specific sections.
 
 ## How It Works

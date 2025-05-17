@@ -5,9 +5,6 @@ permalink: /docs/comments/
 description: Learn how to add comments to your blog using Giscus with the Arsxy theme.
 nav_order: 12
 ---
-
-# Comment System
-
 Arsxy theme supports [Giscus](https://giscus.app/) - a modern comments system powered by GitHub Discussions. It's fully integrated with the theme, including dark mode support.
 
 ## Setting up Giscus (Recommended)

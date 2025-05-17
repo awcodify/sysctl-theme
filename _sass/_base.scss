@@ -34,6 +34,15 @@
   // --border-color: #{$border-color};
   --link-color: #{$link-color};
   --link-hover-color: #{$link-hover-color};
+  
+  /* Taxonomy filter specific vars */
+  --tag-bg: #f0f0f0;
+  --tag-bg-hover: #e0e0e0;
+  --tag-text: #{$text-color};
+  --tag-border: transparent;
+  --tag-active-bg: #{$primary-color};
+  --tag-active-text: #fff;
+  --tag-active-border: transparent;
 }
 
 /* Dark mode CSS variables */
@@ -48,6 +57,15 @@ html.dark-mode {
   // --border-color: #{$dark-border-color};
   --link-color: #{lighten($link-color, 15%)};
   --link-hover-color: #{lighten($link-hover-color, 15%)};
+  
+  /* Category filter specific dark mode vars */
+  --tag-bg: #{rgba($dark-surface, 0.6)};
+  --tag-bg-hover: #{rgba($dark-surface, 0.9)};
+  --tag-text: #{$dark-text-color};
+  --tag-border: #{$dark-border-color};
+  --tag-active-bg: #{lighten($primary-color, 5%)};
+  --tag-active-text: #ffffff;
+  --tag-active-border: #{lighten($primary-color, 15%)};
 }
 
 /* Reset and base styles */

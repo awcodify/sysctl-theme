@@ -4,8 +4,6 @@ title: Installation Guide
 description: How to install the Arsxy Jekyll theme
 permalink: /docs/installation/
 ---
-# Installation Guide
-
 There are two ways to install the Arsxy Theme for your Jekyll site: as a remote theme (recommended) or as a regular gem-based theme.
 
 ## Installing as a Remote Theme (Recommended)

@@ -1,0 +1,82 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="page-content">
+  <h1 class="page-title">Categories</h1>
+  
+  <p class="lead">Browse all posts by category.</p>
+  
+  <div class="categories-nav">
+    <ul class="category-filter">
+      <li><a href="#all" class="active" data-category="all">All Categories</a></li>
+      
+      {% comment %} Create a normalized case-insensitive category list {% endcomment %}
+      {% assign lowercase_categories = "" | split: "" %}
+      {% assign category_map = "" | split: "" %}
+      
+      {% for category_item in site.categories %}
+        {% assign lowercase_name = category_item[0] | downcase %}
+        {% assign original_name = category_item[0] %}
+        {% assign has_found = false %}
+        
+        {% comment %} Check if we already have this category in lowercase form {% endcomment %}
+        {% for existing_cat in lowercase_categories %}
+          {% if existing_cat == lowercase_name %}
+            {% assign has_found = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% unless has_found %}
+          {% assign lowercase_categories = lowercase_categories | push: lowercase_name %}
+          {% assign category_entry = "" | split: "" %}
+          {% assign category_entry = category_entry | push: lowercase_name %}
+          {% assign category_entry = category_entry | push: original_name %}
+          {% assign category_map = category_map | push: category_entry %}
+        {% endunless %}
+      {% endfor %}
+      
+      {% assign sorted_lowercase = lowercase_categories | sort %}
+      {% for lowercase_category in sorted_lowercase %}
+        {% for category_entry in category_map %}
+          {% if category_entry[0] == lowercase_category %}
+            <li><a href="#{{ lowercase_category }}" data-category="{{ lowercase_category }}">{{ category_entry[1] | capitalize }}</a></li>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="categories-list">
+    {% for lowercase_category in sorted_lowercase %}
+      <div class="category-section" data-category="{{ lowercase_category }}">
+        {% for category_entry in category_map %}
+          {% if category_entry[0] == lowercase_category %}
+            <h2 id="{{ lowercase_category }}" class="category-heading">{{ category_entry[1] | capitalize }} Posts</h2>
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        <ul class="post-list">
+          {% for category_posts in site.categories %}
+            {% assign cat_name_lower = category_posts[0] | downcase %}
+            {% if cat_name_lower == lowercase_category %}
+              {% for post in category_posts[1] %}
+                <li class="post-item">
+                  <span class="post-date">{{ post.date | date: site.date_format }}</span>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script src="{{ '/assets/js/taxonomy-filter.js' | relative_url }}"></script>

@@ -501,50 +501,6 @@
         }
       }
     }
-    
-    &.popular-posts-widget {
-      .popular-posts {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-        li {
-          margin-bottom: 0.75rem;
-          padding-bottom: 0.75rem;
-          border-bottom: 1px dashed var(--border-color);
-          
-          &:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-          }
-          
-          .popular-post-link {
-            display: block;
-            text-decoration: none;
-            
-            .popular-post-title {
-              display: block;
-              font-size: 0.95rem;
-              font-weight: 500;
-              margin-bottom: 0.25rem;
-              color: var(--text-secondary);
-              transition: color 0.2s ease;
-              
-              &:hover {
-                color: var(--primary-color);
-              }
-            }
-            
-            .popular-post-date {
-              display: block;
-              font-size: 0.75rem;
-              color: var(--text-muted);
-            }
-          }
-        }
-      }
-    }
   }
 }
 

@@ -20,6 +20,13 @@
   <!-- Critical/main CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   
+  <!-- Custom CSS files -->
+  {% if page.custom_css %}
+    {% for css in page.custom_css %}
+    <link rel="stylesheet" href="{{ "/assets/css/" | append: css | append: ".css" | relative_url }}">
+    {% endfor %}
+  {% endif %}
+  
   <!-- Non-critical/extended CSS loaded asynchronously -->
   <link rel="preload" href="{{ "/assets/css/extended.css" | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ "/assets/css/extended.css" | relative_url }}"></noscript>
