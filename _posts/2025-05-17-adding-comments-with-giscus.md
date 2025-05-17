@@ -75,17 +75,6 @@ Arsxy theme automatically handles switching the Giscus theme when users toggle d
 
 You can customize the appearance of the comments section by editing the `_sass/components/_comments.scss` file in your theme.
 
-## Using Disqus Instead
-
-If you prefer to use Disqus, Arsxy theme also supports that. Simply add your Disqus shortname to your `_config.yml`:
-
-```yaml
-disqus:
-  shortname: your-disqus-shortname
-```
-
-Note that if both Giscus and Disqus are configured, Disqus will take precedence.
-
 ---
 
 We hope you enjoy the new comments feature! Let us know what you think in the comments below (once you've set them up, of course).
