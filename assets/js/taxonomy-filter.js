@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Add click event listeners to taxonomy links
-    document.querySelectorAll(`.${filterClass} a`).forEach(function(link) {
+    filterLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault(); // Prevent default anchor behavior that causes scrolling
         const value = this.getAttribute(dataAttribute).toLowerCase();
         
         // Update active class
-        document.querySelectorAll(`.${filterClass} a`).forEach(function(l) {
+        filterLinks.forEach(function(l) {
           l.classList.remove('active');
         });
         this.classList.add('active');
