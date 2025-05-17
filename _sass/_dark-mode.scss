@@ -107,7 +107,7 @@ html.dark-mode {
   }
   
   /* Unified taxonomy (category and tag) styling in dark mode */
-  html.dark-mode {
+  & {
     /* CSS Variables for dark mode tags and filters */
     --tag-bg: #{$dark-surface};
     --tag-bg-hover: #{lighten($dark-surface, 5%)};
