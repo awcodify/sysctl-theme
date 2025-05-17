@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update URL hash without causing scroll
         if (value === 'all') {
-          history.replaceState(null, null, ' ');
+          history.replaceState(null, null, window.location.pathname + window.location.search);
         } else {
           history.replaceState(null, null, '#' + value);
         }
