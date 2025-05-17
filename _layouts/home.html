@@ -80,7 +80,7 @@ layout: default
                     {% if post.categories.size > 0 %}
                       <span class="post-categories">
                         {% for category in post.categories %}
-                          <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+                          <a href="{{ '/categories/#' | append: category[0] | downcase | relative_url }}">{{ category }}</a>
                         {% endfor %}
                       </span>
                     {% endif %}
@@ -166,7 +166,7 @@ layout: default
         <ul class="category-list">
           {% assign categories = site.categories | sort %}
           {% for category in categories %}
-            <li><a href="{{ '/categories/' | append: category[0] | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
+            <li><a href="{{ '/categories/#' | append: category[0] | downcase | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
           {% endfor %}
         </ul>
       </div>

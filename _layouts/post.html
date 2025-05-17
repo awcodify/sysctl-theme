@@ -22,7 +22,7 @@ layout: default
       {%- if page.categories.size > 0 -%}
       <span class="post-categories">
         {% for category in page.categories %}
-        <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+        <a href="{{ '/categories/#' | append: category | downcase | relative_url }}">{{ category }}</a>
         {% endfor %}
       </span>
       {%- endif -%}

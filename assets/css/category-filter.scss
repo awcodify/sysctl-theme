@@ -1,0 +1,54 @@
+---
+---
+/* Category filtering styles */
+.categories-nav {
+  margin: 1.5rem 0;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  gap: 0.5rem;
+}
+
+.category-filter li {
+  margin-bottom: 0.5rem;
+}
+
+.category-filter a {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  background-color: var(--tag-bg, #f0f0f0);
+  color: var(--text-color, #333);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.category-filter a:hover {
+  background-color: var(--tag-bg-hover, #e0e0e0);
+}
+
+.category-filter a.active {
+  background-color: var(--primary-color, #007bff);
+  color: #fff;
+}
+
+/* Animation for category sections */
+.category-section {
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .category-filter {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+}
