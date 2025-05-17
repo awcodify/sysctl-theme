@@ -52,18 +52,6 @@ permalink: /categories/
   </div>
   
   <div class="categories-list">
-    <div class="category-section" data-category="all">
-      <h2 id="all" class="category-heading">All Posts</h2>
-      <ul class="post-list">
-        {% for post in site.posts %}
-          <li class="post-item">
-            <span class="post-date">{{ post.date | date: site.date_format }}</span>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    
     {% for lowercase_category in sorted_lowercase %}
       <div class="category-section" data-category="{{ lowercase_category }}">
         {% for category_entry in category_map %}

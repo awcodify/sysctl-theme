@@ -80,7 +80,7 @@ layout: default
                     {% if post.categories.size > 0 %}
                       <span class="post-categories">
                         {% for category in post.categories %}
-                          <a href="{{ '/categories/#' | append: category[0] | downcase | relative_url }}">{{ category }}</a>
+                          <a href="{{ '/categories/#' | append: category | downcase | relative_url }}">{{ category }}</a>
                         {% endfor %}
                       </span>
                     {% endif %}
@@ -170,20 +170,19 @@ layout: default
           {% endfor %}
         </ul>
       </div>
-
-      <!-- Popular Posts Widget -->
-      <div class="sidebar-widget popular-posts-widget">
-        <h3 class="widget-title">Popular Posts</h3>
-        <ul class="popular-posts">
-          {% for post in site.posts limit:5 %}
-            <li>
-              <a href="{{ post.url | relative_url }}" class="popular-post-link">
-                <span class="popular-post-title">{{ post.title }}</span>
-                <span class="popular-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-              </a>
-            </li>
+      
+      <!-- Tags Widget -->
+      <div class="sidebar-widget tags-widget">
+        <h3 class="widget-title">Tags</h3>
+        <div class="sidebar-tags">
+          {% assign tags = site.tags | sort %}
+          {% for tag in tags limit:15 %}
+            <a href="{{ '/tags/#' | append: tag[0] | downcase | relative_url }}" class="sidebar-tag">{{ tag[0] }}</a>
           {% endfor %}
-        </ul>
+          {% if site.tags.size > 15 %}
+            <a href="{{ '/tags/' | relative_url }}" class="view-all-tags">View all</a>
+          {% endif %}
+        </div>
       </div>
     </aside>
   </div>
