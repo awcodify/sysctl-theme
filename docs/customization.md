@@ -46,6 +46,30 @@ homepage:
     button_url: "/articles/"
 ```
 
+## Customizing the Favicon
+
+You can easily customize your site's favicon by configuring the appropriate settings in `_config.yml`:
+
+```yaml
+favicon:
+  enabled: true                # Set to false to disable favicons completely
+  icon16: "/path/to/your/favicon-16x16.png"
+  icon32: "/path/to/your/favicon-32x32.png"
+  apple_touch_icon: "/path/to/your/apple-touch-icon.png"
+  manifest: "/path/to/your/site.webmanifest"
+  # Optional additional favicon formats
+  mask_icon: "/path/to/your/safari-pinned-tab.svg"
+  mask_icon_color: "#5bbad5"
+  shortcut_icon: "/path/to/your/favicon.ico"
+  ms_config: "/path/to/your/browserconfig.xml"
+```
+
+To implement favicon customization:
+
+1. Create your favicon files using tools like [Favicon Generator](https://realfavicongenerator.net/)
+2. Add the files to your site (typically in `/assets/images/favicon/`)
+3. Configure the paths in your `_config.yml` file
+
 ## Custom CSS
 
 For more advanced visual customization, you can add your own CSS files to override the theme's default styles.

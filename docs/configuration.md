@@ -123,6 +123,25 @@ defaults:
       share: true
 ```
 
+## Favicon Configuration
+
+Customize your site's favicon:
+
+```yaml
+# Favicon configuration
+favicon:
+  enabled: true                # Set to false to disable favicons completely
+  icon16: "/assets/images/favicon/favicon-16x16.png"
+  icon32: "/assets/images/favicon/favicon-32x32.png"
+  apple_touch_icon: "/assets/images/favicon/apple-touch-icon.png"
+  manifest: "/assets/images/favicon/site.webmanifest"
+  # Optional additional favicon formats
+  mask_icon: "/assets/images/favicon/safari-pinned-tab.svg"
+  mask_icon_color: "#5bbad5"
+  shortcut_icon: "/assets/images/favicon/favicon.ico"
+  ms_config: "/assets/images/favicon/browserconfig.xml"
+```
+
 ## SEO and Analytics
 
 Configure SEO features and analytics:
