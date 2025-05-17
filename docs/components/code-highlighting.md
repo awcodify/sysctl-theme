@@ -4,9 +4,6 @@ title: Code Highlighting
 description: Learn how to use and customize syntax highlighting for code blocks in Arsxy Theme
 permalink: /docs/components/code-highlighting/
 ---
-
-# Code Highlighting
-
 Arsxy Theme includes powerful syntax highlighting capabilities that make code blocks in your content look beautiful and readable. This guide covers how to use and customize code highlighting in your Jekyll site.
 
 ## Basic Usage

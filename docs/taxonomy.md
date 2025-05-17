@@ -4,9 +4,6 @@ title: Tags and Categories
 description: Learn how to use and customize tags and categories in Arsxy Theme
 permalink: /docs/taxonomy/
 ---
-
-# Tags and Categories
-
 The Arsxy theme provides a comprehensive taxonomy system with tags and categories to help organize your content and improve navigation for your readers. This guide explains how to use these features effectively and customize them to your needs.
 
 ## Overview

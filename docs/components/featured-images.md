@@ -4,9 +4,6 @@ title: Featured Images Component
 description: Learn how to use and customize featured images in Arsxy Theme
 permalink: /docs/components/featured-images/
 ---
-
-# Featured Images Component
-
 Featured images enhance the visual appeal of your content and provide a preview of your posts. Arsxy Theme includes robust support for featured images across various layouts.
 
 ## Adding Featured Images to Posts
