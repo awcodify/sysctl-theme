@@ -166,7 +166,7 @@ layout: default
         <ul class="category-list">
           {% assign categories = site.categories | sort %}
           {% for category in categories %}
-            <li><a href="{{ '/categories/#' | append: category[0] | downcase | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
+            <li><a href="{{ '/categories/#' | append: category[0] | slugify | relative_url }}">{{ category[0] }} <span>({{ category[1].size }})</span></a></li>
           {% endfor %}
         </ul>
       </div>
